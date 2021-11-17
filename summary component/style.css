@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+}
+@media screen and (max-width: 375px)  {
+    .container{
+        width: 40%;
+        height: 90%;
+        background: hsl(0, 0%, 99%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+    }
+}
+@media  screen and (min-width: 769px) {
+
+    .container{
+        width: 25%;
+        height: 560px;
+        background: hsl(0, 0%, 99%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+}
+}
+.hero img{
+    width:100%;
+    height:100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+h2{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+.content{
+    width: 78%;
+    margin: 3px auto;
+    line-height: 25px;
+}
+p{
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+.annual img{
+    width: 35px;
+    height: 35px;
+}
+.price{
+    padding-right: 25px;
+}
+.price .plan{
+    color: #000;
+    font-weight: 700;
+}
+.price .yrs{
+    color: hsl(224, 23%, 55%);
+}
+.hero img{
+    width:100%;
+    height:100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+h2{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+.annual{
+    width: 85%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background:hsl(225, 100%, 98%);
+    margin: 20px auto;
+    padding: 0 20px;
+    border-radius: 8px;
+}
+p{
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+.btn{
+    width: 85%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    justify-content: space-between;
+}
+.btn .submit{
+    height: 50%;
+    color: hsl(225, 100%, 98%);
+    background: hsl(245, 75%, 52%);
+    border-radius: 7px;
+    border: 1px solid transparent;
+    box-shadow: 0px 15px 10px hsla(224, 100%, 92%, 0.7);
+    font-weight: 700;
+}
+.btn .order{
+    height: 25%;
+    border: 1px solid transparent;
+    background: none;
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+}
+a{
+    color: hsl(245, 75%, 52%);
+}
+/* active states of components*/ 
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.submit:hover{
+    cursor: pointer;
+    background: hsla(245, 75%, 52%, 0.5);
+}
+.order:hover{
+    cursor: pointer;
+    color: #000;
+} 
