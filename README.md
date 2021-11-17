@@ -4,3 +4,4 @@ Projects from frondendmentor.io
 # ⚒️ Setup
 <p>Fork the repository</p>
 <p>Clone the repository</p>
+<p>svg background needs adjustment</p>
