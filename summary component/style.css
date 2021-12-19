@@ -26,8 +26,8 @@ body{
 @media  screen and (min-width: 769px) {
 
     .container{
-        width: 25%;
-        height: 560px;
+        width: 28%;
+        height: 575px;
         background: hsl(0, 0%, 99%);
         position: absolute;
         top: 50%;
