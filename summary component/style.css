@@ -9,10 +9,10 @@ body{
     background-repeat: no-repeat;
     font-family: 'Red Hat Display', sans-serif;
 }
-@media screen and (max-width: 375px)  {
+@media screen and (min-width: 375px)  {
     .container{
-        width: 40%;
-        height: 90%;
+        width: 375px;
+        height: 550px;
         background: hsl(0, 0%, 99%);
         position: absolute;
         top: 50%;
@@ -21,7 +21,6 @@ body{
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
     }
 }
 @media  screen and (min-width: 769px) {
