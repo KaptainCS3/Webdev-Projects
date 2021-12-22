@@ -4,29 +4,45 @@
     box-sizing: border-box;
 }
 body{
-    background: hsl(212, 23%, 69%);
+    font-family: 'Red Hat Display', sans-serif;
+    background:  hsl(212, 23%, 69%);
     font-size: 13px;
     min-height: 100vh;
 }
-@media screen and (min-width: 375px)  {
+@media screen and (min-width: 375px) and (max-width: 768px) {
 .container{
-    width: 25%;
+    width: 40%;
     height: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);  
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 .hero img{
     width: 100%;
-    height: 200px;
+    height: 40%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border: 1px solid black;
 }
 .content{
     background: hsl(210, 46%, 95%);
     width: 100%;
-    /* height: 60%; */
+    height: 60%; 
+}
+.bottom{
+    display: flex;
+}
+.bottom .avartar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.bottom .share-icon img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #000;
 }
 }
