@@ -7,7 +7,7 @@ body{
     font-family: 'Red Hat Display', sans-serif;
     background:  hsl(212, 23%, 69%);
     font-size: 13px;
-    min-height: 100vh;
+    height: 100vh;
 }
 h3{
     padding: 28px 28px 15px 28px;
@@ -42,7 +42,7 @@ p{
     height: 40px;
     border-radius: 50%;
 }
-.bottom .share-icon img{
+.bottom .share-icon .share{
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -75,28 +75,12 @@ p{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-/* h3{
-    padding: 28px 28px 15px 28px;
-    color: hsl(217, 19%, 35%);
-}
-p{
-    padding: 0 28px;
-    color: hsl(212, 23%, 69%);
-    font-weight: lighter;
-}
-.text{
-    color: hsl(217, 19%, 35%);
-    font-weight: 700;
-}
-.date{
-    color: hsl(212, 23%, 69%);
-} */
 .bottom{
     height: 57px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-/* .caption{
+.caption{
     padding-right: 35px;
 }
 .bottom .avartar img{
@@ -110,10 +94,9 @@ p{
     border-radius: 50%;
     background: hsl(212, 23%, 69%);
     padding: 5px;
-} */
-.bottom:hover{
-    background: hsl(217, 19%, 35%);
-
+}
+.active{
+    display: none;
 }
 }
 /* colors{
@@ -161,6 +144,17 @@ p{
     .share-icon{
         position: relative;
     }
+    .social-media{
+        padding-right: 24px;
+    }
+    span img{
+        width: 18px;
+        height: 18px;
+    }
+    .social-media span{
+        position: relative;
+        padding-right: 8px;
+    }
     .share-icon .active::before{
         content: '';
         position: absolute;
@@ -174,7 +168,7 @@ p{
     .active{
         display: flex;
         position: absolute;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 220px;
         bottom: 55px;
@@ -190,5 +184,8 @@ p{
         visibility: visible;
         opacity: 1;
         transform: translateX(-50%) translateY(0);
+    }
+    .share-icon:hover .share{
+        
     }
 }
