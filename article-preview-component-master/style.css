@@ -158,4 +158,37 @@ p{
     .caption{
         padding-right: 105px;
     }
+    .share-icon{
+        position: relative;
+    }
+    .share-icon .active::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: hsl(217, 19%, 35%);
+        bottom: -5px;
+        left: 112px;
+        transform: rotate(45deg);
+    }
+    .active{
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        width: 220px;
+        bottom: 55px;
+        background: hsl(217, 19%, 35%);
+        border-radius: 5px;
+        height: 40px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .share-icon:hover .active{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
