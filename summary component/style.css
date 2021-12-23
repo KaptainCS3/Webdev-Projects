@@ -4,10 +4,19 @@
     box-sizing: border-box;
 }
 body{
+    background-color: #e0e8ff;
     background-image: url(./images/pattern-background-mobile.svg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     font-family: 'Red Hat Display', sans-serif;
+}
+.main-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (min-width: 375px)  {
     .container{
