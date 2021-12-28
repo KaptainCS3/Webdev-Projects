@@ -24,7 +24,7 @@ body{
 .child1{
     background: #fff;
     grid-column: 1/3;
-    height: 90%;
+    height: 100%;
     width: 95%;
     padding: 30px;
     border-top-right-radius: 5px;
@@ -46,6 +46,31 @@ body{
     color: hsl(71, 73%, 54%);
     font-weight: 400;
 }
+.child2{
+    background: hsl(179, 62%, 43%);
+    width: 50%;
+    height: 100%;
+    padding-left: 30px;
+    padding-top: 30px;
+    border-bottom-left-radius: 5px;
+}
+.child3{
+    background: hsla(179, 62%, 43%, 0.808);
+    width: 50%;
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+button{
+background:hsl(71, 73%, 54%);
+color: hsla(0, 11%, 96%, 0.925);
+border: none;
+margin-top: 28px;
+border-radius: 5px;
+box-shadow: 0 15px 10px hsla(120, 2%, 18%, 0.164);
+}
 /* .container{
     
  }
@@ -61,20 +86,10 @@ body{
     color: hsla(0, 11%, 96%, 0.925);
 }
 .child:nth-of-type(1){
-    background: hsl(179, 62%, 43%);
-    width: 50%;
-    height: 100%;
-    padding-left: 30px;
-    padding-top: 30px;
-    border-bottom-left-radius: 5px;
+  
 }
 .child:nth-of-type(2){
-    background: hsla(179, 62%, 43%, 0.808);
-    width: 50%;
-    height: 100%;
-    border-bottom-right-radius: 5px;
-    padding-top: 30px;
-    padding-left: 30px;
+    
 }
 .child:nth-of-type(1) button{
     width: 80%;
@@ -107,10 +122,5 @@ body{
     display: inline-block;
 }
 button{
-    background:hsl(71, 73%, 54%);
-    color: hsla(0, 11%, 96%, 0.925);
-    border: none;
-    margin-top: 28px;
-    border-radius: 5px;
-    box-shadow: 0 15px 10px hsla(120, 2%, 18%, 0.164);
+   
 } */
