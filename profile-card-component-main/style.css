@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    height: 40%;
+    border: 2px solid red;
+}
+.inner{
+    height: 45%;
+    background: url(./images/bg-pattern-card.svg);
+}
+.outter{
+    background: ;
+}
