@@ -32,10 +32,7 @@ body {
   height: 280px;
   display: inline-block;
   margin: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
 h3 {
@@ -70,10 +67,7 @@ p {
             transform: translate(-50%, -50%);
     border: 1px solid transparent;
     background: white;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px;
   }
 }
 
@@ -89,10 +83,7 @@ p {
             transform: translate(-50%, -50%);
     border: 1px solid transparent;
     background: white;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
