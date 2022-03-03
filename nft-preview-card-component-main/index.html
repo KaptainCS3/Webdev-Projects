@@ -5,30 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Outfit:wght@300;wght:@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | NFT preview card component</title>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <div class="main">
       <div class="NFT">
-        <img src="./images/image-equilibrium.jpg" alt="">
+        <img class="equilibrium" src="./images/image-equilibrium.jpg" alt="equilibrium-image">
+          <div class="active-state"></div>
+            <img class="view" src="./images/icon-view.svg" alt="view-icon">
       </div>
     <div class="content">
               <h3>Equilibrium #3429</h3>
-              <p>Our Equilibrium collection promotes balance and calm.</p>
+              <p class="equ">Our Equilibrium collection promotes balance and calm.</p>
                   <div class="stats">
-                    <div class="cards">0.041 ETH</div>
-                    <div class="cards">3 days left</div>
+                    <div class="ETH">0.041 ETH</div>
+                    <div class="cards"><span class="clock"><img src="./images/icon-clock.svg" alt="clock-icon"></span><span class="days">3 days left</span></div>
                   </div>
-          <hr>
+                    <hr class="horizon">
               <div class="footer">
-                <img src="./images/image-avatar.png" alt="avartar image">
-                <p>Creation of Jules Wyvern</p>
+                  <div class="avartar">
+                  <img src="./images/image-avatar.png" alt="avartar-image">
+                </div>
+                <div class="creat"><span class="crt">Creation of</span><span class="avar-name"> Jules Wyvern</span></div>
               </div>
     </div>
   </div>
-  </div>
+  </main>
 <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
