@@ -1,41 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | NFT preview card component</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .attribution a {
+      color: hsl(178, 100%, 50%);
+      margin-top: 97vh;
+    }
+  </style>
 </head>
+
 <body>
-  <main class="container">
-    <div class="main">
-      <div class="NFT">
-        <img class="equilibrium" src="./images/image-equilibrium.jpg" alt="equilibrium-image">
+  <main>
+    <div class="container">
+      <div class="main">
+        <div class="NFT">
+          <img class="equilibrium" src="./images/image-equilibrium.jpg" alt="equilibrium-image">
           <div class="active-state"></div>
-            <img class="view" src="./images/icon-view.svg" alt="view-icon">
-      </div>
-    <div class="content">
-              <h3>Equilibrium #3429</h3>
-              <p class="equ">Our Equilibrium collection promotes balance and calm.</p>
-                  <div class="stats">
-                    <div class="ETH">0.041 ETH</div>
-                    <div class="cards"><span class="clock"><img src="./images/icon-clock.svg" alt="clock-icon"></span><span class="days">3 days left</span></div>
-                  </div>
-              <div class="footer">
-                  <div class="avartar">
-                  <img src="./images/image-avatar.png" alt="avartar-image">
-                </div>
-                <div class="creat"><span class="crt">Creation of</span><span class="avar-name"> Jules Wyvern</span></div>
+          <img class="view" src="./images/icon-view.svg" alt="view-icon">
+        </div>
+        <section>
+          <div class="content">
+            <h3>Equilibrium #3429</h3>
+            <p class="equ">Our Equilibrium collection promotes balance and calm.</p>
+            <div class="stats">
+              <div class="ETH">0.041 ETH</div>
+              <div class="cards"><span class="clock"><img src="./images/icon-clock.svg" alt="clock-icon"></span><span
+                  class="days">3 days left</span></div>
+            </div>
+            <div class="footer">
+              <div class="avartar">
+                <img src="./images/image-avatar.png" alt="avartar-image">
               </div>
+              <div class="creat"><span class="crt">Creation of</span><span class="avar-name"> Jules Wyvern</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
   </main>
-<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by &nbsp;<a href="#">KaptainCS3</a>.
-  </div>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by &nbsp;<a href="https://github.com/KaptainCS3" target="_blank">KaptainCS3</a>.
+  </footer>
 </body>
+
 </html>
