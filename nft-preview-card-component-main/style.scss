@@ -40,7 +40,7 @@ body {
         width: 280px;
         height: 280px;
         display: inline-block;
-        margin: 10px 0;
+        margin: 20px;
         position: relative;
 
         .equilibrium {
@@ -79,19 +79,19 @@ section {
         flex-direction: column;
         justify-content: space-between;
 
-        h3 {
+        .hero {
+            font-size: 18px;
             color: $white;
-            padding-top: 10px;
         }
 
-        h3:hover {
+        .hero:hover {
             color: $cyan;
             cursor: pointer;
         }
 
         .equ {
             color: $softBlue;
-            padding-top: 15px;
+            padding-top: 10px;
             line-height: 1.5em;
         }
     }
@@ -128,7 +128,7 @@ section {
 
 @media screen and (min-width: 200px) and (max-width: 375px) {
     .container {
-        width: 300px;
+        width: 320px;
         height: 550px;
         position: absolute;
         top: 50%;
@@ -144,7 +144,7 @@ section {
 /*      Desktop view design     */
 @media screen and (min-width: 376px) {
     .container {
-        width: 300px;
+        width: 320px;
         height: 550px;
         position: absolute;
         top: 50%;
