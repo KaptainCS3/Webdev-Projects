@@ -60,8 +60,12 @@ body {
   display: none;
 }
 
-.content {
-  width: 90%;
+section {
+  padding: 20px;
+}
+
+section .content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,38 +78,38 @@ body {
           justify-content: space-between;
 }
 
-.content h3 {
+section .content h3 {
   color: white;
   padding-top: 10px;
 }
 
-.content h3:hover {
+section .content h3:hover {
   color: #00fff7;
   cursor: pointer;
 }
 
-.content .equ {
+section .content .equ {
   color: #8bacda;
   padding-top: 15px;
   line-height: 1.5em;
 }
 
-.stats {
+section .stats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 0.5px solid #2f415b;
   padding: 20px 0;
+  border-bottom: 0.5px solid #2f415b;
 }
 
-.stats .ETH {
+section .stats .ETH {
   color: #00fff7;
 }
 
-.stats .cards {
+section .stats .cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -114,7 +118,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .stats .cards .days {
+  margin-top: -1px;
 }
 
 .avartar img {
@@ -124,10 +135,10 @@ body {
   border: 1px solid white;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 200px) and (max-width: 375px) {
   .container {
     width: 300px;
-    height: 530px;
+    height: 550px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -140,10 +151,10 @@ body {
 }
 
 /*      Desktop view design     */
-@media screen and (min-width: 200px) and (max-width: 375px) {
+@media screen and (min-width: 376px) {
   .container {
     width: 300px;
-    height: 530px;
+    height: 550px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -202,24 +213,5 @@ body {
 
 .NFT:hover {
   cursor: pointer;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.attribution a {
-  color: #3e52a3;
-  margin-top: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
