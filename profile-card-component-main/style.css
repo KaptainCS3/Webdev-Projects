@@ -1,58 +1,147 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-body{
-}
-    .container {
-        width: 100%;
-        height: 100%;
-        background-image: url(./images/bg-pattern-top.svg),
-          url(./images/bg-pattern-bottom.svg);
-        background-position: top -48rem left -10rem, bottom -48rem right -10rem;
-        background-color: var(--dark-cyan);
-        background-repeat: no-repeat;
-      
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      .img-avatar{
-        background-image: url(/images/bg-pattern-card.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 15rem;
-        width: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-      }
-      .img-avatar img{
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        border: 5px solid #fff;
-        transform: translateY(50%);
-      }
 
-      .avatar-name {
-        padding-top: 5rem;
-      }
-      
-      .age {
-        padding: 0 0.5rem;
-      }
-      .stats{
-            color: var(--dark-gray);
-            font-size: 1.4rem;
-            margin-top: -3%;
-      }
-      .profile-card__name,
-.profile-card-stats h3 {
-  font-weight: 700;
-  font-size: var(--fsize-name-stats);
-  color: var(--very-dark-desaturated-blue);
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #19a2ae;
 }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 0 15px;
+  background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-size: cover;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card {
+  width: 350px;
+  height: 390px;
+}
+
+.card-bg {
+  height: 40%;
+}
+
+.card-bg img {
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.avatar img {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.content {
+  background: #fff;
+  height: 70%;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .avatar_stats .value {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer .avatar_stats .stats {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 70px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hero .age {
+  padding-left: 10px;
+}
+
+.ci {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.ci .city {
+  font-weight: 400;
+}
+
+.abt_avatar {
+  border-bottom: 0.5px solid #969696;
+  padding-bottom: 30px;
+}
+/*# sourceMappingURL=style.css.map */
