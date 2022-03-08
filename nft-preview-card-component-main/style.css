@@ -31,7 +31,7 @@ body {
   width: 280px;
   height: 280px;
   display: inline-block;
-  margin: 10px 0;
+  margin: 20px;
   position: relative;
 }
 
@@ -78,19 +78,19 @@ section .content {
           justify-content: space-between;
 }
 
-section .content h3 {
+section .content .hero {
+  font-size: 18px;
   color: white;
-  padding-top: 10px;
 }
 
-section .content h3:hover {
+section .content .hero:hover {
   color: #00fff7;
   cursor: pointer;
 }
 
 section .content .equ {
   color: #8bacda;
-  padding-top: 15px;
+  padding-top: 10px;
   line-height: 1.5em;
 }
 
@@ -137,7 +137,7 @@ section .stats .cards .days {
 
 @media screen and (min-width: 200px) and (max-width: 375px) {
   .container {
-    width: 300px;
+    width: 320px;
     height: 550px;
     position: absolute;
     top: 50%;
@@ -153,7 +153,7 @@ section .stats .cards .days {
 /*      Desktop view design     */
 @media screen and (min-width: 376px) {
   .container {
-    width: 300px;
+    width: 320px;
     height: 550px;
     position: absolute;
     top: 50%;

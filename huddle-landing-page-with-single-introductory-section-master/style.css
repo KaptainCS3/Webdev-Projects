@@ -3,22 +3,25 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
+    body{
+        background-image: url(./images/bg-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-family: 'Open Sans', sans-serif;
+}
+#container{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 h1{
     font-family: 'Poppins', sans-serif;
-}
-@media screen and (min-width: 375px) {
-main-container{
-    height: 100vh;
-}#container{
-    width: 60%;
-    height: 45rem;
-    border: 1px solid red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 }
