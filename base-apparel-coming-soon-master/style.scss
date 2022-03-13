@@ -1,10 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body{
-    background: #000;
-    color: #fff;
-    
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 80%;
+  height: 500px;
+
+  .content{
+  width: 60%;
+  height: auto;
+}
+
+  .avarta_image{
+  background-image: url(./images/hero-desktop.jpg);
+  width: 400px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 }
