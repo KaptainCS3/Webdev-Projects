@@ -2,19 +2,59 @@
 
 body{
     font-family: 'Josefin Sans', sans-serif;
-    min-height: 100vh;
 }
-.main_container{
-  width: 100%;
-  margin: 2rem 0;
-  height: 400px;
+main{
   display: flex;
   justify-content: center;
   align-items: center;
-  .avarta_image{
-    background: url(./images/hero-desktop.jpg);
-    width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  .main_container{
+  height: 550px;
+  width: 80%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .content{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: repeat;
+    width: 70%;
     height: 100%;
-    background-size: cover;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 19px;
+    .hero{
+       text-transform: uppercase;
+       font-size: 3rem;
+       letter-spacing: 0.2em;
+       font-weight: 700;
+      .text{
+      color: $desaturatedRed;
+      font-weight: 300;
+    }
+  }
+    .description{
+      color: $desaturatedRed;
+      line-height: 25px;
+    }
+  }
+  & .avarta_image{
+    width: 35%;
+    height: 100%;
+      //  background-image: url(./images/hero-desktop.jpg);
+      //   background-size: cover;
+      //   background-repeat: no-repeat;
+    }
   }
 }
+
+.avarta_image .desktop{
+          background-image: url(./images/hero-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+          }
