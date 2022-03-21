@@ -26,7 +26,6 @@ main {
 main .main_container {
   height: 550px;
   width: 80%;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,9 +40,8 @@ main .main_container {
 main .main_container .content {
   background-image: url(./images/bg-pattern-desktop.svg);
   background-repeat: repeat;
-  width: 70%;
+  width: 60%;
   height: 100%;
-  border: 1px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +51,8 @@ main .main_container .content {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 19px;
+  padding-left: 120px;
+  margin-top: -20px;
 }
 
 main .main_container .content .hero {
@@ -61,6 +60,7 @@ main .main_container .content .hero {
   font-size: 3rem;
   letter-spacing: 0.2em;
   font-weight: 700;
+  margin-top: -50px;
 }
 
 main .main_container .content .hero .text {
@@ -71,6 +71,37 @@ main .main_container .content .hero .text {
 main .main_container .content .description {
   color: #ce9797;
   line-height: 25px;
+  margin-top: -125px;
+  font-size: 16px;
+}
+
+main .main_container .content form {
+  margin-top: -120px;
+}
+
+main .main_container .content form .arrow {
+  width: 70px;
+  height: 40px;
+  background: #f96262;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 20px;
+  position: absolute;
+  right: 640px;
+  top: 459px;
+}
+
+main .main_container .content form input {
+  width: 75%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  opacity: 0.5;
+}
+
+main .main_container .content form input[placeholder] {
+  padding-left: 45px;
+  color: #f00;
 }
 
 main .main_container .avarta_image {
