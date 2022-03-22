@@ -39,7 +39,7 @@ main .main_container {
 
 main .main_container .content {
   background-image: url(./images/bg-pattern-desktop.svg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   width: 60%;
   height: 100%;
   display: -webkit-box;
@@ -75,33 +75,45 @@ main .main_container .content .description {
   font-size: 16px;
 }
 
-main .main_container .content form {
+main .main_container .content .form_field {
   margin-top: -120px;
 }
 
-main .main_container .content form .arrow {
+main .main_container .content .form_field button {
   width: 70px;
   height: 40px;
   background: #f96262;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
   border-radius: 20px;
+  border: 1px solid transparent;
   position: absolute;
   right: 640px;
-  top: 459px;
+  top: 437px;
 }
 
-main .main_container .content form input {
+main .main_container .content .form_field input {
   width: 75%;
   height: 40px;
   border-radius: 20px;
-  border: 1px solid gray;
   opacity: 0.5;
 }
 
-main .main_container .content form input[placeholder] {
+main .main_container .content .form_field input[placeholder] {
   padding-left: 45px;
-  color: #f00;
+  color: #000;
+}
+
+main .main_container .content .error_control {
+  position: absolute;
+  top: 445px;
+  left: 600px;
+}
+
+main .main_container .content .error_message {
+  padding-top: 10px;
+  padding-left: 45px;
+  color: #f96262;
 }
 
 main .main_container .avarta_image {
