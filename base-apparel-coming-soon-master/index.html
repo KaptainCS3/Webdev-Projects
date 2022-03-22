@@ -29,11 +29,19 @@
               Hello fellow shoppers! We're currently building our new <br> fashion store.
               Add your email below to stay up-to-date with <br> announcements and our launch deals.
             </p>
-            <form>
-            <input type="email" placeholder="Email Address" id="email" required>
-             <div class="arrow">
-               <img src="./images/icon-arrow.svg" alt="arrow-icon">
-            </div>
+            <form class="form_field" id="form_submit">
+            <input type="email" placeholder="Email Address" id="email">
+               <div class="submit">
+                 <button>
+                   <img src="./images/icon-arrow.svg" alt="arrow-icon">
+                  </button>
+                </div>
+               <div class="error_control">
+                 <img class="error" src="./images/icon-error.svg" alt="error-icon">
+                </div>
+                <div class="error_message">
+                <small>error message</small>
+                </div>
             </form>
           </section>
       <div class="avarta_image">
@@ -50,4 +58,5 @@
     </p>
   </footer>
 </body>
+<script src="./index.js"></script>
 </html>
