@@ -1,0 +1,28 @@
+@import "./reset";
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+}
+.container {
+  width: 800px;
+  height: 500px;
+  background: #fff;
+}
+.hero_img{
+    
+    .icon{
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        overflow: hidden;
+    }
+    .box_icon{
+        position: absolute;
+        top: 240px;
+        left: 182px;
+        z-index: 1;
+    }
+}
