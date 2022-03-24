@@ -6,13 +6,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px; text-align: center; color: hsl(0, 0%, 100%);}
+    .attribution a { color: hsl(0, 0%, 100%); }
   </style>
 </head>
 <body>
@@ -27,7 +27,7 @@
         <img src="./images/illustration-woman-online-desktop.svg" alt="">
         </div>
         <div class="pattern">  
-                <img src="./images/bg-pattern-desktop.svg" alt="">
+          <img src="./images/bg-pattern-desktop.svg" alt="">
       </div>
       </div>
       <section class="content">
@@ -35,7 +35,11 @@
           <h1 class="hero">FAQ</h1>
         </header>
         <div class="accordion_card">
-        <button class="accordion">How many team members can I invite?</button>
+        <button class="accordion">How many team members can I invite?
+            <span class="toggle_icon">
+              <img src="./images/icon-arrow-down.svg" alt="">
+            </span>
+        </button>
         <div class="panel">
             <p>
               You can invite up to 2 additional users on the Free plan. There is no limit on
@@ -44,7 +48,11 @@
         </div>
         </div>
         <div class="accordion_card">
-        <button class="accordion">What is the maximum file upload size?</button>
+        <button class="accordion">What is the maximum file upload size?
+            <span class="toggle_icon">
+              <img src="./images/icon-arrow-down.svg" alt="">
+            </span>
+        </button>
         <div class="panel">
           <p>
             No more than 2GB. All files in your account must fit your allotted storage space.
@@ -52,7 +60,11 @@
         </div>
         </div>
         <div class="accordion_card">
-        <button class="accordion">How do I reset my password?</button>
+        <button class="accordion">How do I reset my password?
+            <span class="toggle_icon">
+            <img src="./images/icon-arrow-down.svg" alt="">
+          </span>
+      </button>
         <div class="panel">
           <p>
             Click “Forgot password” from the login page or “Change password” from your profile page.
@@ -61,7 +73,11 @@
         </div>
         </div>
         <div class="accordion_card">
-        <button class="accordion">Can I cancel my subscription?</button>
+        <button class="accordion">Can I cancel my subscription?
+            <span class="toggle_icon">
+              <img src="./images/icon-arrow-down.svg" alt="">
+            </span>
+        </button>
         <div class="panel">
           <p>
             Yes! Send us a message and we’ll process your request no questions asked.
@@ -69,7 +85,11 @@
         </div>
         </div>
         <div class="accordion_card">
-        <button class="accordion">Do you provide additional support?</button>
+        <button class="accordion">Do you provide additional support?
+            <span class="toggle_icon">
+              <img src="./images/icon-arrow-down.svg" alt="">
+            </span>
+        </button>
         <div class="panel">
           <p>
             Chat and email support is available 24/7. Phone lines are open during normal business hours.
@@ -79,9 +99,10 @@
       </section>
     </div>
   </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    Challenge by &nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by &nbsp;<a href="https://github.com/KaptainCS3" target="_blank">KaptainCS3</a>.
+  </footer>
 </body>
+<script src="./index.js"></script>
 </html>
