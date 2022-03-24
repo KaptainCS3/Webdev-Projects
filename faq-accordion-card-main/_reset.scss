@@ -25,5 +25,6 @@ $lightGrayishBlue: hsl(240, 5%, 91%);
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(to right, $softBlue, $softViolet);
+    background: linear-gradient($softViolet, $softBlue);
+    font-family: 'Kumbh Sans', sans-serif;
 }
