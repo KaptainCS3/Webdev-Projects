@@ -6,8 +6,9 @@
 }
 
 body {
-  background: -webkit-gradient(linear, left top, right top, from(#6565e7), to(#af67e9));
-  background: linear-gradient(to right, #6565e7, #af67e9);
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 main {
@@ -28,22 +29,195 @@ main {
 }
 
 .container {
-  width: 800px;
-  height: 500px;
+  width: 850px;
+  height: 550px;
   background: #fff;
+  border-radius: 20px;
 }
 
-.hero_img .icon {
+.container .hero_img .icon {
   position: absolute;
-  top: 100px;
-  left: 200px;
+  top: 130px;
+  left: 160px;
+  z-index: 1;
+}
+
+.container .hero_img .icon img {
+  width: 90%;
+  height: 100%;
+}
+
+.container .hero_img .box_icon {
+  position: absolute;
+  top: 220px;
+  left: 150px;
+  z-index: 2;
+}
+
+.container .hero_img .pattern {
+  position: absolute;
+  width: 50%;
+  height: 40px;
+  left: -150px;
+  top: -100px;
+  z-index: 0;
+}
+
+.container .hero_img .pattern img {
+  width: 115%;
+  background-repeat: no-repeat;
+  background-position: 117% 71%;
   overflow: hidden;
 }
 
-.hero_img .box_icon {
+.container .content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 400px;
+  margin-top: 80px;
+}
+
+.container .content .accordion_card {
+  padding: 20px 0;
+  border-bottom: 0.5px solid #e7e7e9;
+}
+
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.toggle_icon {
   position: absolute;
-  top: 240px;
-  left: 182px;
-  z-index: 1;
+  right: 300px;
+}
+
+.toggle_icon.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion:after {
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active {
+  font-weight: bold;
+  color: #000;
+  -webkit-transition: .125s ease-out;
+  transition: .125s ease-out;
+}
+
+.panel {
+  width: 80%;
+  color: #787887;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 14px;
+  margin-top: .7rem;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 200px) and (max-width: 768px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .container {
+    width: 480px;
+    height: 650px;
+    margin-top: 150px;
+  }
+  main .container .content {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 50px;
+    margin-top: 80px;
+  }
+  main .container .content .accordion_card {
+    padding: 20px 0;
+    border-bottom: 0.5px solid #e7e7e9;
+  }
+  main .container .content .accordion_card .panel {
+    width: 88%;
+  }
+  main .container .content .hero {
+    margin-top: 100px;
+  }
+  main .container .content .toggle_icon {
+    position: absolute;
+    right: 28%;
+  }
+  main .container .hero_img .icon {
+    position: absolute;
+    top: 22px;
+    left: 230px;
+    z-index: 1;
+  }
+  main .container .hero_img .icon img {
+    width: 60%;
+    height: 100%;
+  }
+  main .container .hero_img .box_icon {
+    position: absolute;
+    top: 100px;
+    left: 210px;
+    z-index: 2;
+  }
+  main .container .hero_img .box_icon img {
+    height: 100%;
+    width: 60%;
+  }
+  main .container .hero_img .pattern {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
