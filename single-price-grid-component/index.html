@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>single grid using flex box</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <title>single grid using flex box</title>
 </head>
 <body>
-                   <!-- done by Leonard Appelgryn(KAPTAINCS3) -->
+    <main>             <!-- done by Leonard Appelgryn(KAPTAINCS3) -->
     <div class="container">
-        <div class="child1">
-            <h3>Join our community</h3>
-            <p class="text">30-day, hassle-free money back guarantee</p>
-            <p class="p2">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
-        </div>
-            <div class="child2">
-                <h5>Monthly Subscription</h5>
-                <span class="dollar">$29 </span><span><small class="small">per month</small></span>
-                <div>
-                <small class="small-1">Full access for less than $1 a day </small>
-            </div>
-                <button>Sign Up</button>
-            </div>
-            <div class="child3">
-                <h5>Why Us</h5>
-                <div class="right">
+        <section class="center">
+            <h1 class="hero">Join our community</h1>
+            <p class="30_day">30-day, hassle-free money back guarantee</p>
+            <p class="access">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+        </section>
+        <div class="grid_row">
+            <section class="left_grid">
+                <h2 class="grid_hero">Monthly Subscription</h2>
+                <span class="dollar">$29 </span><span><small class="amt_month">per month</small></span>
+                <div class="small_left">
+                <small>Full access for less than $1 a day </small>
+                    </div>
+                <button class="submit">Sign Up</button>
+            </section>
+            <section class="right_grid">
+                <h2 class="gird_hero">Why Us</h2>
+                <div class="small_right">
                     <small>Tutorials by industry experts,<br>Peer & expert code review<br> Coding exercises Access to our GitHub repos<br> Community forum<br> Flashcard decks<br> New videos every week</small>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
+    </main>
 </body>
 </html>
