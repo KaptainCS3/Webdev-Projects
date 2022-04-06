@@ -72,3 +72,16 @@ main {
   background: $brightYellow;
   color: #fff;
 }
+
+
+@media screen and (min-width: 279px) and (max-width: 768px){
+  main{
+    @include flexBox;
+    flex-direction: column;
+    width: 100%;
+    .grid_row{
+      flex-direction: column;
+    }
+  }
+  
+}
