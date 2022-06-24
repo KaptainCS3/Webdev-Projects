@@ -62,13 +62,64 @@ $Blue: hsl(212, 86%, 64%);
 @media (min-width: 375px) and (max-width: 768px) {
 
 .container{
-  margin-top: 250px;
-  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
+  width: 60%;
+  .carts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+     margin-top: 70px;
+    .desc{
+      background: #fff;
+      margin: 0 20px 20px 0;
+      height: 280px;
+      width: 398px;
+      padding: 25px;
+      // @include newsContent;
+      box-shadow:  4px 8px 20px rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+      border: 4px solid transparent{
+      bottom-left-radius:  10px;
+      bottom-right-radius:  10px;
+    }
+  }
 }
+}
+
+.description{
+  width: 90%;
+  line-height: 25px;
+  text-align: center;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.hero{
+  font-size: 1.5em;
+  margin-top: 250px;
+}
+h1{
+  font-size: 1.5em;
+  padding: 10px 0;
+}
+
+.desc .img{
+  margin-left: 250px;
+  padding-top: 55px;
+  padding-right: 30px;
+}
+
 }
 
 // media query desktop device
@@ -88,12 +139,8 @@ $Blue: hsl(212, 86%, 64%);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    .desc:nth-child(1){
-      border-top-color: $Red;
-    }
     .desc:nth-child(2){
       margin: 2% 0;
-      border-top-color: $Orange;
     }
   }
   .horizontal-carts{
@@ -104,17 +151,11 @@ $Blue: hsl(212, 86%, 64%);
     margin-right: 2%;
     .desc:nth-child(1){
       margin: -5% -20%;
-      border-top-color: $Cyan;
     }
     .desc:nth-child(2){
       margin: -5% -20%;
-      border-top-color: $Blue;
     }
     
-.title{
-  font-weight: 700;
-  color: $veryDarkBlue;
-  }
 }
 p{
   font-weight: 400;
@@ -123,13 +164,10 @@ p{
 }
 .hero{
   font-size: 2.16em;
-  font-weight: 200;
 
 }
 h1{
-  color: $veryDarkBlue;
-  font-size: 2em;
-  font-weight: 700;
+  font-size: 2.175em;
 }
 
 
@@ -138,21 +176,46 @@ h1{
   font-size: 16px;
   padding: 20px;
   line-height: 25px;
-  width: 43%;
+  width: 65%;
 }
  }
   
   
+  .vertical-carts{
+    .desc:nth-child(1){
+      border-top-color: $Red;
+    }
+    .desc:nth-child(2){
+      border-top-color: $Orange;
+    }
+  }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  .horizontal-carts{
+    .desc:nth-child(1){
+      border-top-color: $Cyan;
+    }
+    .desc:nth-child(2){
+      border-top-color: $Blue;
+    }
+  }
+  .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title{
+  font-weight: 700;
+  color: $veryDarkBlue;
+  }
+  .hero{
+    font-weight: 200;
+  }
+  h1{
+  color: $veryDarkBlue;
+  font-weight: 700; 
+}
+P{
+  color: $grayishBlue;
+}
