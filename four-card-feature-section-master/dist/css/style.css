@@ -88,6 +88,10 @@ body {
     padding-top: 55px;
     padding-right: 30px;
   }
+
+  .attribution {
+    margin-top: 850px;
+  }
 }
 @media (min-width: 769px) {
   .carts {
@@ -151,6 +155,10 @@ body {
     padding: 20px;
     line-height: 25px;
     width: 65%;
+  }
+
+  .attribution {
+    margin-top: 250px;
   }
 }
 .vertical-carts .desc:nth-child(1) {
