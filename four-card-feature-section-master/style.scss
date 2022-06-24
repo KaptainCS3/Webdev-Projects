@@ -1,0 +1,158 @@
+//bg colors
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+//border colors
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: $veryLightGray;
+    font-family: 'Poppins', sans-serif;
+  }
+  @mixin container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .container{ 
+    @include container;
+  }
+
+  @mixin newsContent{
+    background: #fff;
+    width: 44%;
+    height: 280px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  4px 8px 20px rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+    border: 4px solid transparent{
+      bottom-left-radius:  10px;
+      bottom-right-radius:  10px;
+    }
+  }
+
+
+.desc p{
+  padding: 20px 0 0 0;
+  line-height: 25px;
+  width: 90%;
+}
+
+.desc .img{
+  align-self: flex-end;
+  padding-top: 55px;
+  padding-right: 30px;
+}
+  
+// media query mobile device
+
+@media (min-width: 375px) and (max-width: 768px) {
+
+.container{
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+}
+
+// media query desktop device
+
+  @media (min-width:769px) {
+    
+  .carts{
+    height: 100vh;
+    .desc{
+      @include newsContent;
+      margin: 15px 0;
+     } 
+    }
+  
+  .vertical-carts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .desc:nth-child(1){
+      border-top-color: $Red;
+    }
+    .desc:nth-child(2){
+      margin: 2% 0;
+      border-top-color: $Orange;
+    }
+  }
+  .horizontal-carts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40%;
+    margin-left: 2%;
+    margin-right: 2%;
+    .desc:nth-child(1){
+      margin: -5% -20%;
+      border-top-color: $Cyan;
+    }
+    .desc:nth-child(2){
+      margin: -5% -20%;
+      border-top-color: $Blue;
+    }
+    
+.title{
+  font-weight: 700;
+  color: $veryDarkBlue;
+  }
+}
+p{
+  font-weight: 400;
+  font-size: 16px;
+  color: $grayishBlue;
+}
+.hero{
+  font-size: 2.16em;
+  font-weight: 200;
+
+}
+h1{
+  color: $veryDarkBlue;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+
+.description{
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  line-height: 25px;
+  width: 43%;
+}
+ }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
