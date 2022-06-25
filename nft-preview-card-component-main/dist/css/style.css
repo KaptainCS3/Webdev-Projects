@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(217deg, 54%, 11%);
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+.main .NFT {
+  width: 280px;
+  height: 280px;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+}
+.main .NFT .equilibrium {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.main .NFT .active-state {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: hsla(178deg, 100%, 50%, 0.3);
+  top: 0;
+  border-radius: 10px;
+  display: none;
+}
+.main .NFT .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+section {
+  padding: 20px;
+}
+section .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section .content .hero {
+  font-size: 18px;
+  color: hsl(0deg, 0%, 100%);
+}
+section .content .hero:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+section .content .equ {
+  color: hsl(215deg, 51%, 70%);
+  padding-top: 10px;
+  line-height: 1.5em;
+}
+section .stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 0.5px solid hsl(215deg, 32%, 27%);
+}
+section .stats .ETH {
+  color: hsl(178deg, 100%, 50%);
+}
+section .stats .cards {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+section .stats .cards .days {
+  margin-top: -1px;
+}
+
+.avartar img {
+  border-radius: 50%;
+  width: 40px;
+  height: auto;
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+
+@media screen and (min-width: 200px) and (max-width: 375px) {
+  .container {
+    width: 320px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid transparent;
+    background: hsl(216deg, 50%, 16%);
+    border-radius: 15px;
+  }
+}
+/*      Desktop view design     */
+@media screen and (min-width: 376px) {
+  .container {
+    width: 320px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid transparent;
+    background: hsl(216deg, 50%, 16%);
+    border-radius: 15px;
+  }
+}
+.days {
+  color: hsl(215deg, 51%, 70%);
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.creat {
+  padding-right: 30px;
+}
+.creat .crt {
+  color: hsl(215deg, 51%, 70%);
+}
+.creat .avar-name {
+  color: hsl(0deg, 0%, 100%);
+}
+.creat .avar-name:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NFT:hover .active-state {
+  display: block;
+  opacity: 0.6;
+}
+
+.NFT:hover .view {
+  display: block;
+}
+
+.NFT:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(185deg, 75%, 39%);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .card {
+  width: 350px;
+  height: 380px;
+}
+.main .card .card-bg {
+  height: 40%;
+}
+.main .card .card-bg img {
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+}
+.main .card .avatar img {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+.main .card .content {
+  background: #fff;
+  height: 70%;
+  border-radius: 0 0 10px 10px;
+}
+.main .card .content .abt_avatar {
+  border-bottom: 0.3px solid hsl(0deg, 0%, 59%);
+  padding-bottom: 30px;
+}
+.main .card .content .abt_avatar .hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 70px;
+  font-size: 18px;
+  color: hsl(229deg, 23%, 23%);
+  font-weight: 700;
+}
+.main .card .content .abt_avatar .hero .age {
+  padding-left: 10px;
+  color: hsl(227deg, 10%, 46%);
+  font-weight: 400;
+}
+.main .card .content .abt_avatar .ci {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.main .card .content .abt_avatar .ci .city {
+  font-weight: 400;
+  color: hsl(0deg, 0%, 59%);
+}
+.main .card .footer {
+  display: flex;
+  margin: 35px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .card .footer .avatar_stats {
+  text-align: center;
+}
+.main .card .footer .avatar_stats .values {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.main .card .footer .avatar_stats .stats {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 59%);
+}
+
+@media screen and (min-width: 200px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 30vw bottom 45vh, left 40vw top 50vh;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 30vw bottom 45vh, left 40vw top 50vh;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=style.css.map */
