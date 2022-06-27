@@ -1,0 +1,46 @@
+// #### Text
+
+
+// (sub-heading at the top of the app UI)
+$paleViolet: hsl(276, 100%, 81%);
+
+// (chat on the left)
+$moderateViolet: hsl(276, 55%, 52%);
+
+// (chat on the right)
+$desaturatedDarkViolet: hsl(271, 15%, 43%);
+
+// (placeholder text)
+$grayishBlue: hsl(206, 6%, 79%);
+
+// (main heading)
+$veryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+// (paragraph)
+$darkGrayishViolet: hsl(270, 7%, 64%);
+
+
+// #### Gradients
+
+// These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+$lightMagenta: hsl(293, 100%, 63%);
+$lightViolet: hsl(264, 100%, 61%);
+
+$mainApp-bg: linear-gradient(to right, $lightViolet -12%, $lightMagenta 155%);
+$bg-obj: linear-gradient(to top, $lightViolet -12%, $lightMagenta 155%);
+
+// ### Secondary
+
+$white: hsl(0, 0%, 100%);
+
+// (app background)
+
+$lightGrayishViolet : hsl(270, 20%, 96%);
+
+// (submit button background)
+
+$veryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+
+// (radio button outline)
+
+$veryLightMagenta: hsl(289, 100%, 72%);

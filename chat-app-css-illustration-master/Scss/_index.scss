@@ -1,0 +1,154 @@
+
+@mixin object($bg-value){
+    height: 80%;
+    width: 65%;
+    background: $bg-value;
+}
+
+@mixin  flexbox-v{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin  flexbox-h{
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    .left{
+        width: 50%;
+        height: 100%;
+        @include flexbox-h();
+        .bg-obj{
+            @include object($bg-obj);
+            border-bottom-right-radius: 200px;
+            border-bottom-left-radius: 200px;
+            margin: 0 -90px;
+        }
+        .chat-ui{
+            width: 45%;
+            height: 60%;
+            background: $white;
+            border: 5px solid $white;
+            margin-top: 120px;
+            margin-left: 20px;
+            border-radius: 20px;
+            padding: 10px 8px;
+            box-shadow: 4px 34px 59px #cfcfcf;
+            .app-heading{
+                width: 100%;
+                height: 15%;
+                background: $mainApp-bg;
+                border-radius: 20px 20px 5px 5px;
+                padding: 20px;
+                .user-details{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 10px;
+                    .return-arrow{
+                        margin-left: -55px;
+                        color: $white;
+                        font-size: 1.2em;
+                        // font-weight: 500;
+                    }
+                    .avarta-img{
+                        width: 30px;
+                        height: 30px;
+                        margin-left: -45px;
+                    .avarta{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        border: 2px solid $white;
+                    }
+                    }
+                    .details{
+                        margin-left: -45px;
+                        p:nth-child(1){
+                            font-size: .8em;
+                            color: $white;
+                            font-weight: 400;
+                        }
+                        p:nth-child(2){
+                            font-size: 0.6em;
+                             color: #d89eff;
+                             font-weight: 400;
+                             margin-top: 5px;
+                        }
+                    }
+                    .more-opt{
+                        margin-right: -55px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                    span{
+                        margin: 1px 0;
+                        width: 5px;
+                        height: 5px;
+                        background: $white;
+                        border-radius: 50%;
+                    }
+                    }
+                }
+            }
+            .chat-section{
+                background: $lightGrayishViolet;
+                height: 85%;
+                .left-reply{
+                    width: 60%;
+                }
+                .pet-gallary{
+                    @include flexbox-h();
+                    display: flex;
+                    width: 55%;
+                    justify-content: flex-end;
+                    .pets-img{
+                       width: 100%;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 12px;
+                        }
+                    }
+                }
+            }
+            .client-reply{
+                display: flex;
+                justify-content: flex-end;              
+                font-size: 0.7em;
+                p{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .right{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        .main-content{
+            z-index: 1;
+            width: 65%;
+        }
+        .bg-obj{
+            @include object($lightGrayishViolet);
+            border-top-right-radius: 200px;
+            border-top-left-radius: 200px;
+            padding: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+    }
+}
