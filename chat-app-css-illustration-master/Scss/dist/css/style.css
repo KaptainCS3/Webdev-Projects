@@ -257,6 +257,7 @@
   font-size: 0.8em;
   width: 352.09px;
   line-height: 25px;
+  color: hsl(270deg, 7%, 64%);
 }
 
 * {
@@ -513,6 +514,7 @@ body {
     font-size: 0.8em;
     width: 352.09px;
     line-height: 25px;
+    color: hsl(270deg, 7%, 64%);
   }
 }
 @media (min-width: 440px) and (max-width: 680px) {
@@ -769,6 +771,7 @@ body {
     width: 350px;
     padding: 20px;
     font-size: 1em;
+    color: hsl(270deg, 7%, 64%);
   }
 }
 @media (max-width: 439px) {
@@ -854,5 +857,6 @@ body {
     width: 350px;
     padding: 20px;
     font-size: 1em;
+    color: hsl(270deg, 7%, 64%);
   }
 }/*# sourceMappingURL=style.css.map */

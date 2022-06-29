@@ -251,13 +251,14 @@
             .description{
                 font-size: 0.8em;
                 width: 352.09px;
-                // height: 90;
                 line-height: 25px;
+                color: $darkGrayishViolet;
             }
         }
     }
 }
 
+// Desktop media query
 @mixin desktop-query{
     .container{
     display: flex;
@@ -495,19 +496,20 @@
             .hero{
                 font-size: 2em;
                 margin: 20px 0;
-                color: $veryDarkDesaturatedViolet
+                color: $veryDarkDesaturatedViolet;
             }
             .description{
                 font-size: 0.8em;
                 width: 352.09px;
-                // height: 90;
                 line-height: 25px;
+                color: $darkGrayishViolet;
             }
         }
     }
 }
 }
 
+// Tablet media query
 @mixin tablet-query{
        body{
             overflow-x: hidden;
@@ -762,13 +764,15 @@
                 text-align: center;
                 width: 350px;
                 padding: 20px;
-                font-size: 1em
+                font-size: 1em;
+                color: $darkGrayishViolet;
             }
         }
     }
 }
 }
 
+// Mobile media query
 @mixin mobile-query {
          body{
             overflow-x: hidden;
@@ -847,7 +851,8 @@
                 text-align: center;
                 width: 350px;
                 padding: 20px;
-                font-size: 1em
+                font-size: 1em;
+                color: $darkGrayishViolet;
             }
         }
     }
