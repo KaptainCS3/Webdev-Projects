@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./Scss/dist/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="navEl">
+    <p class="logo">
+      <img src="./images/logo.svg" alt="logo-image">
+    </p>
+    <ul class="navBar">
+      <li class="navItems">
+        <a href="#" class="navLinks">Features
+          <span><img src="./images/icon-arrow-down.svg" alt=""></span>
+          <span><img src="./images/icon-arrow-up.svg" alt=""></span>
+        </a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">Company 
+                  <span><img src="./images/icon-arrow-down.svg" alt=""></span>
+                  <span><img src="./images/icon-arrow-up.svg" alt=""></span>
+        </a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">Careers</a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">About</a>
+      </li>
+    </ul>
+    </div>
+    <div class="login-register">
+      <ul>
+        <li class="navItems">
+          <a href="#" class="navLinks">Login</a>
+        </li>
+        <li class="navItems"> 
+        <a href="#" class="navLinks">Register</a>
+        </li>
+      </ul>
+    </div>
+    <span class="burger-menu"></span>
+  </nav>
+  <main class="container">
+    <section class="content">
+      <h1 class="hero">Make remote work</h1>
+      <p class="description">Get your team in sync, no matter your location. Streamline processes,
+      create team rituals, and watch productivity soar.
+      </p>
+      <div class="btn">
+        <button class="learn-more">Learn more</button>
+      </div>
+      <div class="sponsors">
+        <img src="./images/client-databiz.svg" alt="databiz" class="sponsor-img">
+        <img src="./images/client-audiophile.svg" alt="audio phile" class="sponsor-img">
+        <img src="./images/client-meet.svg" alt="meet" class="sponsor-img">
+        <img src="./images/client-maker.svg" alt="maker" class="sponsor-img">
+      </div>
+    </section>
+    <section class="illustrator">
+      <div class="img">
+        <img src="./images/image-hero-desktop.png" alt="image-hero-desktop" class="desktop">
+        <img src="./images/image-hero-mobile.png" alt="image-mobile-desktop" class="mobile">
+      </div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
