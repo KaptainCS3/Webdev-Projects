@@ -27,7 +27,9 @@ $lightMagenta: hsl(293, 100%, 63%);
 $lightViolet: hsl(264, 100%, 61%);
 
 $mainApp-bg: linear-gradient(to right, $lightViolet, $lightMagenta);
-$bg-obj: linear-gradient(to top, $lightViolet, $lightMagenta);
+$bg-obj-left: linear-gradient(to top, $lightViolet, $lightMagenta);
+$bg-obj-right: hsl(270, 20%, 96%);
+
 
 // ### Secondary
 
