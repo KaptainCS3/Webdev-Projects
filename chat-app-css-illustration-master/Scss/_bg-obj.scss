@@ -1,12 +1,11 @@
 @mixin object($bg-value){
-    // width: 412px;
     background: $bg-value;
 }
 
 .left{
     .bg-obj{
         width: 60%;
-            @include object($bg-obj);
+            @include object($bg-obj-left);
             height: 750px;
             border-bottom-right-radius: 200px;
             border-bottom-left-radius: 200px;
@@ -16,7 +15,7 @@
 .right{
     .bg-obj{
         width: 45%;
-            @include object($lightGrayishViolet);
+            @include object($bg-obj-right);
             border-top-right-radius: 0;
             border-top-left-radius: 300px;
             height: 750px;
