@@ -3,3 +3,18 @@
 $almostWhite: hsl(0, 0%, 98%);
 $mediumGray: hsl(0, 0%, 41%);
 $almostBlack: hsl(0, 0%, 8%);
+
+/**
+ * Initial state, hidden off screen
+ */
+.clicky-menu ul {
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+}
+.clicky-menu ul[aria-hidden=false] {
+  visibility: visible;
+}
+.clicky-menu > li {
+  position: relative;
+}
