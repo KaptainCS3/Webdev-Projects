@@ -14,58 +14,120 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-  <nav class="nav">
-    <div class="navEl">
-    <p class="logo">
-      <img src="./images/logo.svg" alt="logo-image">
-    </p>
-    <ul class="navBar">
-      <li class="navItems">
-        <a href="#" class="navLinks">Features
-          <span><img src="./images/icon-arrow-down.svg" alt=""></span>
-          <span><img src="./images/icon-arrow-up.svg" alt=""></span>
-        </a>
-      </li>
-      <li class="navItems">
-        <a href="#" class="navLinks">Company 
-                  <span><img src="./images/icon-arrow-down.svg" alt=""></span>
-                  <span><img src="./images/icon-arrow-up.svg" alt=""></span>
-        </a>
-      </li>
-      <li class="navItems">
-        <a href="#" class="navLinks">Careers</a>
-      </li>
-      <li class="navItems">
-        <a href="#" class="navLinks">About</a>
-      </li>
-    </ul>
-    </div>
-    <div class="login-register">
-      <ul>
-        <li class="navItems">
-          <a href="#" class="navLinks">Login</a>
+    <nav class="nav id="site-navigation" class="site-navigation" aria-label="Clickable Menu Demonstration">
+      <div class="navEl">
+        <div class="box">
+      <p class="logo"><img src="./images/logo.svg" alt=""></p>
+      <div id="marker"></div>
+      <ul class="navBar main-menu clicky-menu no-js">
+        <li class="navItems dropdown" id="myDropdwon">
+          <a href="#" class="navLinks">Features
+            <span><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></span>
+            <span><img src="./images/icon-arrow-up.svg" alt="icon-arrow-up"></span>
+          </a>
+          <ul class="inner-list-features">
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-todo.svg" alt="icon-todo">
+                </span>
+                Todo List
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-calendar.svg" alt="icon-calendar">
+                </span>
+                Calendar
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-reminders.svg" alt="icon-reminders">
+                </span>
+                Reminders
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-planning.svg" alt="icon-planning">
+                </span>
+                Planning
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="navItems"> 
-        <a href="#" class="navLinks">Register</a>
+        <li class="navItems dropdown">
+          <a href="#" class="navLinks">Company
+            <span><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></span>
+            <span><img src="./images/icon-arrow-up.svg" alt="icon-arrow-up"></span>
+          </a>
+          <ul class="inner-list-company">
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">History
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">Our Team
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">Blog
+              </a>
+            </li>
+            </ul>
+        </li>
+        <li class="navItems">
+          <a href="#" class="navLinks">Careers</a>
+        </li>
+        <li class="navItems">
+          <a href="#" class="navLinks">About</a>
         </li>
       </ul>
-    </div>
-    <span class="burger-menu"></span>
-  </nav>
+      </div>
+      
+        <ul class="login-register-btn">
+          <li class="navItems">
+            <a href="#" class="navLinks">Login</a>
+          </li>
+          <li class="navItems">
+            <a href="#" class="navLinks brd">Register</a>
+          </li>
+        </ul>
+
+      <span class="burger-menu">
+        <img src="./images/icon-menu.svg" alt="">
+      </span>
+      </div>
+    </nav> 
+    
   <main class="container">
     <section class="content">
       <h1 class="hero">Make remote work</h1>
+      <div class="description">
       <p class="description">Get your team in sync, no matter your location. Streamline processes,
       create team rituals, and watch productivity soar.
       </p>
+      </div>
       <div class="btn">
         <button class="learn-more">Learn more</button>
       </div>
       <div class="sponsors">
-        <img src="./images/client-databiz.svg" alt="databiz" class="sponsor-img">
-        <img src="./images/client-audiophile.svg" alt="audio phile" class="sponsor-img">
-        <img src="./images/client-meet.svg" alt="meet" class="sponsor-img">
-        <img src="./images/client-maker.svg" alt="maker" class="sponsor-img">
+        <div class="spnsors-brand">
+          <img src="./images/client-databiz.svg" alt="databiz" class="sponsor-img">
+        </div>
+        <div class="spnsors-brand">
+          <img src="./images/client-audiophile.svg" alt="audio phile" class="sponsor-img">
+        </div>
+        <div class="spnsors-brand">
+          <img src="./images/client-meet.svg" alt="meet" class="sponsor-img">
+        </div>
+        <div class="spnsors-brand">
+          <img src="./images/client-maker.svg" alt="maker" class="sponsor-img">
+        </div>
       </div>
     </section>
     <section class="illustrator">
@@ -76,9 +138,10 @@
     </section>
   </main>
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script src="./Script/dist/js/app.js"></script>
 </body>
 </html>
