@@ -19,3 +19,12 @@ document.querySelector('hover-f').addEventListener('click', (e) => {
     let show = document.querySelector('show');
     show.classList.add('newStyle');
 });
+
+
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "450px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
