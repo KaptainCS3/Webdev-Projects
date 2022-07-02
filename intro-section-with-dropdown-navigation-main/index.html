@@ -9,16 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-
-      <!-- <span class="burger-menu">
-        <img src="./images/icon-menu.svg" alt="">
-      </span> -->
-      <!-- </div> -->
     <nav class="nav">
       <div class="wrapper">
         <div class="nav-wrapper">
@@ -64,7 +60,7 @@
                 </li>
               </ul>
             </div>
-            <div class="navItems dropdown" data-dropdown="">
+            <div class="navItems dropdown" data-dropdown>
               <button class="navLinks link" id="hover-c" data-dropdown-button="">Company
                 <span class="show"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></span>
                 <span class="hide"><img src="./images/icon-arrow-up.svg" alt="icon-arrow-up"></span>
@@ -102,21 +98,94 @@
           </li>
         </ul>
     
-        <!-- <span class="burger-menu"> -->
-          <!-- <img src="./images/icon-menu.svg" alt=""> -->
-        <!-- </span> -->
+        <div class="burger-menu">
+          <div class="menu"></div>
+          <div class="close"></div>
+        </div>
       </div>
       </div>
     </nav>
-    
+
+    <!-- <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <div class="header">
+                <div class="navItems dropdown" data-dropdown>
+                  <a class="link navLinks" id="hover-f" data-dropdown-button>Features
+                    <span class="show"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></span>
+                    <span class="hide"><img src="./images/icon-arrow-up.svg" alt="icon-arrow-up"></span>
+                  </a>
+                  <ul class="inner-list-features dropdown-menu">
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner">
+                        <span>
+                          <img src="./images/icon-todo.svg" alt="icon-todo">
+                        </span>
+                        Todo List
+                      </a>
+                    </li>
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner">
+                        <span>
+                          <img src="./images/icon-calendar.svg" alt="icon-calendar">
+                        </span>
+                        Calendar
+                      </a>
+                    </li>
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner">
+                        <span>
+                          <img src="./images/icon-reminders.svg" alt="icon-reminders">
+                        </span>
+                        Reminders
+                      </a>
+                    </li>
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner">
+                        <span>
+                          <img src="./images/icon-planning.svg" alt="icon-planning">
+                        </span>
+                        Planning
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="navItems dropdown" data-dropdown>
+                  <a class="navLinks link" id="hover-c" data-dropdown-button>Company
+                    <span class="show"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></span>
+                    <span class="hide"><img src="./images/icon-arrow-up.svg" alt="icon-arrow-up"></span>
+                  </a>
+                  <ul class="inner-list-company dropdown-menu">
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner link">History
+                      </a>
+                    </li>
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner link">Our Team
+                      </a>
+                    </li>
+                    <li class="navItems-inner">
+                      <a href="#" class="navLinks-inner link">Blog
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <li class="navItems">
+                  <a href="#" class="navLinks link" id="hover-cr">Careers</a>
+                </li>
+                <li class="navItems">
+                  <a href="#" class="navLinks link" id="hover-a">About</a>
+                </li>
+                </ul>
+              </div>
+    </div>
+    <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button>
+     -->
   <main class="container">
     <section class="content">
       <h1 class="hero">Make remote work</h1>
-      <div class="description">
       <p class="description">Get your team in sync, no matter your location. Streamline processes,
       create team rituals, and watch productivity soar.
       </p>
-      </div>
       <div class="btn">
         <button class="learn-more">Learn more</button>
       </div>
