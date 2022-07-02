@@ -4,6 +4,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+//  #hover-a, #hover-c, #hover-cr, #hover-f{
+//     font-size: 0.9em;
+//     color: $mediumGray;
+// }
+
 #hover-f:hover,#hover-c:hover, #hover-cr:hover, #hover-a:hover{
     color: $almostBlack;
 }
