@@ -99,15 +99,15 @@
         </ul>
     
         <div class="burger-menu">
-          <div class="menu"></div>
-          <div class="close"></div>
+          <div class="menu openbtn" onclick="openNav()"></div>
+          </div>
         </div>
+        
       </div>
       </div>
     </nav>
-
-    <!-- <div id="mySidepanel" class="sidepanel">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div id="mySidepanel" class="sidepanel"> 
+      <div class="close closebtn" onclick="closeNav()">
               <div class="header">
                 <div class="navItems dropdown" data-dropdown>
                   <a class="link navLinks" id="hover-f" data-dropdown-button>Features
@@ -178,14 +178,18 @@
                 </ul>
               </div>
     </div>
-    <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button>
-     -->
+    <!-- <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button> -->
+    
   <main class="container">
     <section class="content">
+      <div class="heading">
       <h1 class="hero">Make remote work</h1>
+      </div>
+      <div class="description-box">
       <p class="description">Get your team in sync, no matter your location. Streamline processes,
       create team rituals, and watch productivity soar.
       </p>
+      </div>
       <div class="btn">
         <button class="learn-more">Learn more</button>
       </div>
@@ -206,8 +210,8 @@
     </section>
     <section class="illustrator">
       <div class="img">
-        <img src="./images/image-hero-desktop.png" alt="image-hero-desktop" class="desktop">
-        <img src="./images/image-hero-mobile.png" alt="image-mobile-desktop" class="mobile">
+        <div class="desktop"></div>
+        <div class="mobile"></div>
       </div>
     </section>
   </main>
