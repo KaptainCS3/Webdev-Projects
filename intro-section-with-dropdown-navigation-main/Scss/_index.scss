@@ -4,28 +4,35 @@
     width: 100%;
     height: 60px;
     display: flex;
-    .navEl{
-    display: flex;
     justify-content: space-between;
-    width: 100%;
-    .box{
+    .wrapper{
         display: flex;
-        width: 80%;
-        justify-content: space-between;
-        padding-left: 30px;
-        
         align-items: center;
-        .logo{
+        // padding-left: 25px;
+        width: 100%;
+        .nav-wrapper{
             display: flex;
-            padding-right: 50px;
-        }
-        .navBar{
-            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            // padding-left: 30px;
             width: 100%;
-           .navItems{
-             padding: 0 20px;
+            .header{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                padding: 0 25px;
+                .navLinks{
+                    padding: 0 25px;
+                    font-size: 0.9em;
+                    color: $mediumGray;
+                }
+                button{
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: 500;
+                }
             }
-           }
         }
     }
     .login-register-btn{
@@ -33,7 +40,15 @@
         justify-content: space-evenly;
         align-items: center;
         height: 100%;
-        padding-left: 45px;
+        .brd{
+            border: 2px solid $mediumGray;
+            padding: 10px 10px;
+            margin-left: -20px;
+            border-radius: 12px;
+            &:hover{
+                border-color: $almostBlack;
+            }
+        }
         li{
             padding-left: 20px;
             padding-right: 35px;
@@ -43,18 +58,18 @@
 .container{
     display: flex;
     justify-content: space-between;
-    margin: 40px 100px;
-    width: 85%;
+    margin: 50px auto;
+    width: 80%;
     .content{
-        width: 100%;
+        width: 50%;
         display: flex;
         flex-direction: column;
-        margin-left: 35px;
+        margin-left: 20px;
         .hero{
             font-size: 4em;
-            width: 420px;
-            margin-top: 28%;
-            margin-bottom: 12%;
+            width: 430px;
+            margin-top: 25%;
+            margin-bottom: 5%;
             color: $almostBlack;
         }
         .description{
@@ -62,9 +77,10 @@
             width: 380px;
             line-height: 25px;
             color: $mediumGray;
+
         }
         .btn{
-            margin-top: 5%;
+            margin-top: 12%;
             width: 145px;
             height: 50px;
             .learn-more{
@@ -74,30 +90,26 @@
                 border-radius: 15px;
                 color: $almostWhite;
                 background: $almostBlack;
-                border: 1px solid transparent;
+                border: 2px solid transparent;
                 font-weight: 700;
                   &:hover{
                 color: $almostBlack;
                 background: $almostWhite;
                 cursor: pointer;
-                border: 1px solid;
+                border: 2px solid;
             }
             }
         }
         .sponsors{
             display: flex;
             justify-content: space-evenly;
-            margin-left: -10%;
-            margin-top: 35%;
-            width: 100%;
+            margin-top: 15%;
+            margin-left: -3%;
+            width: 80%;
         }
     }
     .illustrator{
-        width: 100%;
-        height: 100%;
-        .desktop{
-            width: 100%;
-            height: 800%;
-        }
+        width: 450px;
+        height: 600px;
     }
 }
