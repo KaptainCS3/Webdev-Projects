@@ -3,35 +3,12 @@
         display: none;
     }
 }
-@media  (min-width: 440px) and (max-width: 680px) {
-    .navEl{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    
-    body{
-        // overflow-x: hidden;
-           .navBar{
-        display: none;
-    } 
-     .desktop{
-        display: none;
-    }
-    .navItems{
-        display: none;
-    }
-    }
-    .container{
-        flex-direction: column-reverse;
-    }
-    .burger-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-    .mobile{
-            width: 100%;
-            height: 100%;
-    }
+@media  (min-width: 440px) and (max-width: 680px){
+   .login-register-btn .navItems,  .nav-wrapper .header .navItems, .desktop{
+    display: none;
+   }
+   body{
+    overflow-x: hidden;
+
+   }
 }
