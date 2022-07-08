@@ -1,15 +1,269 @@
-@media (min-width: 769px) {
+/**
+ * Initial state, hidden off screen
+ */
+@media (min-width: 768px) {
   .mobile, .burger-menu {
     display: none;
   }
+
+  .desktop {
+    background: url("/images/image-hero-desktop.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
-@media (min-width: 440px) and (max-width: 680px) {
+@media (min-width: 250px) and (max-width: 439px) {
+  body {
+    overflow-x: hidden;
+  }
+  body #hover-f-mobile:hover, body #hover-c-mobile:hover, body #hover-cr-mobile:hover, body #hover-a-mobile:hover {
+    color: hsl(0deg, 0%, 8%);
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .container .content {
+    margin-top: -25%;
+    width: 50%;
+    align-items: center;
+    padding-left: 150px;
+  }
+  .container .content .hero {
+    font-size: 2.5em;
+    width: 430px;
+    padding-top: 25%;
+    padding-bottom: 5%;
+    margin-left: 50px;
+    color: hsl(0deg, 0%, 8%);
+  }
+  .container .content .description {
+    font-size: 1em;
+    width: 330px;
+    line-height: 25px;
+    color: hsl(0deg, 0%, 41%);
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .container .content .btn {
+    margin-top: 15%;
+    width: 145px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .container .content .btn .learn-more {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    border-radius: 15px;
+    color: hsl(0deg, 0%, 98%);
+    background: hsl(0deg, 0%, 8%);
+    border: 2px solid transparent;
+    font-weight: 700;
+  }
+  .container .content .btn .learn-more:hover {
+    color: hsl(0deg, 0%, 8%);
+    background: hsl(0deg, 0%, 98%);
+    cursor: pointer;
+    border: 2px solid;
+  }
+  .container .content .sponsors {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15%;
+    width: 50%;
+  }
+  .container .content .sponsors .sponsors-brand {
+    padding: 0 10px;
+  }
+
   .login-register-btn .navItems, .nav-wrapper .header .navItems, .desktop {
     display: none;
   }
 
+  .menu {
+    width: 32px;
+    height: 18px;
+    background: url("/images/icon-menu.svg");
+    background-repeat: no-repeat;
+    margin-top: -10px;
+    margin-bottom: -35px;
+    margin-left: -60px;
+  }
+
+  .illustrator {
+    margin-top: -15%;
+    width: 103.9%;
+    margin-left: -12%;
+  }
+  .illustrator .mobile img {
+    width: 120%;
+  }
+
+  .closebtn {
+    margin-top: 15px;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: url(/images/icon-close-menu.svg);
+  }
+  .closebtn:hover {
+    cursor: pointer;
+  }
+}
+@media (min-width: 440px) and (max-width: 550px) {
   body {
     overflow-x: hidden;
+  }
+  body #hover-f-mobile:hover, body #hover-c-mobile:hover, body #hover-cr-mobile:hover, body #hover-a-mobile:hover {
+    color: hsl(0deg, 0%, 8%);
+  }
+
+  #mySidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background-color: hsl(0deg, 0%, 98%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  #mySidenav .header {
+    position: absolute;
+    width: 280px;
+    top: 100px;
+    right: 0;
+    transition: 0.4s ease;
+  }
+  #mySidenav .header .navLinks {
+    padding: 8px 8px 8px 32px;
+    font-size: 1em;
+    color: hsl(0deg, 0%, 41%);
+    display: block;
+  }
+  #mySidenav .mobile-login {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 500;
+  }
+  #mySidenav .mobile-login .login-register-btn-mobile .login {
+    padding: 35px 400px;
+  }
+  #mySidenav .mobile-login .login-register-btn-mobile .brd {
+    border: 2px solid hsl(0deg, 0%, 41%);
+    padding: 14px 70px;
+    border-radius: 12px;
+  }
+  #mySidenav .mobile-login .login-register-btn-mobile .brd:hover {
+    border-color: hsl(0deg, 0%, 8%);
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .container .content {
+    margin-top: -25%;
+    width: 50%;
+    align-items: center;
+    padding-left: 150px;
+  }
+  .container .content .hero {
+    font-size: 2.8em;
+    width: 430px;
+    padding-top: 30%;
+    padding-bottom: 5%;
+    margin-left: 15px;
+    color: hsl(0deg, 0%, 8%);
+  }
+  .container .content .description {
+    font-size: 1.4em;
+    width: 490px;
+    line-height: 25px;
+    color: hsl(0deg, 0%, 41%);
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .container .content .btn {
+    margin-top: 15%;
+    width: 145px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .container .content .btn .learn-more {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    border-radius: 15px;
+    color: hsl(0deg, 0%, 98%);
+    background: hsl(0deg, 0%, 8%);
+    border: 2px solid transparent;
+    font-weight: 700;
+  }
+  .container .content .btn .learn-more:hover {
+    color: hsl(0deg, 0%, 8%);
+    background: hsl(0deg, 0%, 98%);
+    cursor: pointer;
+    border: 2px solid;
+  }
+  .container .content .sponsors {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15%;
+    width: 50%;
+  }
+  .container .content .sponsors .sponsors-brand {
+    padding: 0 18px;
+  }
+
+  .login-register-btn .navItems, .nav-wrapper .header .navItems, .desktop {
+    display: none;
+  }
+
+  .menu {
+    width: 32px;
+    height: 18px;
+    background: url("/images/icon-menu.svg");
+    background-repeat: no-repeat;
+    margin-top: -10px;
+    margin-bottom: -35px;
+    margin-left: -60px;
+  }
+
+  .illustrator {
+    margin-top: -15%;
+    width: 103.9%;
+    margin-left: -12%;
+  }
+  .illustrator .mobile img {
+    width: 120%;
+  }
+
+  .closebtn {
+    margin-top: 15px;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: url(/images/icon-close-menu.svg);
+  }
+  .closebtn:hover {
+    cursor: pointer;
   }
 }
 /**
@@ -82,52 +336,6 @@
   flex-direction: column;
   margin-left: 20px;
 }
-.container .content .hero {
-  font-size: 4em;
-  width: 430px;
-  margin-top: 25%;
-  margin-bottom: 5%;
-  color: hsl(0deg, 0%, 8%);
-}
-.container .content .description {
-  font-size: 1em;
-  width: 380px;
-  line-height: 25px;
-  color: hsl(0deg, 0%, 41%);
-}
-.container .content .btn {
-  margin-top: 12%;
-  width: 145px;
-  height: 50px;
-}
-.container .content .btn .learn-more {
-  width: 100%;
-  height: 100%;
-  font-size: 1.2em;
-  border-radius: 15px;
-  color: hsl(0deg, 0%, 98%);
-  background: hsl(0deg, 0%, 8%);
-  border: 2px solid transparent;
-  font-weight: 700;
-}
-.container .content .btn .learn-more:hover {
-  color: hsl(0deg, 0%, 8%);
-  background: hsl(0deg, 0%, 98%);
-  cursor: pointer;
-  border: 2px solid;
-}
-.container .content .sponsors {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 15%;
-  margin-left: -3%;
-  width: 80%;
-}
-.container .illustrator {
-  width: 450px;
-  height: 600px;
-}
-
 /**
  * Initial state, hidden off screen
  */
@@ -139,6 +347,10 @@
 
 #hover-f:hover, #hover-c:hover, #hover-cr:hover, #hover-a:hover {
   color: hsl(0deg, 0%, 8%);
+}
+
+a {
+  cursor: pointer;
 }
 
 body {
@@ -230,10 +442,6 @@ body .inner-list-company {
   display: none;
 }
 
-.show {
-  display: none;
-}
-
 .newStyle {
   display: block;
 }
@@ -264,13 +472,54 @@ body .inner-list-company {
   color: black;
 }
 
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-}
-
 .openbtn:hover {
   cursor: pointer;
+}
+
+#mySidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  background-color: hsl(0deg, 0%, 98%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+#mySidenav .header {
+  position: absolute;
+  width: 280px;
+  top: 100px;
+  right: 0;
+  transition: 0.4s ease;
+}
+#mySidenav .header .navLinks {
+  padding: 8px 8px 8px 32px;
+  font-size: 1em;
+  color: hsl(0deg, 0%, 41%);
+  display: block;
+}
+#mySidenav .mobile-login {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+}
+#mySidenav .mobile-login .login-register-btn-mobile .login {
+  padding: 35px 80px;
+}
+#mySidenav .mobile-login .login-register-btn-mobile .brd {
+  border: 2px solid hsl(0deg, 0%, 41%);
+  padding: 14px 70px;
+  border-radius: 12px;
+}
+#mySidenav .mobile-login .login-register-btn-mobile .brd:hover {
+  border-color: hsl(0deg, 0%, 8%);
 }/*# sourceMappingURL=style.css.map */
