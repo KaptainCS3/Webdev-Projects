@@ -12,6 +12,9 @@
 #hover-f:hover,#hover-c:hover, #hover-cr:hover, #hover-a:hover{
     color: $almostBlack;
 }
+a{
+cursor: pointer;
+}
 body{
     // overflow-x: hidden;
     // overflow-y: hidden;
