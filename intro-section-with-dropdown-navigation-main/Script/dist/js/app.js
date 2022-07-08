@@ -22,10 +22,10 @@ document.querySelector('hover-f').addEventListener('click', (e) => {
 
 
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "450px";
+  document.getElementById("mySidenav").style.width = "70%";
 }
 
 function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
+  document.getElementById("mySidenav").style.width = "0";
 }
 
