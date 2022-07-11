@@ -1,26 +1,23 @@
 document.addEventListener("click", (e) => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]");
-  // const arrowIndicator = e.target.matches("[data-dropdown-indicator]");
   if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
 
+  let show = document.querySelector(".arrow-down");
   let currentDropdown;
   if (isDropdownButton) {
     currentDropdown = e.target.closest("[data-dropdown]");
     currentDropdown.classList.toggle("active");
+    // toggle arrow indicator
+    show.classList.toggle("arrow-up");
   }
 
   document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
     if (dropdown === currentDropdown) return;
     dropdown.classList.remove("active");
+    // remove arrow
+    show.classList.remove("arrow-up");
   });
 });
-
-document.querySelector('hover-f').addEventListener('click', (e) => {
-    let show = document.querySelector('show');
-    show.classList.add('newStyle');
-});
-
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "70%";
 }
@@ -29,9 +26,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-
-
-//accordion 
+//accordion
 // var acc = document.getElementsByClassName("accordion");
 // var i;
 // for (i = 0; i < acc.length; i++) {
@@ -45,3 +40,14 @@ function closeNav() {
 //     }
 //   });
 // }
+
+/*
+    -----------------------------------------------
+    |                                             |
+    | drop down toggle bug not completely solved  |
+    |                                             |
+    |                                             |
+    |                                             |
+    -----------------------------------------------
+
+*/
