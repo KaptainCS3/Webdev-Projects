@@ -1,16 +1,20 @@
-/**
- * Initial state, hidden off screen
- */
 @media (min-width: 768px) {
-  .mobile, .burger-menu {
+  .illustrator .mobile, .burger-menu {
     display: none;
   }
-
-  .desktop {
+  body {
+    overflow-x: hidden;
+  }
+  .desktop-view {
+    width: 600px;
+    height: 550px;
+    margin-left: 190px;
+  }
+  .desktop-view .img {
     background: url("/images/image-hero-desktop.png");
-    width: 100%;
+    width: 120%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 }
@@ -21,7 +25,6 @@
   body #hover-f-mobile:hover, body #hover-c-mobile:hover, body #hover-cr-mobile:hover, body #hover-a-mobile:hover {
     color: hsl(0deg, 0%, 8%);
   }
-
   .container {
     flex-direction: column-reverse;
     width: 100%;
@@ -32,17 +35,15 @@
     align-items: center;
     padding-left: 150px;
   }
-  .container .content .hero {
+  .container .content h1.hero {
     font-size: 2.5em;
     width: 430px;
-    padding-top: 25%;
-    padding-bottom: 5%;
     margin-left: 50px;
     color: hsl(0deg, 0%, 8%);
   }
-  .container .content .description {
-    font-size: 1em;
-    width: 330px;
+  .container .content p.description {
+    font-size: 1.2em;
+    width: 400px;
     line-height: 25px;
     color: hsl(0deg, 0%, 41%);
     text-align: center;
@@ -77,13 +78,11 @@
     width: 50%;
   }
   .container .content .sponsors .sponsors-brand {
-    padding: 0 10px;
+    padding: 0px;
   }
-
   .login-register-btn .navItems, .nav-wrapper .header .navItems, .desktop {
     display: none;
   }
-
   .menu {
     width: 32px;
     height: 18px;
@@ -93,7 +92,6 @@
     margin-bottom: -35px;
     margin-left: -60px;
   }
-
   .illustrator {
     margin-top: -15%;
     width: 103.9%;
@@ -102,7 +100,6 @@
   .illustrator .mobile img {
     width: 120%;
   }
-
   .closebtn {
     margin-top: 15px;
     width: 26px;
@@ -123,7 +120,6 @@
   body #hover-f-mobile:hover, body #hover-c-mobile:hover, body #hover-cr-mobile:hover, body #hover-a-mobile:hover {
     color: hsl(0deg, 0%, 8%);
   }
-
   #mySidenav {
     height: 100%;
     width: 0;
@@ -171,7 +167,6 @@
   #mySidenav .mobile-login .login-register-btn-mobile .brd:hover {
     border-color: hsl(0deg, 0%, 8%);
   }
-
   .container {
     flex-direction: column-reverse;
     width: 100%;
@@ -182,17 +177,16 @@
     align-items: center;
     padding-left: 150px;
   }
-  .container .content .hero {
+  .container .content h1.hero {
     font-size: 2.8em;
     width: 430px;
-    padding-top: 30%;
-    padding-bottom: 5%;
+    padding-top: 5%;
     margin-left: 15px;
     color: hsl(0deg, 0%, 8%);
   }
-  .container .content .description {
+  .container .content p.description {
     font-size: 1.4em;
-    width: 490px;
+    width: 460px;
     line-height: 25px;
     color: hsl(0deg, 0%, 41%);
     text-align: center;
@@ -229,11 +223,9 @@
   .container .content .sponsors .sponsors-brand {
     padding: 0 18px;
   }
-
   .login-register-btn .navItems, .nav-wrapper .header .navItems, .desktop {
     display: none;
   }
-
   .menu {
     width: 32px;
     height: 18px;
@@ -243,7 +235,6 @@
     margin-bottom: -35px;
     margin-left: -60px;
   }
-
   .illustrator {
     margin-top: -15%;
     width: 103.9%;
@@ -252,7 +243,6 @@
   .illustrator .mobile img {
     width: 120%;
   }
-
   .closebtn {
     margin-top: 15px;
     width: 26px;
@@ -266,9 +256,27 @@
     cursor: pointer;
   }
 }
-/**
- * Initial state, hidden off screen
- */
+.img-container {
+  width: 10px;
+  height: 6px;
+}
+
+.arrow-down {
+  margin: 5px;
+  height: 100%;
+  width: 100%;
+  background: url(./images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+}
+
+.arrow-up {
+  margin: 5px;
+  height: 100%;
+  width: 100%;
+  background: url(./images/icon-arrow-up.svg);
+  background-repeat: no-repeat;
+}
+
 .nav {
   font-weight: 500;
   width: 100%;
@@ -327,7 +335,9 @@
 .container {
   display: flex;
   justify-content: space-between;
-  margin: 50px auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
   width: 80%;
 }
 .container .content {
@@ -336,9 +346,51 @@
   flex-direction: column;
   margin-left: 20px;
 }
-/**
- * Initial state, hidden off screen
- */
+.container .content .hero {
+  font-size: 4em;
+  width: 430px;
+  margin-top: 26%;
+  color: hsl(0deg, 0%, 8%);
+}
+.container .content .description {
+  font-size: 1em;
+  padding-top: 5%;
+  width: 380px;
+  line-height: 25px;
+  color: hsl(0deg, 0%, 41%);
+}
+.container .content .btn {
+  margin-top: 12%;
+  width: 145px;
+  height: 50px;
+}
+.container .content .btn .learn-more {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  border-radius: 15px;
+  color: hsl(0deg, 0%, 98%);
+  background: hsl(0deg, 0%, 8%);
+  border: 2px solid transparent;
+  font-weight: 700;
+}
+.container .content .btn .learn-more:hover {
+  color: hsl(0deg, 0%, 8%);
+  background: hsl(0deg, 0%, 98%);
+  cursor: pointer;
+  border: 2px solid;
+}
+.container .content .sponsors {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13%;
+  margin-left: -3%;
+  width: 100%;
+}
+.container .content .sponsors .sponsors-brand {
+  padding: 0 12px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -371,40 +423,35 @@ body li a:hover {
 body .inner-list-features {
   background: #fff;
   position: absolute;
-  height: 180px;
-  width: 160px;
-  margin-top: 20px;
-  margin-left: -5%;
+  height: 160px;
+  width: 145px;
+  margin-top: 15px;
+  margin-left: -25%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 20px whitesmoke, -5px -5px 35px whitesmoke;
+  box-shadow: 5px 5px 25px rgb(209, 209, 209), -5px 1px 25px rgb(209, 209, 209);
   border-radius: 10px;
 }
 body .inner-list-features span {
   padding-right: 10px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 body .inner-list-company {
   position: absolute;
-  width: 150px;
-  margin-top: 20px;
+  margin-top: 15px;
   background: #fff;
   position: absolute;
-  height: 140px;
+  height: 120px;
   width: 120px;
-  margin-top: 20px;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 20px whitesmoke, -5px -5px 35px whitesmoke;
+  box-shadow: 5px 5px 25px rgb(209, 209, 209), -5px 1px 25px rgb(209, 209, 209);
   border-radius: 10px;
 }
 
-/**
- * Initial state, hidden off screen
- */
 .dropdown.active > .link, .link:hover {
   color: hsl(0deg, 0%, 8%);
 }
@@ -436,14 +483,6 @@ body .inner-list-company {
 
 .link span {
   padding-left: 5px;
-}
-
-.hide {
-  display: none;
-}
-
-.newStyle {
-  display: block;
 }
 
 .sidepanel {
@@ -522,4 +561,29 @@ body .inner-list-company {
 }
 #mySidenav .mobile-login .login-register-btn-mobile .brd:hover {
   border-color: hsl(0deg, 0%, 8%);
+}
+
+a {
+  display: flex;
+}
+
+.img-container {
+  width: 10px;
+  height: 6px;
+}
+
+.arrow-down {
+  margin: 5px;
+  height: 100%;
+  width: 100%;
+  background: url(/images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+}
+
+.arrow-up {
+  margin: 5px;
+  height: 100%;
+  width: 100%;
+  background: url(/images/icon-arrow-up.svg);
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
