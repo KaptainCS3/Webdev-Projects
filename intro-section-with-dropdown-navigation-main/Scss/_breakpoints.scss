@@ -1,21 +1,30 @@
 @import './variables';
 @media (min-width: 768px) {
-    .mobile, .burger-menu{
+    .illustrator .mobile, .burger-menu{
         display: none;
     }
-    .desktop{
-    background: url('/images/image-hero-desktop.png');
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-}
 
-// @media (min-width: 250px) and (max-width: 439px) {
-//        .login-register-btn .navItems,  .nav-wrapper .header .navItems, .desktop{
-//     display: none;
-//    }
+    //remove horizontal scroll bar
+    body{
+        overflow-x: hidden;
+    }
+
+    //set image container property
+    .desktop-view{
+        width: 600px;
+        height: 550px;
+        margin-left: 190px;
+     
+     // image properties
+        .img{
+    background: url('/images/image-hero-desktop.png');
+    width: 120%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+     }
+}
+}
    
 
 @media (min-width: 250px) and (max-width: 439px) {
@@ -25,6 +34,7 @@
     color: $almostBlack;
 }
     }
+    // mobile responsive
     .container{
         flex-direction: column-reverse;
         width: 100%;
@@ -33,17 +43,15 @@
             width: 50%;
             align-items: center;
             padding-left: 150px;
-              .hero{
+              h1.hero{
             font-size: 2.5em;
             width: 430px;
-            padding-top: 25%;
-            padding-bottom: 5%;
             margin-left: 50px;
             color: $almostBlack;
               }
-             .description{
-            font-size: 1em;
-            width: 330px;
+             p.description{
+            font-size: 1.2em;
+            width: 400px;
             line-height: 25px;
             color: $mediumGray;
             text-align: center;
@@ -77,11 +85,12 @@
             margin-top: 15%;
             width: 50%;
             .sponsors-brand{
-                padding: 0 10px;
+                padding: 0px;
             }
         }
         }
     }
+    //remove nav element on breakpoint
        .login-register-btn .navItems,  .nav-wrapper .header .navItems, .desktop{
     display: none; 
         }
@@ -190,17 +199,17 @@
             width: 50%;
             align-items: center;
             padding-left: 150px;
-              .hero{
+              h1.hero{
             font-size: 2.8em;
             width: 430px;
-            padding-top: 30%;
-            padding-bottom: 5%;
+            padding-top: 5%;
+            // padding-bottom: 5%;
             margin-left: 15px;
             color: $almostBlack;
               }
-             .description{
+             p.description{
             font-size: 1.4em;
-            width: 490px;
+            width: 460px;
             line-height: 25px;
             color: $mediumGray;
             text-align: center;
@@ -272,3 +281,22 @@
             }
         }
 }
+
+ .img-container{
+            width: 10px;
+            height: 6px;
+        }
+        .arrow-down{
+            margin: 5px;
+            height: 100%;
+            width: 100%;
+            background: url(./images/icon-arrow-down.svg);
+            background-repeat: no-repeat;
+        }
+        .arrow-up{
+            margin: 5px;
+            height: 100%;
+            width: 100%;
+            background: url(./images/icon-arrow-up.svg);
+            background-repeat: no-repeat;
+        }
