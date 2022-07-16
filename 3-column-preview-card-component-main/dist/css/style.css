@@ -82,14 +82,13 @@ p {
     font-size: 15px;
     line-height: 1.8;
   }
-
   .btn {
     margin-top: 80px;
     padding: 10px 0;
   }
 }
 /*   -----------  mobile view  -----------*/
-@media (min-width: 375px) and (max-width: 769px) {
+@media (min-width: 275px) and (max-width: 769px) {
   .container {
     height: 1200px;
     display: flex;
