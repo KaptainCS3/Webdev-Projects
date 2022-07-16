@@ -5,9 +5,9 @@ This repo container all my current and finished project from
 **Have fun building!** 🚀
 
 ## Newbies Project
----
+completed 5+
 ## Junior Project
 ---
 ## Intermediate Project
----
+completed 1
 
