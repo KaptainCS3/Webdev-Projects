@@ -16,7 +16,7 @@ main {
     justify-content: center;
     align-items: center;
     & .content {
-      background-image: url(./images/bg-pattern-desktop.svg);
+      background-image: url(/images/bg-pattern-desktop.svg);
       background-repeat: no-repeat;
       width: 60%;
       height: 100%;
@@ -98,7 +98,7 @@ main {
 }
 
 .avarta_image .desktop {
-  background-image: url(./images/hero-desktop.jpg);
+  background-image: url(/images/hero-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
