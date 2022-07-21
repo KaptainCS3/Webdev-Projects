@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background: hsl(204deg, 43%, 93%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+main .container {
+  width: 42%;
+  height: 490px;
+}
+main .container .center {
+  height: 40%;
+  background: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main .container .grid_row {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+}
+main .container .grid_row .left_grid {
+  background: hsl(179deg, 62%, 43%);
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  padding-top: 2em;
+  padding-left: 38px;
+}
+main .container .grid_row .right_grid {
+  width: 100%;
+  border-bottom-right-radius: 5px;
+  padding-top: 2em;
+  padding-left: 38px;
+  background: hsl(179deg, 47%, 52%);
+}
+
+.hero {
+  color: hsl(179deg, 62%, 43%);
+  padding-top: 2em;
+  padding-left: 38px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+._day {
+  color: hsl(71deg, 73%, 54%);
+  padding-left: 38px;
+  padding-top: 1.2em;
+  font-weight: 700;
+}
+
+.access {
+  color: hsl(218deg, 22%, 67%);
+  padding-top: 1em;
+  padding-left: 38px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.grid_hero {
+  font-size: 16px;
+}
+
+.submit {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: hsl(71deg, 73%, 54%);
+  color: #fff;
+}
+
+@media screen and (min-width: 279px) and (max-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  main .grid_row {
+    flex-direction: column;
+  }
+}
+.dollar {
+  font-size: 2em;
+  display: inline-block;
+  padding-top: 0.5em;
+  font-weight: 700;
+  padding-top: 0.6em;
+}
+
+.amt_month {
+  color: hsl(204deg, 43%, 93%);
+  padding-left: 0.8em;
+}
+
+.small_left {
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 0.5em;
+  padding-bottom: 1.8em;
+}
+
+.small_right {
+  font-weight: 400;
+  color: hsl(204deg, 43%, 93%);
+  padding-top: 1em;
+}/*# sourceMappingURL=style.css.map */
