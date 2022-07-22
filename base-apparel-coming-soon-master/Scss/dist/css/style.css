@@ -23,7 +23,7 @@ main .main_container {
   align-items: center;
 }
 main .main_container .content {
-  background-image: url(./images/bg-pattern-desktop.svg);
+  background-image: url(/images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   width: 60%;
   height: 100%;
@@ -101,7 +101,7 @@ main .main_container .avarta_image {
 }
 
 .avarta_image .desktop {
-  background-image: url(./images/hero-desktop.jpg);
+  background-image: url(/images/hero-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
