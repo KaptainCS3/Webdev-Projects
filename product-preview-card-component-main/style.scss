@@ -95,7 +95,7 @@ main{
         }
 
 // media query mobile view
-  @media (min-width: 375px) and (max-width: 768px) {
+  @media (min-width: 275px) and (max-width: 768px) {
     .container{
         flex-direction: column;
         justify-content: center;

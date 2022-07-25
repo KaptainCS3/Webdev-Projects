@@ -89,7 +89,7 @@ p {
   font-size: 0.9em;
 }
 
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 275px) and (max-width: 768px) {
   .container {
     flex-direction: column;
     justify-content: center;
@@ -110,7 +110,6 @@ p {
   .container .img .img-desktop {
     display: none;
   }
-
   .content {
     height: 65%;
     width: 100%;
