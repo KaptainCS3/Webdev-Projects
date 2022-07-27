@@ -430,7 +430,7 @@ body .inner-list-features {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 25px rgb(209, 209, 209), -5px 1px 25px rgb(209, 209, 209);
+  box-shadow: 1px 2px 50px #e3e3e3, -1px -2px 50px #e3e3e3;
   border-radius: 10px;
 }
 body .inner-list-features span {
@@ -448,7 +448,7 @@ body .inner-list-company {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 25px rgb(209, 209, 209), -5px 1px 25px rgb(209, 209, 209);
+  box-shadow: 1px 2px 50px #e3e3e3, -1px -2px 50px #e3e3e3;
   border-radius: 10px;
 }
 
