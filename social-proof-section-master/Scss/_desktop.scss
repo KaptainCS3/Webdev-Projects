@@ -1,0 +1,130 @@
+@import './reset', './variables';
+@media (min-width: 376px){
+    body{
+        @include space-between;
+        height: 100vh;
+        width: 80%;
+        margin: 80px auto;
+        flex-direction: column;
+        background: url(/images/bg-pattern-top-desktop.svg), 
+                    url(/images/bg-pattern-bottom-desktop.svg); 
+        background-repeat: no-repeat;
+        background-position: left -60vh top -55vh, right -20vw bottom -10vh;
+        background-size: cover;
+        .intro{
+            @include space-between;
+            width: 100%;
+            .intro-content{
+                width: 40%;
+                h1{
+                    width: 100%;
+                    font-size: 2.5em;
+                    padding-bottom: 20px;
+                    color: $veryDarkMagenta;
+                }
+                p{
+                    font-size: .85em;
+                    width: 100%;
+                    line-height: 20px;
+                    font-weight: 500;
+                    color: $darkGrayishMagenta;
+                }
+            }
+            .rating{
+                display: flex;
+                flex-direction: column;
+                height: 250px;
+                width: 45%;
+                justify-content: space-evenly;
+                .rate-content{
+                    padding: 0 20px;
+                    width: 100%;
+                    display: flex;
+                    border-radius: 10px;
+                    height: 60px;
+                    background: $lightGrayishMagenta;
+                    align-items: center;
+                    font-size: 12px;
+                    justify-content: space-evenly;
+                }
+
+                 .star{  
+                    img{
+                    padding: 0 2px;
+                        }
+                    }
+
+                    p{  
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: $veryDarkMagenta;
+                    }
+                .rate-content:nth-child(1){
+                    margin-left: -75px;
+                }
+                .rate-content:nth-child(2){
+                    margin-left: -35px;
+                }
+                .rate-content:nth-child(3){
+                    margin-left: 0;
+                }
+            }
+
+    }
+    .card-description{
+        width: 100%;
+        height: 300px;
+        @include space-between;
+          .profile-card:nth-child(2){
+        margin-top: 45px;
+         }
+          .profile-card:nth-child(3){
+        margin-top: 90px;
+         }
+        .profile-card{
+                    width: 32%;
+                    height: 230px;
+                    border: 1px solid;
+                    padding: 20px 35px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    background: $veryDarkMagenta;
+                    border-radius: 10px;
+                    border: none;
+                    .detail{
+                        width: 60%;
+                       @include space-between;
+                        .detail-img{
+                            width: 40px;
+                            height: 40px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                            }
+                        }
+                        span{
+                            font-size: 13px;
+                            color: $white;
+                            font-weight: 700;
+                        }
+                        .verify{
+                            color: $softPink;
+                            font-weight: 400;
+                        }
+                    }
+                    .text-content{
+                        font-size: 12.4px;
+                        color: $lightGrayishMagenta;
+                        font-weight: 500;
+                        line-height: 18px;
+                    }
+                }
+    }
+}
+    .attribution{
+        position: absolute;
+        bottom: -150px;
+    }
+}
