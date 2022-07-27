@@ -1,0 +1,55 @@
+// Google Fonts
+$font-alata: 'Alata',
+sans-serif;
+$font-josefin_sans: 'Josefin Sans',
+sans-serif;
+.logo{
+    font-family: $font-alata;
+    font-weight: bolder;
+}
+nav, .navBar{
+    font-weight: 400;
+    font-family: $font-alata;
+}
+.heroPage h1{
+    font-family: $font-josefin_sans;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: $font-josefin_sans;
+    font-weight: 300;
+    padding-top: 30px;
+}
+h3{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: $font-josefin_sans;
+    font-weight: 300;
+    padding-top: 5px;
+}
+.VR{
+    font-family: $font-alata;
+    font-weight: 400;
+}
+.view{
+    font-family: $font-alata;
+    letter-spacing: 4px;
+}
+.content{
+    font-size: 1.5em;
+    font-family: $font-josefin_sans;
+    font-weight: 300;
+}
+.copyright{
+    font-family: $font-alata;
+    font-size: 14px;
+}
+.logo_footer {
+    font-size: 1.4em;
+    font-family: $font-alata;
+    font-weight: bolder;
+}

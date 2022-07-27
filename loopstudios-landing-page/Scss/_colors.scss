@@ -1,0 +1,41 @@
+// ## Colors
+
+// ### Primary
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+
+.logo, .navLinks, .content{
+    color: $white;
+}
+.describ, .view{
+    background: $white;
+}
+.VR, .copyright{
+    color: $darkGray;
+}
+h3, .view{
+    color: $black;
+}
+.view{
+    border: 2px solid $darkGray;
+}
+.footer{
+    background: $black;
+}
+.view:hover {
+    background: $black;
+    color: $white;
+    border: none;
+    cursor: pointer;
+}
+.flexbox:hover {
+    cursor: pointer;
+}
+.flexbox:hover .content {
+    color: $black;
+}
+.flexbox:hover .desk{
+    opacity: 0.4;
+}
