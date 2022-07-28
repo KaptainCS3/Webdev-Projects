@@ -17,6 +17,9 @@ $veryDarkGray: hsl(0, 0%, 41%);
     width: 100%;
     height: 100vh;
     top: 0;
+    background: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     header{
         
         // display: flex;
@@ -37,11 +40,4 @@ $veryDarkGray: hsl(0, 0%, 41%);
         font-weight: 300;
     }
     }
-    .heroView .desktop{
-        width: 100%;
-        height: 100%;
-    }
-}
-.heroPage .heroView .mobile{
-    display: none;
 }

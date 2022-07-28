@@ -30,12 +30,12 @@ h3, .view{
     border: none;
     cursor: pointer;
 }
-.flexbox:hover {
+.grid-content:hover {
     cursor: pointer;
 }
-.flexbox:hover .content {
+.grid-content:hover .content{
     color: $black;
 }
-.flexbox:hover .desk{
+.grid-content:hover .flexbox{
     opacity: 0.4;
 }
