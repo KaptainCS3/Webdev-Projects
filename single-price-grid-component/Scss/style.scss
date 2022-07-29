@@ -6,43 +6,6 @@
   align-items: center;
 }
 
-main {
-  @include flexBox;
-  width: 100%;
-  height: 100vh;
-  .container {
-    width: 42%;
-    height: 490px;
-    // border: 1px solid red;
-    .center {
-      height: 40%;
-      background: #fff;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-    .grid_row {
-      display: flex;
-      height: 50%;
-      width: 100%;
-      color: #fff;
-      .left_grid {
-        background: $cyan;
-        width: 100%;
-        border-bottom-left-radius: 5px;
-        padding-top: 2em;
-        padding-left: 38px;
-      }
-      .right_grid {
-        width: 100%;
-        border-bottom-right-radius: 5px;
-        padding-top: 2em;
-        padding-left: 38px;
-        background: hsl(179, 47%, 52%);
-      }
-    }
-  }
-}
-
 .hero {
   color: $cyan;
   padding-top: 2em;
@@ -63,6 +26,7 @@ main {
   line-height: 25px;
   font-size: 14px;
   font-weight: 700;
+  width: 95%;
 }
 .grid_hero {
   font-size: 16px;
@@ -74,19 +38,14 @@ main {
   border: 1px solid transparent;
   background: $brightYellow;
   color: #fff;
-}
-
-
-@media screen and (min-width: 279px) and (max-width: 768px){
-  main{
-    @include flexBox;
-    flex-direction: column;
-    width: 100%;
-    .grid_row{
-      flex-direction: column;
-    }
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8; //additional functionality
   }
-  
+}
+.flex-box{
+  display: flex;
+  align-items: center;
 }
 
 .dollar{
@@ -99,15 +58,130 @@ main {
 .amt_month{
   color: $lightGray;
   padding-left: 0.8em;
+  display: inline-block;
+  padding-top: 20px;
 }
 .small_left{
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.1em;
   padding-top: 0.5em;
   padding-bottom: 1.8em;
+  width: 100%;
 }
 .small_right{
   font-weight: 400;
   color: $lightGray;
-  padding-top: 1em;
+  padding-top: 1.4em;
+}
+
+main {
+  .container {
+    .grid_row {
+      display: flex;
+      height: 50%;
+      width: 100%;
+      color: #fff;
+      section.left_grid {
+        background: $cyan;
+        width: 100%;
+        padding-top: 2em;
+    
+      }
+      section.right_grid {
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        padding-top: 2em;
+        background: hsl(179, 47%, 52%);
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  main {
+  @include flexBox;
+  width: 100%;
+  height: 100vh;
+  .container {
+    width: 42%;
+    height: 490px;
+    .center {
+      height: 40%;
+      background: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    .grid_row {
+      display: flex;
+      height: 50%;
+      width: 100%;
+      color: #fff;
+      section.left_grid {
+        background: $cyan;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        padding-top: 2em;
+        padding-left: 38px;
+        padding-right: 38px;
+      }
+      section.right_grid {
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        padding-top: 2em;
+        padding-left: 38px;
+        background: hsl(179, 47%, 52%);
+      }
+    }
+  }
+}
+
+}
+
+@media (min-width: 279px) and (max-width: 768px){
+  body{
+    @include flexBox;
+  }
+  main{
+    width: 320px;
+    .container{
+      width: 100%;
+      height: 100%;
+    }
+    section.center{
+      padding: 25px;
+      height: 35%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background: #fff;
+      h1, p{
+        padding: 0;
+        width: 100%;
+      }
+      ._day{
+        font-size: 1em;
+        padding-top: 20px;
+      }
+      .access{
+        padding-top: 20px;
+        width: 100%;
+        font-size: 0.8em;
+      }
+    }
+    .grid_row{
+      flex-direction: column;
+      height: 450px;
+    }
+  }
+  .left_grid, .right_grid{
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+  }
+  .right_grid{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+  }
+
 }
