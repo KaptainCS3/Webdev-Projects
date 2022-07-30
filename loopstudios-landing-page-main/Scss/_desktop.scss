@@ -1,4 +1,4 @@
-@import '_reset','_navBar', '_states', '_mobile', '_desktop', 'colors', '_products', '_fontFamilies', '_achievement', '_footer';
+@import '_reset','_navBar', '_states', '_mobile', 'colors', '_products', '_fontFamilies', '_achievement', '_footer';
 @media (min-width: 768px) {
     body{
         @include product;
