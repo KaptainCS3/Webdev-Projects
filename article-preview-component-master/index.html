@@ -4,40 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./Scss/dist/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
     <title>article preview component master using CSS flex box</title>
+
+    <style>
+      @media (min-width: 769px) {
+        .hero{
+            width: 45%;
+            height: 100%;
+            background: url(./images/drawers.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 8px 0 0 8px;
+        }
+      }
+      @media (min-width: 250px) and (max-width: 768px) {
+        .hero{
+            border-radius: 8px 8px 0 0;
+            width: 100%;
+            height: 42%;
+            background: url(./images/drawers.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+      }
+    </style>
 </head>
 <body>
     <!--              done by Leonard Appelgryn(KAPTAINCS3)        -->
-    <div class="container">
+    <main>
+         <div class="container">
         <div class="hero">
         </div>
-        <div class="content">
-                <h3>Shift the overall look and feel by adding these wonderful touches to furniture in your home </h3>
+             <section>
+                <div class="content">
+                <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home </h1>
                 <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
                 <div class="bottom">
+                  <div class="details">
                     <div class="avartar">
                     <img  src="./images/avatar-michelle.jpg" alt="michelle">
-                     </div>
-                    <div class="caption">
-                    <span class="text">Michelle Appleton</span><br><span class="date">28 Jun 2020</span>
-                     </div>
-                     <div class="share-icon">
-                    <!-- <img class="share" src="./images/icon-share.svg" alt="share-icon"> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" class="icon"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
-                    <div class="active">
-                        <p>SHARE</p>
-                        <div class="social-media">
-                        <span><img src="./images/icon-facebook.svg" alt="facebook-social-media-icon"></span>
-                        <span><img src="./images/icon-twitter.svg" alt="twitter-social-media-icon"></span>
-                        <span><img src="./images/icon-pinterest.svg" alt="pinterest-social-media-icon"></span>
+                  </div>
+                  <div class="avarta-description">
+                  <div class="text">Michelle Appleton</div>
+                  <div class="date">28 Jun 2020</div>
+                  </div>
+                  </div>
+                     <button class="share" id="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" class="icon">
+                      <path fill="#6E8098" id="path"
+                        d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+                    </svg>
+                    </button>
+                </div>
+                <div class="share-content">
+                    <div class="share-icon">
+                      <p>SHARE</p>
+                      <div class="social-media">
+                        <div><img src="./images/icon-facebook.svg" alt="facebook-social-media-icon"></div>
+                        <div><img src="./images/icon-twitter.svg" alt="twitter-social-media-icon"></div>
+                        <div><img src="./images/icon-pinterest.svg" alt="pinterest-social-media-icon"></div>
+                      </div>
                     </div>
-                    </div>
-                    </div>
+                </div>
             </div>
-    </div>
+            </section>
+            </div>
+  </main>
+  <script src="./app.js"></script>
 </body>
 </html>
