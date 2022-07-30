@@ -57,13 +57,11 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-
   .description {
     width: 90%;
     line-height: 25px;
     text-align: center;
   }
-
   .text {
     display: flex;
     flex-direction: column;
@@ -72,23 +70,19 @@ body {
     width: 100%;
     margin-left: 30px;
   }
-
   .hero {
     font-size: 1.5em;
     margin-top: 250px;
   }
-
   h1 {
     font-size: 1.5em;
     padding: 10px 0;
   }
-
   .desc .img {
     margin-left: 250px;
     padding-top: 55px;
     padding-right: 30px;
   }
-
   .attribution {
     margin-top: 850px;
   }
@@ -110,7 +104,6 @@ body {
     border-bottom-right-radius: 10px;
     margin: 15px 0;
   }
-
   .vertical-carts {
     display: flex;
     flex-direction: column;
@@ -120,7 +113,6 @@ body {
   .vertical-carts .desc:nth-child(2) {
     margin: 2% 0;
   }
-
   .horizontal-carts {
     display: flex;
     justify-content: space-between;
@@ -134,21 +126,17 @@ body {
   .horizontal-carts .desc:nth-child(2) {
     margin: -5% -20%;
   }
-
   p {
     font-weight: 400;
     font-size: 16px;
     color: hsl(229deg, 6%, 66%);
   }
-
   .hero {
     font-size: 2.16em;
   }
-
   h1 {
     font-size: 2.175em;
   }
-
   .description {
     text-align: center;
     font-size: 16px;
@@ -156,7 +144,6 @@ body {
     line-height: 25px;
     width: 65%;
   }
-
   .attribution {
     margin-top: 250px;
   }
