@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./Scss/dist/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -14,34 +15,139 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    /* font-family: 'Kumbh Sans', sans-serif; */
   </style>
 </head>
 <body>
+  <nav class="nav">
+    <div id="hamburger">
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    </div>
+    <div class="nav-wrapper">
+    <div id="logo">
+      <img src="./images/logo.svg" alt="icon-logo">
+    </div>
+    <ul class="nav-bar">
+      <li class="nav-items">
+        <a href="#" class="nav-links">Collections</a>
+      </li>
+      <li class="nav-items">
+        <a href="#" class="nav-links">Men</a>
+      </li>
+      <li class="nav-items">
+        <a href="#" class="nav-links">Women</a>
+      </li>
+      <li class="nav-items">
+        <a href="#" class="nav-links">About</a>
+      </li>
+      <li class="nav-items">
+        <a href="#" class="nav-links">Contact</a>
+      </li>
+    </ul>
+</div>
+    <div class="nav-shoping-cart">
+      <div class="shop">
+        <img src="./images/icon-cart.svg" alt="icon-cart">
+      </div>
+      <div class="avarta">
+        <img src="./images/image-avatar.png" alt="image-avatar">
+      </div>
+    </div>
+  </nav>
 
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
   
-  <div class="attribution">
+  <nav class="nav-mobile">
+    <ul class="navBar">
+      <li class="navItems">
+        <a href="#" class="navLinks">Collections</a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">Men</a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">Women</a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">About</a>
+      </li>
+      <li class="navItems">
+        <a href="#" class="navLinks">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="shop-item-preview">
+      <div class="item-preview">
+        <div class="preview-content">
+          <img src="./images/image-product-1.jpg" alt="image-product-1">
+        </div>  
+          <!-- <div class="preview-content">
+            <img src="./images/image-product-2.jpg" alt="image-product-2">
+          </div>  
+          <div class="preview-content">
+            <img src="./images/image-product-3.jpg" alt="image-product-3">
+          </div>  
+          <div class="preview-content">
+            <img src="./images/image-product-4.jpg" alt="image-product-4">
+          </div>   -->
+      </div>
+      <div class="items-tab">
+       <div class="thumbnail-img">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+        </div>
+       <div class="thumbnail-img">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+        </div>
+       <div class="thumbnail-img">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+        </div>
+       <div class="thumbnail-img">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+        </div>
+      </div>
+    </div>
+    <div class="shop-content">
+      <span class="vendor">Sneaker Company</span>
+      <h1 class="hero">Fall Limited Edition Sneakers</h1>
+      <p class="content">These low-profile sneakers are your perfect casual wear companion. Featuring a
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="pricing">
+        <div class="discount-price">
+          <p class="price-content">$125.00</p>
+        </div>
+        <div class="discount-percent">
+          <p class="discount-content">50%</p>
+        </div>
+      </div>
+      <div class="actual-price">
+        <small class="price-strickout">
+          $250.00
+        </small>
+      </div>
+      <div class="cart">
+      <div class="quantiy-range">
+        <button class="decrement">
+          <img src="./images/icon-minus.svg" alt="icon-minus">
+        </button>
+        <div class="quantity">0</div>
+        <button class="increment">
+          <img src="./images/icon-plus.svg" alt="icon-plus">
+        </button>
+      </div>
+      <button class="add-cart" type="submit">
+        <!-- <div class="cart-btn"> -->
+        <img src="./images/icon-cart.svg" alt="icon-cart">
+        <!-- </div> -->
+        Add to cart
+      </button>
+      </div>
+    </div>
+  </main>  
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
+  <script src="./app.js" defer></script>
 </body>
 </html>
