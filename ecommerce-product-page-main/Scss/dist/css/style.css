@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.nav-links {
+  color: hsl(219deg, 9%, 45%);
+  font-size: 0.9em;
+}
+
+body {
+  width: 80%;
+  height: 100vh;
+  margin: 15px auto;
+}
+
+#hamburger, .nav-mobile {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  border-bottom: 0.5px solid hsl(220deg, 14%, 75%);
+  align-items: center;
+}
+.nav .nav-wrapper {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.nav .nav-wrapper #logo {
+  width: 20%;
+}
+.nav .nav-wrapper .nav-bar {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav .nav-shoping-cart {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .nav-shoping-cart .avarta img {
+  width: 45px;
+  height: 45px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  width: 100%;
+}
+.container .shop-item-preview {
+  width: 50%;
+  margin-left: 50px;
+  height: 100%;
+}
+.container .shop-item-preview .items-tab {
+  display: flex;
+  width: 380px;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.container .shop-item-preview .items-tab .thumbnail-img {
+  width: 75px;
+  height: 75px;
+}
+.container .shop-item-preview .items-tab .thumbnail-img img {
+  height: 100%;
+  border-radius: 10px;
+}
+.container .shop-item-preview .item-preview .preview-content {
+  width: 360px;
+  height: 380px;
+}
+.container .shop-item-preview .item-preview .preview-content img {
+  height: 100%;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container .shop-content {
+  width: 50%;
+  height: 100%;
+}
+.container .shop-content .vendor {
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1em;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.container .shop-content .hero {
+  width: 100%;
+  font-size: 3em;
+  padding-bottom: 20px;
+  color: hsl(0deg, 0%, 0%);
+}
+.container .shop-content .content {
+  font-size: 1.1em;
+  line-height: 25px;
+  width: 90%;
+  padding-bottom: 20px;
+  color: hsl(219deg, 9%, 45%);
+}
+.container .shop-content .pricing {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.container .shop-content .pricing .discount-price .price-content {
+  font-size: 2em;
+  font-weight: 700;
+}
+.container .shop-content .pricing .discount-percent .discount-content {
+  font-size: 1.2em;
+  width: 55px;
+  padding: 5px;
+  background: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  border-radius: 5px;
+  text-align: center;
+}
+.container .shop-content .actual-price .price-strickout {
+  font-size: 1.2em;
+  -webkit-text-decoration: line-through hsl(219deg, 9%, 45%);
+          text-decoration: line-through hsl(219deg, 9%, 45%);
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 700;
+}
+.container .shop-content .cart {
+  width: 100%;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+.container .shop-content .cart .add-cart {
+  width: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.nav-links {
+  color: hsl(219deg, 9%, 45%);
+  font-size: 0.9em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.nav-links {
+  color: hsl(219deg, 9%, 45%);
+  font-size: 0.9em;
+}/*# sourceMappingURL=style.css.map */
