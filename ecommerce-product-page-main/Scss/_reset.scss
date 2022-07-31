@@ -1,0 +1,13 @@
+@import './variable';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Kumbh Sans', sans-serif; 
+}
+.nav-links{
+    color: $DarkGrayishBlue;
+    font-size: .9em;
+}
