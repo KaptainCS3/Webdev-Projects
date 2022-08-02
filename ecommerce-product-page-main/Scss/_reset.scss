@@ -11,3 +11,17 @@
     color: $DarkGrayishBlue;
     font-size: .9em;
 }
+
+[data-tab-content]{
+    display: none;
+}
+.active[data-tab-content]{
+    display: block;
+}
+.tab.active{ 
+    opacity: 0.4;
+}
+// .thumbnail-img.active{
+//     border: 2px solid $orange;
+//     border-radius: 12px;
+// }
