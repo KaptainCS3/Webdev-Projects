@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-@media (min-width: 376px) {
+@media (min-width: 768px) {
     
     body{
         background-image: url(./images/bg-desktop.svg);
