@@ -3,8 +3,6 @@ const tabContents = document.querySelectorAll("[data-tab-content]");
 const thumbnail = document.querySelectorAll("[data-tab-thumbnail]")
 const btnMinus = document.querySelector('.decrement')
 let quantityValue = document.querySelector('.quantity-value');
-const closeBtn = document.querySelector('.close')
-const modalBox = document.querySelector('#modal-box')
 tabs.forEach((tab) => {
     tab.addEventListener('click', ()=>{
         const target = document.querySelector(tab.dataset.tabTarget);
@@ -19,16 +17,6 @@ tabs.forEach((tab) => {
         target.classList.add("active")
     })
 });
-
-closeBtn.addEventListener("click", () => {
-  modalBox.style.display = "none";
-});
-
-tabContents.forEach(tab =>{
-  tab.addEventListener("click", () =>{
-    modalBox.style.display = 'block'
-  })
-})
 
 
 // quantity add / reduce function
@@ -45,4 +33,16 @@ decreaseValue.addEventListener('click', ()=>{
   return
   qty -= 1
   qtyValue.innerHTML = qty
+})
+
+
+const lightBox = document.createElement('div');
+lightBox.id = 'lightbox';
+document.body.appendChild(lightBox);
+
+const preview = document.querySelectorAll('.preview-content');
+preview.forEach(tab =>{
+  tab.addEventListener('click', () =>{
+    lightBox.classList.add('active')
+  })
 })
