@@ -16,7 +16,7 @@
   position: relative;
   z-index: 3;
   display: flex;
-  width: 77%;
+  width: 80%;
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 50px;
@@ -66,7 +66,7 @@
   position: relative;
   z-index: 3;
   display: flex;
-  width: 77%;
+  width: 80%;
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 50px;
@@ -269,7 +269,7 @@ h3 {
   body .product {
     height: 100vh;
     display: flex;
-    width: 77%;
+    width: 80%;
     justify-content: space-between;
     margin: 0 auto;
     top: 540px;
@@ -306,7 +306,7 @@ h3 {
     position: relative;
     top: 450px;
     height: 100vh;
-    width: 77%;
+    width: 80%;
     margin: 0 auto;
   }
   body .achievement .achiev_wrapper {
@@ -331,11 +331,11 @@ h3 {
   body .achievement .achiev_wrapper .grid-container {
     display: grid;
     width: 100%;
-    border: 1px solid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 20px 5px;
+    grid-gap: 20px;
     -o-object-fit: cover;
        object-fit: cover;
+    overflow: hidden;
   }
   body .achievement .achiev_wrapper .grid-container .grid-content {
     height: 450px;
@@ -354,13 +354,12 @@ h3 {
   body .achievement .deep-earth {
     background: url(/images/desktop/image-deep-earth.jpg);
     background-repeat: no-repeat;
+    background-size: contain;
   }
   body .achievement .night-arcade {
     background: url(/images/desktop/image-night-arcade.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   body .achievement .soccer-team {
     background: url(/images/desktop/image-soccer-team.jpg);
