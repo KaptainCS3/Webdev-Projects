@@ -1,7 +1,12 @@
-@import '_reset','_navBar', '_states', '_mobile', 'colors', '_products', '_fontFamilies', '_achievement', '_footer';
+@import   'colors', '_products', '_fontFamilies', '_achievement', '_footer';
 @media (min-width: 768px) {
     body{
-        @include product;
-        @include achievement;
+        #hamburger{
+            display: none;
+        }
+        @include nav_desktop;
+        @include product_desktop;
+        @include achievement_desktop;
+        @include desktop_footer;
     }
 }

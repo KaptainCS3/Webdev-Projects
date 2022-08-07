@@ -1,4 +1,4 @@
-@mixin achievement{
+@mixin achievement_desktop{
     .achievement{
     position: relative;
     top: 450px;
@@ -7,12 +7,13 @@
     margin: 0 auto;
     .achiev_wrapper{
         width: 100%;
+        padding-top: 40px;
         .works{
             z-index: 3;
             display: flex;
             width: 100%;
             justify-content: space-between;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             line-height: 35px;
             .view{
                 width: 14%;
@@ -88,4 +89,102 @@
     background-size: cover;
 }
 }
+}
+
+@mixin achievement_mobile {
+    .achievement{
+    position: relative;
+    top: 460px;
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+        .achiev_wrapper{
+        width: 100%;
+        padding-top: 40px;
+        .works{
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            line-height: 35px;
+            h3{
+                width: 100%;
+                font-size: 1.8em;
+                text-align: center;
+            }
+            .view{
+                width: 50%;
+                height: 40px;
+                text-transform: uppercase;
+                font-size: 1em;
+                display: inline-block;
+                word-spacing: 5px;
+                position: absolute;
+                bottom: -155%;
+                left: 25%;
+            }
+        }
+        .grid-container{
+            display: grid;
+            width: 100%;
+            grid-template-columns: auto;
+            gap: 20px;
+        .grid-content{
+            height: 130px;
+        }
+        }
+                }
+                .flexbox{
+                    width: 100%;
+                    height: 100%;
+                    // padding: 50px 0;
+                }
+                .content{
+                    position: relative;
+                    top: -75px;
+                    left: 8%;
+                    text-transform: uppercase;
+                }
+
+                .deep-earth{
+                    background: url(/images/mobile/image-deep-earth.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .night-arcade{
+                    background: url(/images/mobile/image-night-arcade.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .soccer-team{
+                    background: url(/images/mobile/image-soccer-team.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .grid{
+                    background: url(/images/mobile/image-grid.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .vr{
+                    background: url(/images/mobile/image-from-above.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .pocket{
+                    background: url(/images/mobile/image-pocket-borealis.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .curiosity{
+                    background: url(/images/mobile/image-curiosity.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .fisheye{
+                    background: url(/images/mobile/image-fisheye.jpg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    }
+    }   
 }

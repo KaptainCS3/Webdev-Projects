@@ -1,2 +1,14 @@
+@import   './colors', './_products', './_fontFamilies', './_achievement', './_footer';
+@media (min-width: 250px) and (max-width: 400px) {
+    body{
+        overflow-x: hidden;
+        width: auto;
+        margin: 0 auto;
+        position: relative;
 
-
+        @include nav_mobile;
+        @include product_mobile;
+        @include achievement_mobile;
+        @include mobile_footer;
+    }
+}

@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navItems{
+.nav-items{
     list-style: none;
 }
-.navLinks{
+.nav-links{
     text-decoration: none;
+}
+body{
+    position: relative;
 }
 
 
