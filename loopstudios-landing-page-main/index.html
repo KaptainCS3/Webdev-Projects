@@ -16,38 +16,55 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         body{
-        }
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
 
-        .attribution a {
-            color: hsl(228, 45%, 44%);
         }
     </style>
 </head>
 
 <body>
     <nav class="nav">
-        <p class="logo"><img src="./images/logo.svg" alt=""></p>
-        <p><img src="./images/icon-hamburger.svg" alt=""></p>
+        <div class="logo"><img src="./images/logo.svg" alt="logo-icon"></div>
+        <div id="hamburger"><img src="./images/icon-hamburger.svg" alt="icon-hamburger"></div>
         <div id="marker"></div>
-<ul class="navBar">
-    <li class="navItems">
-        <a href="#" class="navLinks a" id="links" data-slide-nav>About</a>
+<ul class="nav-bar">
+    <li class="nav-items">
+        <a href="#About" class="nav-links a" id="links" data-slide-nav>About</a>
     </li>
-    <li class="navItems">
-        <a href="#" class="navLinks a" data-slide-nav>Careers</a>
+    <li class="nav-items">
+        <a href="#Careers" class="nav-links a" data-slide-nav>Careers</a>
     </li>
-    <li class="navItems">
-        <a href="#" class="navLinks a" data-slide-nav>Events</a>
+    <li class="nav-items">
+        <a href="#Events" class="nav-links a" data-slide-nav>Events</a>
     </li>
-    <li class="navItems">
-        <a href="#" class="navLinks a" data-slide-nav>Products</a>
+    <li class="nav-items">
+        <a href="#Products" class="nav-links a" data-slide-nav>Products</a>
     </li>
-    <li class="navItems">
-        <a href="#" class="navLinks a" data-slide-nav>Support</a>
+    <li class="nav-items">
+        <a href="#Support" class="nav-links a" data-slide-nav>Support</a>
+    </li>
+</ul>
+    </nav>
+    <nav class="nav_mobile">
+        <div class="logo"><img src="./images/logo.svg" alt="logo-icon"></div>
+        <div id="hamburger" id="hamburger"><img src="./images/icon-hamburger.svg" alt="icon-hamburger"></div>
+        <div id="close">
+            <img src="./images/icon-close.svg" alt="icon-close">
+        </div>
+<ul class="nav-bar" id="nav-mobile">
+    <li class="nav-items">
+        <a href="#" class="nav-links a" id="links" data-slide-nav>About</a>
+    </li>
+    <li class="nav-items">
+        <a href="#" class="nav-links a" data-slide-nav>Careers</a>
+    </li>
+    <li class="nav-items">
+        <a href="#" class="nav-links a" data-slide-nav>Events</a>
+    </li>
+    <li class="nav-items">
+        <a href="#" class="nav-links a" data-slide-nav>Products</a>
+    </li>
+    <li class="nav-items">
+        <a href="#" class="nav-links a" data-slide-nav>Support</a>
     </li>
 </ul>
     </nav>
@@ -121,36 +138,35 @@
         </div>
         </section>
     </main>
-
-    <!-- <footer class="footer">
+    <footer class="footer">
     <div class="footer_wrapper">
 <div class="wrapper">
-  <p class="logo_footer"><img src="./images/logo.svg" alt=""></p>
+  <div class="logo_footer"><img src="./images/logo.svg" alt="logo-icon"></div>
   <div id="icon"></div>
   <div class="social">
-<img src="./images/icon-facebook.svg" alt="" data-slide-icon>
-<img src="./images/icon-twitter.svg" alt="" data-slide-icon>
-<img src="./images/icon-pinterest.svg" alt="" data-slide-icon>
-<img src="./images/icon-instagram.svg" alt="" data-slide-icon>
+<a href="https://web.facebook.com/enow.leonard.9" target="_blank"><img src="./images/icon-facebook.svg" alt="icon-facebook" data-slide-icon></a>
+<a href="https://twitter.com/KaptainCS3" target="_blank"><img src="./images/icon-twitter.svg" alt="icon-twitter" data-slide-icon></a>
+<a href="https://www.pinterest.com" target="_blank"><img src="./images/icon-pinterest.svg" alt="icon-pinterest" data-slide-icon></a>
+<a href="https://www.instagram.com/leonard_appelgryn_" target="_blank"><img src="./images/icon-instagram.svg" alt="icon-instagram" data-slide-icon></a>
   </div>
 </div>
 <div class="nav_footer">
-<ul class="navBar">
-  <div id="marker_footer"></div>
-  <li class="navItems">
-    <a href="#" class="navLinks a" id="links" data-slide>About</a>
+<div id="marker_footer"></div>
+<ul class="nav-bar">
+  <li class="nav-items">
+    <a href="#About" class="nav-links a" id="links" data-slide>About</a>
   </li>
-  <li class="navItems">
-    <a href="#" class="navLinks a" data-slide>Careers</a>
+  <li class="nav-items">
+    <a href="#Careers" class="nav-links a" data-slide>Careers</a>
   </li>
-  <li class="navItems">
-    <a href="#" class="navLinks a" data-slide>Events</a>
+  <li class="nav-items">
+    <a href="#Events" class="nav-links a" data-slide>Events</a>
   </li>
-  <li class="navItems">
-    <a href="#" class="navLinks a" data-slide>Products</a>
+  <li class="nav-items">
+    <a href="#Products" class="nav-links a" data-slide>Products</a>
   </li>
-  <li class="navItems">
-    <a href="#" class="navLinks a" data-slide>Support</a>
+  <li class="nav-items">
+    <a href="#Support" class="nav-links a" data-slide>Support</a>
   </li>
 </ul>
 <p class="copyright">
@@ -158,11 +174,7 @@
 </p>
 </div>
 </div>
-    <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  </footer> -->
+  </footer>
     <script src="./js/dist/js/app.js"></script>
 </body>
 
