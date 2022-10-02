@@ -35,7 +35,6 @@ decreaseValue.addEventListener('click', ()=>{
   qtyValue.innerHTML = qty
 })
 
-
 const lightBox = document.createElement('div');
 lightBox.id = 'lightbox';
 document.body.appendChild(lightBox);
