@@ -1,0 +1,154 @@
+:root{
+    --bg__nav:  0 0% 100%; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+@media (min-width: 768px) {
+    body{
+        width: 100%;
+        height: 100vh;
+        background-image: url(./home/background-home-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .nav{
+        font-family: 'Barlow Condensed';
+        padding-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        font-weight: 400;
+        color: #fff;
+    }
+    .container__nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+    .logo{
+        padding: 40px;
+    }
+    .img__logo{
+        width: 40px;
+        height: 40px;
+    }
+    .border__nav{
+        width: 58%;
+        border-bottom: 1px solid;
+    }
+    .nav__bar{
+        display: flex;
+        height: 65px;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        backdrop-filter: blur(2.5rem);
+        background: hsl(var(--bg__nav)/ 0.05)
+    }
+    .route__links span{
+        padding: 0 8px;
+        font-weight: 700;
+    }
+    .route__links{
+        padding: 20px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .container__home{
+        display: flex;
+        width: 100%;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+     .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 83%;
+    height: 75%;
+    flex-direction: row;
+   }
+
+    .left__container{
+        width: 50%;
+    }
+    .left__container .hero{
+        font-size: 2em;
+        font-family: 'Barlow Condensed';
+        word-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .left__container span{
+        font-size: 8.5em;
+        text-transform: uppercase;
+        font-family: "Bellefair";
+    }
+    
+    .left__container .description{
+        width: 70%;
+        font-family: 'Barlow';
+        line-height: 1.5em;
+    }
+   .right__container button{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: none;
+    font-size: 2.5em;
+    font-family: "Bellefair";
+    text-transform: uppercase;
+   }
+   .caption__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid;
+    width: 50%;
+    height: 100%;
+   }
+   .caption__container .pick__destination{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Barlow";
+   }
+   .img{
+    width: 350px;
+    height: 350px;
+    /* align-self: flex-end; */
+    padding: 15px;
+   }
+   .img img{
+    width: 100%;
+    height: 100%;
+   }
+.description__container{
+    align-self: flex-start;
+    /* border: 1px solid; */
+    width: 45%;
+}
+   .names{
+    display: flex;
+    /* width: 100%; */
+    border: 1px solid;
+   }
+   .names h3{
+    padding: 20px;
+   }
+   .destination__background{
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+   }
+}
