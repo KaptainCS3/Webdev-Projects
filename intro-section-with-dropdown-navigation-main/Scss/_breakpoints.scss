@@ -3,27 +3,18 @@
     .illustrator .mobile, .burger-menu{
         display: none;
     }
-
-    //remove horizontal scroll bar
     body{
         overflow-x: hidden;
     }
-
-    //set image container property
-    .desktop-view{
-        width: 600px;
-        height: 550px;
-        margin-left: 190px;
-     
-     // image properties
-        .img{
-    background: url('/images/image-hero-desktop.png');
-    width: 120%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-     }
-}
+    .illustrator__img{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+    }
+    .desktop{
+        width: 68%;
+    }
 }
    
 
