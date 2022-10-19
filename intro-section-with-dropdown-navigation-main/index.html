@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./Scss/dist/css/style.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
 </head>
 <body> 
     <nav class="nav">
@@ -88,7 +89,7 @@
             <li class="navItems">
               <a href="#" class="navLinks link" id="hover-a">About</a>
             </li>
-          </ul>
+          <!-- </ul> -->
         </div>
     </div>
         <ul class="login-register-btn">
@@ -99,101 +100,16 @@
             <a href="#" class="navLinks brd link">Register</a>
           </li>
         </ul>
-    
-        <div class="burger-menu">
-          <div class="menu openbtn" onclick="openNav()"></div>
-          </div>
-        </div>
-        
       </div>
       </div>
     </nav>
-
-
-<div id="mySidenav" class="sidenav">
-  <div href="javascript:void(0)" class="closebtn" onclick="closeNav()"></div>
-  <div class="header">
-    <div class="navItems dropdown">
-      <a class="link navLinks" id="hover-f-mobile">Features
-        <div class="img-container">
-          <div class="arrow-down"></div>
-        </div>
-      </a>
-      <ul class="inner-list-features dropdown-menu">
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner">
-            <span>
-              <img src="./images/icon-todo.svg" alt="icon-todo">
-            </span>
-            Todo List
-          </a>
-        </li>
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner">
-            <span>
-              <img src="./images/icon-calendar.svg" alt="icon-calendar">
-            </span>
-            Calendar
-          </a>
-        </li>
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner">
-            <span>
-              <img src="./images/icon-reminders.svg" alt="icon-reminders">
-            </span>
-            Reminders
-          </a>
-        </li>
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner">
-            <span>
-              <img src="./images/icon-planning.svg" alt="icon-planning">
-            </span>
-            Planning
-          </a>
-        </li>
-      </ul>
+    <div class="side__panel">
+      
     </div>
-    <div class="navItems dropdown">
-      <a class="navLinks link" id="hover-c-mobile">Company
-          <div class="img-container">
-            <div class="arrow-down"></div>
-          </div>
-      </a>
-      <ul class="inner-list-company dropdown-menu">
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner link">History
-          </a>
-        </li>
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner link">Our Team
-          </a>
-        </li>
-        <li class="navItems-inner">
-          <a href="#" class="navLinks-inner link">Blog
-          </a>
-        </li>
-      </ul>
+    <div class="burger__menu">
     </div>
-    <li class="navItems">
-      <a href="#" class="navLinks link" id="hover-cr-mobile">Careers</a>
-    </li>
-    <li class="navItems">
-      <a href="#" class="navLinks link" id="hover-a-mobile">About</a>
-    </li>
-    </ul>
-  </div>
-  <div class="mobile-login">
-  <ul class="login-register-btn-mobile">
-    <li class="navItems login">
-      <a href="#" class="navLinks link">Login</a>
-    </li>
-    <li class="navItems">
-      <a href="#" class="navLinks brd link">Register</a>
-    </li>
-  </ul>
-  </div>
-</div>
+    <div class="close__menu">
+    </div>
    <main class="container">
     <section class="content">
       <div class="heading">
@@ -223,12 +139,10 @@
       </div>
     </section>
     <section class="illustrator">
-      <div class="illustrator__img">
-        <img src="./images/image-hero-desktop.png" alt="" class="desktop">
-      </div>
-        <div class="mobile">
-          <img src="./images/image-hero-mobile.png" alt="">
-        </div>
+     <div class="desktop"></div>
+     <div class="container__mobile">
+       <img src="./images/image-hero-mobile.png" alt="" class="mobile">
+     </div>
     </section>
   </main>
   <script src="./Script/dist/js/app.js"></script>
