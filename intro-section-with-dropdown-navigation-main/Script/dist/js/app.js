@@ -10,36 +10,21 @@ document.addEventListener("click", (e) => {
     // toggle arrow indicator
     show.classList.toggle("arrow-up");
   }
-
-  document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
-    if (dropdown === currentDropdown) return;
-    dropdown.classList.remove("active");
-    // remove arrow
-    show.classList.remove("arrow-up");
-  });
 });
-function openNav() {
-  document.getElementById("mySidenav").style.width = "70%";
-}
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-//accordion
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function () {
-//     this.classList.toggle("active");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.display === "block") {
-//       panel.style.display = "none";
-//     } else {
-//       panel.style.display = "block";
-//     }
-//   });
-// }
+const sidePanel = document.querySelector(".side__panel");
+const burger = document.querySelector(".burger__menu");
+const closeBurger = document.querySelector(".close__menu");
+burger.addEventListener("click", () => {
+  sidePanel.style.width = "70%";
+  burger.style.display = "none";
+  closeBurger.style.display = "block";
+});
+closeBurger.addEventListener("click", () => {
+  sidePanel.style.width = 0;
+  closeBurger.style.display = "none";
+  burger.style.display = "block";
+});
 
 /*
     -----------------------------------------------
