@@ -2,13 +2,13 @@ document.addEventListener("click", (e) => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]");
   if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
 
-  let show = document.querySelector(".arrow-down");
+  // let show = document.querySelector(".arrow-down");
   let currentDropdown;
   if (isDropdownButton) {
     currentDropdown = e.target.closest("[data-dropdown]");
     currentDropdown.classList.toggle("active");
-    // toggle arrow indicator
-    show.classList.toggle("arrow-up");
+    document.querySelector(".toggle").classList.add("active__");
+    // show.classList.toggle("arrow-up");
   }
 });
 

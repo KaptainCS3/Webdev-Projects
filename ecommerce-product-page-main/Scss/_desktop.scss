@@ -197,6 +197,17 @@ body{
     }
 }
 
+.modal__container{
+    width: 380px;
+    height: 360px;
+}
+
+.img__modal{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
 
 // #lightbox{
 //     position: fixed;

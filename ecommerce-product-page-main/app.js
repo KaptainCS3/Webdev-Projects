@@ -58,3 +58,9 @@ slideNav.forEach((link) => {
     indicatorNav(f.target);
   });
 });
+
+const product = document.querySelector("#product-1");
+
+product.addEventListener("click", () => {
+
+});
