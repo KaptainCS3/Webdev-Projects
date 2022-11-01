@@ -105,9 +105,9 @@
 
     <div class="side__panel">
       <ul class="side">
-        <li class="side__nav dropdown__nav">Features
+        <!-- <li class="side__nav dropdown__nav">Features
           <img src="./images/icon-arrow-down.svg" alt="">
-          <ul>
+          <ul class="show__inner__nav">
             <li class="inner__nav">
               <a href="#" class="">
                 <span>
@@ -144,7 +144,7 @@
         </li>
         <li class="side__nav dropdown__nav">Company
           <img src="./images/icon-arrow-down.svg" alt="">
-          <ul class="">
+          <ul class="show__inner__nav">
             <li class="inner__nav">
               <a href="#" class="">History
               </a>
@@ -155,6 +155,65 @@
             </li>
             <li class="inner__nav">
               <a href="#" class="">Blog
+              </a>
+            </li>
+          </ul>
+        </li> -->
+        
+        <li class="navItems dropdown side__nav dropdown__nav" data-dropdown>
+          <a class="link navLinks" id="hover-f" data-dropdown-button>Features
+            <span><img src="./images/icon-arrow-down.svg" alt="" class="toggle"></span>
+          </a>
+          <ul class="inner-list-features dropdown-menu">
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-todo.svg" alt="icon-todo">
+                </span>
+                Todo List
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-calendar.svg" alt="icon-calendar">
+                </span>
+                Calendar
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-reminders.svg" alt="icon-reminders">
+                </span>
+                Reminders
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner">
+                <span>
+                  <img src="./images/icon-planning.svg" alt="icon-planning">
+                </span>
+                Planning
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="navItems dropdown side__nav dropdown__nav" data-dropdown>
+          <a class="navLinks link" id="hover-c" data-dropdown-button>Company
+            <span><img src="./images/icon-arrow-down.svg" alt="" class="toggle"></span>
+          </a>
+          <ul class="inner-list-company dropdown-menu">
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner link">History
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner link">Our Team
+              </a>
+            </li>
+            <li class="navItems-inner">
+              <a href="#" class="navLinks-inner link">Blog
               </a>
             </li>
           </ul>
