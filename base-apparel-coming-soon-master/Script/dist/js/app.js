@@ -14,8 +14,11 @@ btn.addEventListener("click", () => {
     errorMessage.innerHTML = "Please enter a valide email";
     return false;
   } else {
-    handleSubmit()
+    email.style.borderColor = "#0f0";
+    error.style.display = "none";
     errorMessage.innerHTML = "";
-    return true;
+    handleSubmit()
+
+   return true;
   }
 });
