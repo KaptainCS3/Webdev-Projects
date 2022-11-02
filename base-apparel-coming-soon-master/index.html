@@ -31,23 +31,25 @@
             </p>
             <form class="form_field" id="form_submit">
               <div class="form_control">
-            <input type="email" placeholder="Email Address" id="email" required>
+            <input type="email" placeholder="Email Address" id="email">
+            <div class="submit">
+              <button>
+                <img src="./images/icon-arrow.svg" alt="arrow-icon">
+               </button>
+             </div>
+             <div class="error_control">
+               <img src="./images/icon-error.svg" alt="error-icon">
+              </div>
             </div>
-               <div class="submit">
-                 <button>
-                   <img src="./images/icon-arrow.svg" alt="arrow-icon">
-                  </button>
-                </div>
-               <div class="error_control">
-                 <img src="./images/icon-error.svg" alt="error-icon">
-                </div>
                 <div class="error_message">
-                <small></small>
+                <small class="error__email"></small>
                 </div>
             </form>
           </section>
       <div class="avarta_image">
-        <div class="desktop"></div>
+        <div class="desktop">
+          <img src="./images/hero-desktop.jpg" alt="">
+        </div>
         <div class="mobile"></div>
       </div>
     </div>

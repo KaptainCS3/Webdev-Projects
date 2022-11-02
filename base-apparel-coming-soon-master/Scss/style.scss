@@ -1,5 +1,6 @@
 @import "./_reset";
 
+$bg: "/images";
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -15,16 +16,16 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    & .content {
-      background-image: url(/images/bg-pattern-desktop.svg);
+    .content {
       background-repeat: no-repeat;
-      width: 60%;
+      background-size: cover;
+      background-image: url(../../../#{$bg}/bg-pattern-desktop.svg);
+      width: 62.5%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding-left: 120px;
-      margin-top: -20px;
       .hero {
         text-transform: uppercase;
         font-size: 3rem;
@@ -40,67 +41,71 @@ main {
         color: $desaturatedRed;
         line-height: 25px;
         margin-top: -125px;
-        font-size: 16px;
+        font-size: 0.9em;
+        padding: 30px 0;
       }
       .form_field {
         margin-top: -120px;
       }
-      .form_field button {
-        width: 70px;
-        height: 40px;
-        background: $softRed;
-        text-align: center;
-        padding-top: 5px;
-        border-radius: 20px;
-        border: 1px solid transparent;
-        position: absolute;
-        right: 640px;
-        top: 437px;
+      .form_control{
+        position: relative;
       }
+      .submit{
+        position: absolute;
+        right: 25%;
+        top: 0;
+      }
+      .form_field button{
+        width: 80px;
+        background: $desaturatedRed;
+        text-align: center;
+        padding: 0.9em;
+        border-radius: 1.9em;
+        border: 1px solid transparent;
+      }
+
       .form_field input {
         width: 75%;
-        height: 40px;
-        border-radius: 20px;
-        // border: 1px solid gray;
+        border-radius: 1.9em;
+        padding: 1.1em;
+        border: 2px solid gray;
         opacity: 0.5;
       }
-      .form_field .error_control{
-        visibility: visible;
+      .error_control{
+        position: absolute;
+        right: 42%;
+        top: 18%;
+        display: none;
       }
       .form_field input[placeholder] {
-        padding-left: 45px;
+        padding-left: 20px;
         color: #000;
-        // text-align: center;
-      }
-      .form_field .error_message small{
-        visibility: visible;
-      }
-      .error_control {
-        position: absolute;
-        visibility: hidden;
-        top: 445px;
-        left: 600px;
       }
       .error_message {
         padding-top: 10px;
-        small {
-          visibility: hidden;
-          padding-left: 45px;
+        .small__text,
+        .error__email{
+          padding-left: 1.8em;
           color: $softRed;
         }
       }
     }
-    & .avarta_image {
-      width: 35%;
+    .avarta_image{
+      width: 40%;
       height: 100%;
+      .desktop img{
+        width: 100%;
+        height: 100%;
+
+      }
     }
   }
 }
 
-.avarta_image .desktop {
-  background-image: url(/images/hero-desktop.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+
+@media (max-width: 23.438rem) {
+    main{
+      width: 60%;
+    }
 }
+
