@@ -127,18 +127,17 @@ body {
       align-items: center;
       min-height: 100vh;
     }
-    .content {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url(../../../#{$bg}/bg-pattern-desktop.svg);
-    }
     .main_container{
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../../../#{$bg}/bg-pattern-desktop.svg);
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 80%;
+      width: 100%;
       flex-direction: column-reverse;
       .content{
+        width: 80%;
         .logo{
           position: absolute;
           top: 2%;
