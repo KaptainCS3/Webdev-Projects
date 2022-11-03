@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./Scss/dist/css/style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="toggle__container">
+      <h2 class="heading">Our Pricing</h2>
+      <div class="toogle__price">
+        <span class="annual">Annually</span>
+        <label class="switch">
+          <input type="checkbox" checked id="toggle__switch">
+          <span class="slider round"></span>
+        </label>
+        <span class="month">Monthly</span>
+      </div>
+    </div>
+    <div class="wrapper">
+    <section class="card">
+      <h3 class="hero">Basic</h3>
+      <h1 class="price basic">
+        &dollar;199.99
+      </h1>
+      <p class="content__card">
+        500 GB Storage
+      </p>
+      <p class="content__card">
+        2 Users Allowed
+      </p>
+      <p class="content__card">
+        Send up to 3 GB
+      </p>
+      <button class="btn">Learn More</button>
+    </section>
+    <section class="card">
+      <h3 class="hero">Professional</h3>
+      <h1 class="price professional">
+        &dollar;249.99
+      </h1>
+      <p class="content__card">
+        1 TB Storage
+      </p>
+      <p class="content__card">
+        Send up to 10 GB
+      </p>
+      <p class="content__card">
+        5 Users Allowed
+      </p>
+      <button class="btn">Learn More</button>
+    </section>
+    <section class="card">
+      <h3 class="hero">Master</h3>
+      <h1 class="price master">
+        &dollar;399.99
+      </h1>
+      <p class="content__card">2 TB Storage</p>
+      <p class="content__card">10 Users Allowed</p>
+      <p class="content__card">Send up to 20 GB</p>
+      <button class="btn">Learn More</button>
+    </section>
+    </div>
+  </main>
+  <script src="./Script/app.js"></script>
+</body>
+</html>
