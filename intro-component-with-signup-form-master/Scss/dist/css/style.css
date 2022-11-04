@@ -89,6 +89,11 @@ section {
   border: 1px solid transparent;
   color: #fff;
   font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.form .btn:hover {
+  opacity: 0.7;
 }
 .form .term__text {
   font-size: 0.6em;
@@ -108,12 +113,19 @@ section {
 .form .form__input img {
   position: absolute;
   right: 4%;
-  top: 20%;
+  top: 15%;
+  display: none;
+}
+.form input style {
+  background: none;
 }
 .form .error__email {
   padding-top: 5px;
   display: inline-block;
   float: right;
+  font-style: italic;
+  color: hsl(0deg, 100%, 74%);
+  font-size: 0.7em;
 }
 .form .caption {
   background: hsl(248deg, 32%, 49%);
@@ -121,4 +133,64 @@ section {
   text-align: center;
   border-radius: 8px;
   padding: 15px 0;
+}
+
+.form__container, .caption {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), 0 0 0 rgba(0, 0, 0, 0.5), 0 0 0 rgba(0, 0, 0, 0.5), 0px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.err {
+  background: url("../../.././images/icon-error.svg");
+  background-repeat: no-repeat;
+  border: 1px solid hsl(0deg, 100%, 74%);
+  background-position: 98% 50%;
+  background-size: 25px 25px;
+  color: hsl(0deg, 100%, 74%);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    background: url("../../.././images/bg-intro-mobile.png"), hsl(0deg, 100%, 74%);
+    background-size: cover;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+  }
+  .content {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    font-size: 0.88em;
+  }
+  .description {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .hero {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .form {
+    padding: 0;
+    height: 100%;
+  }
+  section {
+    width: 90%;
+  }
+  .form .caption {
+    padding: 30px 50px;
+    margin-bottom: 20px;
+  }
+  .form .term__text {
+    font-size: 0.8em;
+    width: 92%;
+    text-align: center;
+  }
+  .form .form__input {
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
