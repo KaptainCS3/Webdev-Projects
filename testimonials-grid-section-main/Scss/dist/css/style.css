@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: hsl(210deg, 46%, 95%);
+}
+
+.container {
+  margin-top: 100px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template: repeat(2, 0.8fr)/repeat(4, 0.6fr);
+  grid-gap: 1.8em;
+  width: 85%;
+}
+
+.grid div {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.grid__1 {
+  grid-column: 1/3;
+  background: url(../../.././images/bg-pattern-quotation.svg), hsl(263deg, 55%, 52%);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+}
+
+.grid__2 {
+  background: hsl(217deg, 19%, 35%);
+}
+
+.grid__3 {
+  background: hsl(0deg, 0%, 100%);
+  grid-column: 4/-1;
+  grid-row: 1/-1;
+}
+
+.grid__4 {
+  background: hsl(0deg, 0%, 100%);
+}
+
+.grid__5 {
+  background: hsl(219deg, 29%, 14%);
+  grid-column: 2/4;
+}
+
+.hero {
+  font-size: 1.32em;
+  color: hsl(0deg, 0%, 100%);
+  padding: 15px 0;
+}
+
+.grid__3 .hero, .grid__4 .hero {
+  color: hsl(219deg, 29%, 14%);
+}
+.grid__3 .hero .name, .grid__4 .hero .name {
+  color: hsl(219deg, 29%, 14%);
+}
+
+.grid__2 .description, .grid__5 .description {
+  color: hsl(0deg, 0%, 81%);
+}
+
+.description {
+  font-size: 0.9em;
+  color: hsl(0deg, 0%, 81%);
+  height: 100%;
+  opacity: 70%;
+}
+
+.grid__3 .name, .grid__4 .name {
+  color: hsl(219deg, 29%, 14%);
+  opacity: 100%;
+}
+
+.grid__1 .avarta {
+  width: 35%;
+}
+.grid__1 .avarta .avarta__name {
+  padding: 0 10px;
+}
+
+.grid__2 .avarta, .grid__4 .avarta, .grid__3 .avarta {
+  width: 85%;
+}
+.grid__2 .avarta .avarta__name, .grid__4 .avarta .avarta__name, .grid__3 .avarta .avarta__name {
+  padding: 0 10px;
+}
+
+.avarta__name {
+  padding: 0 10px;
+  color: hsl(217deg, 19%, 35%);
+}
+
+.name {
+  color: hsl(0deg, 0%, 81%);
+}
+
+.vfy {
+  color: hsl(219deg, 29%, 14%);
+  opacity: 0.5;
+}
+
+.grid__5 .vfy {
+  color: hsl(217deg, 19%, 35%);
+  opacity: 0.5;
+}
+
+.avarta {
+  display: flex;
+  width: 40%;
+}
+
+.avarta .avarta__img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-: repeat(5, 100px)/repeat(1, 20px);
+  }
+}/*# sourceMappingURL=style.css.map */
