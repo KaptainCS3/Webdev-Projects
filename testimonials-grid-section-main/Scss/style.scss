@@ -11,109 +11,165 @@ $bg: "./images";
 }
 .grid{
     display: grid;
-    grid-template: repeat(2, 0.8fr) / repeat(4, 0.6fr);
     grid-gap: 1.8em;
     width: 85%;
 }
-.grid div{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 30px;
-}
-.grid__1{
-    grid-column: 1 / 3;
-    background: url(../../../#{$bg}/bg-pattern-quotation.svg), $moderateViolet;
-    background-repeat: no-repeat;
-    background-position: 80% 0%;
-}
-.grid__2{
-    background: $veryDarkGrayishBlue;
-}
-.grid__3{
-    background: $white;
-    grid-column: 4 / -1;
-    grid-row: 1 / -1;
-}
-.grid__4{
-    background: $white;
-}
-.grid__5{
-    background: $veryDarkBlackishBlue;
-    grid-column: 2 / 4;
-}
-.hero{
-    font-size: 1.32em ;
-    color: $white;
-    padding: 15px 0;
-}
-
-.grid__3 .hero, .grid__4 .hero{
-    color: $veryDarkBlackishBlue;
-    .name{
+ .grid__1{
+        background: url(../../../#{$bg}/bg-pattern-quotation.svg), $moderateViolet;
+        background-repeat: no-repeat;
+        background-position: 80% 0%;
+    }
+    .grid__2{
+        background: $veryDarkGrayishBlue;
+    }
+    .grid__3, .grid__4{
+        background: $white;
+    }
+    .grid__5{
+        background: $veryDarkBlackishBlue;
+    }
+    .hero{
+        color: $white;
+    }
+    .grid__3 .name, .grid__4 .name{
         color: $veryDarkBlackishBlue;
+        opacity: 100%;
     }
-}
-
-.grid__2 .description, .grid__5 .description{
-       color: $lightGray;
-}
-.description{
-    font-size: 0.9em;
-    color: $lightGray;
-    height: 100%;
-    opacity: 70%;
-}
-
-.grid__3 .name, .grid__4 .name{
-    color: $veryDarkBlackishBlue;
-    opacity: 100%;
-}
-
-.grid__1 .avarta{
-    width: 35%;
-    .avarta__name{
-        padding: 0 10px;
+    .description{
+        color: $lightGray;
+        opacity: 70%;
     }
-}
-.grid__2 .avarta, .grid__4 .avarta, .grid__3 .avarta{
-    width: 85%;
-    .avarta__name{
-        padding:  0 10px;
-    }
-}
 
+      .name{
+        color: $lightGray;
+    }
+    
+    .vfy{
+        color: $veryDarkBlackishBlue;
+        opacity: 0.5;
+    }
+    .grid__5 .vfy{
+        color: $veryDarkGrayishBlue;
+        opacity: 0.5;
+    }
+    
+    .grid__3 .hero, .grid__4 .hero{
+        color: $veryDarkBlackishBlue;
+        .name{
+            color: $veryDarkBlackishBlue;
+        }
+    }
+    
+    .grid__2 .description, .grid__5 .description{
+           color: $lightGray;
+    }
+
+        .avarta__name{
+        color: $veryDarkGrayishBlue;
+    }
+
+     .avarta .avarta__img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    
+@media (min-width: 769px) {
+    .grid{
+    grid-template: repeat(2, 0.8fr) / repeat(4, 0.6fr);
+}
+    .grid div{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .grid__1{
+        grid-column: 1 / 3;
+    }
+    .grid__3{
+        grid-column: 4 / -1;
+        grid-row: 1 / -1;
+    }
+    .grid__5{
+        grid-column: 2 / 4;
+    }
+    .hero{
+        font-size: 1.32em ;
+        padding: 15px 0;
+    }
+    .description{
+        font-size: 0.9em;
+        height: 100%;
+    }
+    
+    .grid__1 .avarta{
+        width: 35%;
+        .avarta__name{
+            padding: 0 10px;
+        }
+    }
+    .grid__2 .avarta, .grid__4 .avarta, .grid__3 .avarta{
+        width: 85%;
+        .avarta__name{
+            padding:  0 10px;
+        }
+    }
+    
 .avarta__name{
-    padding: 0 10px;
-    color: $veryDarkGrayishBlue;
+        padding: 0 10px;
 }
-
-.name{
-    color: $lightGray;
+    
+    .avarta{
+       width: 40%;
+    }
 }
-
-.vfy{
-    color: $veryDarkBlackishBlue;
-    opacity: 0.5;
-}
-.grid__5 .vfy{
-    color: $veryDarkGrayishBlue;
-    opacity: 0.5;
-}
-
 .avarta{
     display: flex;
-    width: 40%;
-}
-.avarta .avarta__img{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
     .grid{
-        display: grid;
-        grid-template-: repeat(5, 100px) / repeat(1, 20px);
+        grid-template-columns: 1fr;
+        // fraction unit for various divs
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.75fr 1fr;
     }
+    .grid div{
+        padding: 30px;
+        border-radius: 10px;
+    }
+    div .description{
+        font-size: 1em;
+    }
+    .hero{
+        padding: 10px 0;
+     font-size: 1.2em;
+    }
+    .grid__1{
+        //div one
+        grid-row: 1 / 2;
+    }
+    .grid__2{
+        //div two
+        grid-row: 2 / 3;
+    }
+    .grid__3{
+        //div five
+        grid-row: 5 / 5;
+    }
+    .grid__4{
+        //div three
+        grid-row: 3 / 4;
+    }
+    .grid__5{
+        //div four
+        grid-row: 4 / 4;
+    }
+
+    .avarta__name{
+        width: 140px;
+        padding: 0 10px;
+        justify-content: center;
+        align-items: center;
+}
 }
