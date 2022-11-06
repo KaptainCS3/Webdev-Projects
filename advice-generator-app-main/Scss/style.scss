@@ -1,0 +1,70 @@
+@import './reset';
+
+$bg: "./images";
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    background: $darkGrayishBlue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 28%;
+    height: 250px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.hero{
+    text-transform: uppercase;
+    color: $neonGreen;
+    font-size: 0.7em;
+    letter-spacing: 0.4em;
+}
+.description{
+    color: $lightCyan;
+    text-align: center;
+}
+.desktop{
+img{
+    width: 100%;
+    padding: 0 15px;
+}
+}
+
+    .btn, .btn__container{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        position: absolute;
+        background: $neonGreen;
+        border: none;
+        top: 66.5%;
+        background-repeat: no-repeat;
+        z-index: 100;
+        cursor: pointer;
+        &:hover{
+            box-shadow:  1px 5px 25px rgba(82, 255, 168, 0.4),
+                         5px 5px 25px rgba(82, 255, 168, 0.4),
+                         -5px 5px 25px rgba(82, 255, 168, 0.4),
+                         -5px 5px 25px rgba(82, 255, 168, 0.4);
+        }
+    }
+    .dice{
+    background: url("../../../#{$bg}/icon-dice.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20px 20px;
+    outline: none;
+   }
+
+@media (max-width: 768px) {
+    .wrapper{
+        width:  80%;
+        min-height: 230px;
+    }
+}
