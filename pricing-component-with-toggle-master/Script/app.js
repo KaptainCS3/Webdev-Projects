@@ -17,3 +17,5 @@ priceChange = () => {
 toggle.addEventListener("click", () => {
   priceChange();
 });
+
+priceChange();
