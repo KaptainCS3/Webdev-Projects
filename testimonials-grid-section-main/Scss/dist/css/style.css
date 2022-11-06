@@ -20,20 +20,11 @@ body {
 
 .grid {
   display: grid;
-  grid-template: repeat(2, 0.8fr)/repeat(4, 0.6fr);
   grid-gap: 1.8em;
   width: 85%;
 }
 
-.grid div {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  padding: 30px;
-}
-
 .grid__1 {
-  grid-column: 1/3;
   background: url(../../.././images/bg-pattern-quotation.svg), hsl(263deg, 55%, 52%);
   background-repeat: no-repeat;
   background-position: 80% 0%;
@@ -43,43 +34,16 @@ body {
   background: hsl(217deg, 19%, 35%);
 }
 
-.grid__3 {
-  background: hsl(0deg, 0%, 100%);
-  grid-column: 4/-1;
-  grid-row: 1/-1;
-}
-
-.grid__4 {
+.grid__3, .grid__4 {
   background: hsl(0deg, 0%, 100%);
 }
 
 .grid__5 {
   background: hsl(219deg, 29%, 14%);
-  grid-column: 2/4;
 }
 
 .hero {
-  font-size: 1.32em;
   color: hsl(0deg, 0%, 100%);
-  padding: 15px 0;
-}
-
-.grid__3 .hero, .grid__4 .hero {
-  color: hsl(219deg, 29%, 14%);
-}
-.grid__3 .hero .name, .grid__4 .hero .name {
-  color: hsl(219deg, 29%, 14%);
-}
-
-.grid__2 .description, .grid__5 .description {
-  color: hsl(0deg, 0%, 81%);
-}
-
-.description {
-  font-size: 0.9em;
-  color: hsl(0deg, 0%, 81%);
-  height: 100%;
-  opacity: 70%;
 }
 
 .grid__3 .name, .grid__4 .name {
@@ -87,23 +51,9 @@ body {
   opacity: 100%;
 }
 
-.grid__1 .avarta {
-  width: 35%;
-}
-.grid__1 .avarta .avarta__name {
-  padding: 0 10px;
-}
-
-.grid__2 .avarta, .grid__4 .avarta, .grid__3 .avarta {
-  width: 85%;
-}
-.grid__2 .avarta .avarta__name, .grid__4 .avarta .avarta__name, .grid__3 .avarta .avarta__name {
-  padding: 0 10px;
-}
-
-.avarta__name {
-  padding: 0 10px;
-  color: hsl(217deg, 19%, 35%);
+.description {
+  color: hsl(0deg, 0%, 81%);
+  opacity: 70%;
 }
 
 .name {
@@ -120,9 +70,19 @@ body {
   opacity: 0.5;
 }
 
-.avarta {
-  display: flex;
-  width: 40%;
+.grid__3 .hero, .grid__4 .hero {
+  color: hsl(219deg, 29%, 14%);
+}
+.grid__3 .hero .name, .grid__4 .hero .name {
+  color: hsl(219deg, 29%, 14%);
+}
+
+.grid__2 .description, .grid__5 .description {
+  color: hsl(0deg, 0%, 81%);
+}
+
+.avarta__name {
+  color: hsl(217deg, 19%, 35%);
 }
 
 .avarta .avarta__img {
@@ -131,9 +91,92 @@ body {
   border-radius: 50%;
 }
 
+@media (min-width: 769px) {
+  .grid {
+    grid-template: repeat(2, 0.8fr)/repeat(4, 0.6fr);
+  }
+  .grid div {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  .grid__1 {
+    grid-column: 1/3;
+  }
+  .grid__3 {
+    grid-column: 4/-1;
+    grid-row: 1/-1;
+  }
+  .grid__5 {
+    grid-column: 2/4;
+  }
+  .hero {
+    font-size: 1.32em;
+    padding: 15px 0;
+  }
+  .description {
+    font-size: 0.9em;
+    height: 100%;
+  }
+  .grid__1 .avarta {
+    width: 35%;
+  }
+  .grid__1 .avarta .avarta__name {
+    padding: 0 10px;
+  }
+  .grid__2 .avarta, .grid__4 .avarta, .grid__3 .avarta {
+    width: 85%;
+  }
+  .grid__2 .avarta .avarta__name, .grid__4 .avarta .avarta__name, .grid__3 .avarta .avarta__name {
+    padding: 0 10px;
+  }
+  .avarta__name {
+    padding: 0 10px;
+  }
+  .avarta {
+    width: 40%;
+  }
+}
+.avarta {
+  display: flex;
+}
+
 @media (max-width: 768px) {
   .grid {
-    display: grid;
-    grid-template-: repeat(5, 100px)/repeat(1, 20px);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.75fr 1fr;
+  }
+  .grid div {
+    padding: 30px;
+    border-radius: 10px;
+  }
+  div .description {
+    font-size: 1em;
+  }
+  .hero {
+    padding: 10px 0;
+    font-size: 1.2em;
+  }
+  .grid__1 {
+    grid-row: 1/2;
+  }
+  .grid__2 {
+    grid-row: 2/3;
+  }
+  .grid__3 {
+    grid-row: 5/5;
+  }
+  .grid__4 {
+    grid-row: 3/4;
+  }
+  .grid__5 {
+    grid-row: 4/4;
+  }
+  .avarta__name {
+    width: 140px;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
