@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
     rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d642480840.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -68,11 +69,31 @@
       <p class="description">
         Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.
       </p>
-      <p class="description">
+      <p class="description__content">
           Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!
         </p>
-        <a href="" class="link">See how Fylo works</a>
-        <div class="quotes"></div>
+          <a href="#" class="link">See how Fylo works
+            <img src="./images/icon-arrow.svg" alt="icon-arrow">
+          </a>
+        <div class="quotes">
+          <img src="./images/icon-quotes.svg" alt="">
+          <p class="quotes__content">
+              Fylo has improved our team productivity by an order of magnitude. Since
+              making the switch our team has become a well-oiled collaboration machine.
+          </p>
+          <div class="avarta__content">
+            <img src="./images/avatar-testimonial.jpg" alt="avatar-testimonial">
+            <div class="avarta__detail">
+              <span class="details">
+                Kyle Burton
+              </span>
+              <br>
+              <span class="details fd">
+                Founder & CEO, Huddle
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="right">
           <img src="./images/illustration-2.svg" alt="illustration-2">
@@ -83,14 +104,14 @@
         <h2 class="get__started">
         Get early access today
       </h2>
-      <p class="description">
+      <p class="description" id="description">
         It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
       </p>
     </div>
     <div class="right">
       <form action="" class="form__section">
-        <input type="text">
-        <button class="btn_start">
+        <input type="text" placeholder="email@example.com">
+        <button class="btn__start">
           Get Started For Free
         </button>
       </form>
@@ -100,22 +121,14 @@
 </main>
   
 
-  <!-- Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
- -->
-
-  
-
   <footer class="footer">
+    <div class="footer__img">
+      <img src="./images/logo--color.svg" alt="logo" class="logo__footer"/>
+    </div>
+    <div class="wrapper__footer">
     <div class="footer__section">
-      <div class="footer__img">
-        <img src="./images/logo.svg" alt="logo" />
-      </div>
-      <p class="phone"><span class="phone__icon"><img src="./images/icon-phone.svg" alt="icon-phone"></span>Phone: +1-543-123-4567</p>
-      <p class="email"><span class="email_icon"><img src="./images/icon-email.svg" alt=""></span>example@fylo.com</p>
+      <p class="phone"><span class="icon"><img src="./images/icon-phone.svg" alt="icon-phone"></span>Phone: +1-543-123-4567</p>
+      <p class="email"><span class="icon"><img src="./images/icon-email.svg" alt=""></span>example@fylo.com</p>
     </div>
     <div class="footer__section">
       <a href="" class="footer__links">
@@ -143,9 +156,16 @@
       </p>
     </div>
     <div class="footer__section">
-      <div class="social__media"></div>
-      <div class="social__media"></div>
-      <div class="social__media"></div>
+      <div class="social__media">
+        <i class="fa-brands fa-facebook-f"></i>
+      </div>
+      <div class="social__media">
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <div class="social__media">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
     </div>
   </footer>
   <script src="./Script/app.js"></script>
