@@ -71,6 +71,9 @@ body {
   border: 1px solid hsl(0deg, 0%, 75%);
   border-radius: 3px;
 }
+.container .wrapper .container__section .error__email {
+  color: #f96262;
+}
 .container .wrapper .container__section .right img {
   width: 100%;
   height: 100%;
