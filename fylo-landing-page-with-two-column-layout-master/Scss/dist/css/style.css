@@ -71,7 +71,9 @@ body {
   border: 1px solid hsl(0deg, 0%, 75%);
   border-radius: 3px;
 }
-.container .wrapper .container__section .error__email {
+.container .wrapper .container__section .error__email, .container .wrapper .container__section .error__email_ {
+  display: inline-block;
+  margin-top: 10px;
   color: #f96262;
 }
 .container .wrapper .container__section .right img {
@@ -119,6 +121,7 @@ body {
 }
 .btn:hover, .btn__start:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 @media (min-width: 769px) {
@@ -315,5 +318,31 @@ body {
 .container .wrapper .container__section .right .get__started,
 .container .wrapper .container__section .right #description {
     width: 100%;
+  }
+  .quotes {
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+  }
+  .footer {
+    height: 80vh;
+    display: flex;
+    padding: 4% 10%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: hsl(243deg, 87%, 12%);
+  }
+  .footer .wrapper__footer {
+    border: 1px solid;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer .wrapper__footer .footer__section {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
   }
 }/*# sourceMappingURL=style.css.map */

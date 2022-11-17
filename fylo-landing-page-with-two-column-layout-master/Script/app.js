@@ -1,5 +1,6 @@
 const btn = document.querySelector("button");
 const errorMessage = document.querySelector(".error__email");
+const errorMessage_ = document.querySelector(".error__email_");
 const email = document.querySelector("#email");
 const submit = document.querySelector(".form");
 const emailStarter = document.querySelector("#email__starter");
@@ -25,7 +26,8 @@ btn.addEventListener("click", () => {
 btnStarter.addEventListener("click", () => {
   if (!emailStarter.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
     emailStarter.style.borderColor = "#f96262";
-    errorMessage.innerHTML = "Please check your email";
+    errorMessage_.innerHTML = "Please check your email";
+    errorMessage_.style.marginTop = 10 + "px";
     return false;
   } else {
     emailStarter.style.borderColor = "#0f0";
