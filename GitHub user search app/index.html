@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="toggle" id="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git devfinder</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#141d2f]" id="root">
+    <div class="flex items-center justify-center h-[100vh] m-5">
+        <div class="inner__container h-[550px] w-[350px]">
+            <nav class="nav flex justify-between my-8 text-white">
+                <h1 class="logo text-2xl">devfinder</h1>
+                <div class="toggle flex justify-between w-[25%] items-center">
+                    <h2 class="theme__indicator text-xl">LIGHT</h2>
+                    <img src="./assets/icon-sun.svg" alt="icon-sun" class="theme__pointer">
+                </div>
+            </nav>
+            <form class="form__container">
+                <div class="wrapper bg-[#1E2A47]">
+                    <div class="inner__wrapper">
+                        <div class="img">
+                            <span>
+                                <img src="./assets/icon-search.svg" alt="search icon">
+                            </span>
+                        </div>
+                        <div class="input">
+                            <input type="text" class="input__form placeholder:text-slate-400 text-white" name="search" placeholder="Search GitHub username ...">
+                        </div>
+                        <div class="len__mic">
+                            <div class="break"></div>
+                        </div>
+                        <div class="btn -ml-[200px] -mt-[0.3em]">
+                            <button id="btn" type="submit" data-mdb-ripple="true" data-mdb-ripple-color="light"
+                            class="inline-block px-4 py-2.5 bg-[#0079ff] text-white font-medium text-xs leading-tight rounded-[10px] shadow-md hover:bg-[#0079ff] hover:shadow-lg focus:bg-[#0079ff] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#0079ff] active:shadow-lg transition duration-150 ease-in-out">Search</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+            <main class="content h-[450px] rounded-xl mt-5 bg-[#1E2A47]">
+                <section class="profile flex justify-around py-8">
+                    <div class="img__profile -ml-[5em]">
+                        <img src="./assets/image-user-placeholder.png" alt="github user avarta" id="git__avatar">
+                    </div>
+                    <div class="profile__name -ml-[10em]">
+                        <div class="user__name">
+                            <p class="text-white git__name">The Octocat</p>
+                            <p class="text-[#0079ff] text-xl login__name">@Octocat</p>
+                        </div>
+                        <p class="text-white join__date">Joined 25 Jan 2011</p>
+                    </div>
+                </section>
+                <section class="profile__boi px-4 text-white">
+                    <p class="pb-8" id="bio__text">This profile has no bio</p>
+                    <div class="git__stats flex justify-between py-4 rounded-xl bg-[#141d2f]">
+                       <div class="stats flex flex-col items-start px-5">
+                        <p class="repo__text">Repo</p>
+                        <p class="value">8</p>
+                        </div>
+                       <div class="stats flex flex-col">
+                         <p id="followers__text">Followers</p>
+                        <p class="value">3965</p>
+                        </div>
+                       <div class="stats flex flex-col px-5">
+                        <p id="following__text">Following</p>
+                        <p class="value">9</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="profile__detail flex flex-col px-4 py-6 text-white">
+                    <div class="details flex items-center py-1">
+                        <img src="./assets/icon-location.svg" alt="">
+                        <a class="pl-4" id="location">San Francisco</a>
+                    </div>
+                    <div class="details flex items-center py-1">
+                        <img src="./assets/icon-twitter.svg" alt="">
+                        <a href="#" class="pl-4" id="twitter__name">Not Available</a>
+                    </div>
+                    <div class="details flex items-center py-1">
+                        <img src="./assets/icon-website.svg" alt="">
+                        <a href="#" class="pl-4" id="website">github.blog</a>
+                    </div>
+                    <div class="details flex items-center py-1">
+                        <img src="./assets/icon-company.svg" alt="">
+                        <a href="#" class="pl-4" id="company">@github</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+</div>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
