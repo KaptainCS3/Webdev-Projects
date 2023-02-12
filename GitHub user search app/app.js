@@ -10,14 +10,13 @@ const followersText = document.querySelector("#followers");
 const followingText = document.querySelector("#following");
 const userLocation = document.querySelector("#location");
 const twitter = document.querySelector("#twitter__name");
-const website = document.querySelector("#website");
+const webSite = document.querySelector("#link");
 const company = document.querySelector("#company");
 const gitProfile = document.querySelector(".img__profile");
 const gitAvatar = document.querySelector("#git__avatar");
 const formInput = document.querySelector(".input__form");
 const btn = document.querySelector("#btn");
 const nav = document.querySelector(".nav");
-// const stats = document.querySelectorAll(".value");
 const boiProfile = document.querySelector(".profile__boi");
 const profileDetail = document.querySelector(".profile__detail");
 const formSubmit = document.querySelector(".form__container");
@@ -25,23 +24,52 @@ const image = document.querySelector(".theme__pointer");
 const formContainer = document.querySelector(".wrapper");
 const mainContainer = document.querySelector(".content");
 const statsContainer = document.querySelector(".git__stats");
-
+const monthArray = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 themeBtn.addEventListener("click", () => {
   image.getAttribute("src") == "./assets/icon-sun.svg"
     ? image.setAttribute("src", "./assets/icon-moon.svg")
     : image.setAttribute("src", "./assets/icon-sun.svg");
-  if (themeIndicator.innerHTML === "light".toLocaleUpperCase()) {
-    themeIndicator.innerHTML = "dark".toLocaleUpperCase();
+  if (themeIndicator.innerText === "light".toLocaleUpperCase()) {
+    themeIndicator.innerText = "dark".toLocaleUpperCase();
     document.querySelector("#root").style.background = "#f6f8ff";
     formContainer.style.background = "#fefefe";
     mainContainer.style.background = "#fefefe";
     statsContainer.style.background = "#f6f8ff";
+    formInput.style.color = "#4b6a9b";
+    document.querySelector(".svg__location").setAttribute("fill", "#4b6a9b");
+    document.querySelector(".svg__twitter").setAttribute("fill", "#4b6a9b");
+    document.querySelector(".svg__blog").setAttribute("fill", "#4b6a9b");
+    document.querySelector(".svg__company").setAttribute("fill", "#4b6a9b");
+    repoText.style.color = "#000";
+    followersText.style.color = "#000";
+    followingText.style.color = "#000";
   } else {
-    themeIndicator.innerHTML = "light".toLocaleUpperCase();
+    repoText.style.color = "#f6f8ff";
+    followersText.style.color = "#f6f8ff";
+    followingText.style.color = "#f6f8ff";
+    formInput.style.color = "#f6f8ff";
+    themeIndicator.innerText = "light".toLocaleUpperCase();
     formContainer.style.background = "#1E2A47";
     document.querySelector("#root").style.background = "#141d2f";
     mainContainer.style.background = "#1E2A47";
     statsContainer.style.background = "#141d2f";
+    document.querySelector(".svg__location").setAttribute("fill", "#f6f8ff");
+    document.querySelector(".svg__twitter").setAttribute("fill", "#f6f8ff");
+    document.querySelector(".svg__blog").setAttribute("fill", "#f6f8ff");
+    document.querySelector(".svg__company").setAttribute("fill", "#f6f8ff");
   }
   gitName.classList.toggle("text-white");
   joinDate.classList.toggle("dark");
@@ -54,10 +82,8 @@ themeBtn.addEventListener("click", () => {
 formSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
 });
-const getResponse = async () => {
-  const response = await fetch(
-    `https://api.github.com/users/${formInput.value}`
-  );
+const getResponse = async (gitUserName) => {
+  const response = await fetch(`https://api.github.com/users/${gitUserName}`);
   if (!response.ok) {
     throw new Error(response.error);
   } else {
@@ -70,35 +96,91 @@ const getResponse = async () => {
 
     //!get github userName
     data.name
-      ? (gitName.innerHTML = `The ${data.name}`)
-      : (gitName.innerHTML = ``);
+      ? (gitName.innerText = `The ${data.name}`)
+      : (gitName.innerText = `The ${data.login}`);
 
     //!get github login name
-    data.login
-      ? (loginName.innerHTML = `@${data.login}`)
-      : (loginName.innerHTML = "");
+    loginName.innerText = `@${data.login}`;
 
     //!get github date join
-    data.created_at
-      ? (joinDate.innerHTML = `Joined ${
-          data.created_at.split("T")[0]
-        } ${data.created_at.slice(0, 4)}`)
-      : (joinDate.innerHTML = "");
+    joinDate.innerText = `Joined on ${data.created_at.slice(8, 10)} ${
+      monthArray[data.created_at.slice(5, 7) - 1]
+    }  ${data.created_at.slice(0, 4)}`;
+
+    //!get github user bio
+    data.bio
+      ? (bioText.innerText = data.bio)
+      : (bioText.innerText = "This profile has no bio");
+
+    //!get github public repo
+    data.public_repos
+      ? (repoText.innerText = data.public_repos)
+      : (repoText.innerText = "0");
+
+    //!get github followers
+    data.followers
+      ? (followersText.innerText = data.followers)
+      : (followersText.innerText = "0");
+
+    //!get github following
+    data.following
+      ? (followingText.innerText = data.following)
+      : (followingText.innerText = "0");
+
+    //!get github user location
+    if (data.location) userLocation.innerText = data.location;
+    else {
+      userLocation.innerText = "Not Available";
+      document.querySelector(".location").style.opacity = "0.5";
+    }
+
+    //!get github user twitter name
+    if (data.twitter_username) {
+      twitter.innerText = `@${data.twitter_username}`;
+      twitter.setAttribute(
+        "href",
+        `https://twitter.com/${data.twitter_username}`
+      );
+      twitter.setAttribute("target", "_blank");
+    } else {
+      twitter.innerText = "Not Available";
+      document.querySelector(".twitter").style.opacity = "0.5";
+      twitter.removeAttribute("href");
+      twitter.style.cursor = "not-allowed";
+    }
+
+    //!get github user company
+    if (data.company) company.innerText = data.company;
+    else {
+      company.innerText = "Not Available";
+      company.style.cursor = "not-allowed";
+      company.removeAttribute("href");
+      document.querySelector(".company").style.opacity = "0.5";
+    }
+
+    //!get github user blog
+    if (data.blog) {
+      const link = data.blog.split("/")[2];
+      webSite.innerText = link;
+      webSite.setAttribute("href", data.blog);
+      webSite.setAttribute("target", "_blank");
+    } else {
+      webSite.innerText = "Not Available";
+      document.querySelector(".blog").style.opacity = "0.5";
+      webSite.removeAttribute("href");
+      webSite.style.cursor = "not-allowed";
+    }
   }
+  //!fill svg path
+  document.querySelector(".svg__location").setAttribute("fill", "#f6f8ff");
+  document.querySelector(".svg__twitter").setAttribute("fill", "#f6f8ff");
+  document.querySelector(".svg__blog").setAttribute("fill", "#f6f8ff");
+  document.querySelector(".svg__company").setAttribute("fill", "#f6f8ff");
 };
 btn.addEventListener("click", () => {
-  getResponse();
+  const gitUserName = formInput.value;
+  getResponse(gitUserName);
 });
 
-//   "name": "The Octocat",
-//   "login": "octocat",
-//   "created_at": "2011-01-25T18:44:36Z",
-//   "avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
-//   "bio": null,
-//  "public_repos": 8,
-//   "followers": 8320,
-//   "following": 9,
-//   "location": "San Francisco",
-//   "twitter_username": null,
-//   "blog": "https://github.blog",
-//   "company": "@github",
+//!Default user
+getResponse("KaptainCS3");
