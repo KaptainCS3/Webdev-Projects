@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#141d2f]" id="root">
-    <div class="flex items-center justify-center h-[100vh] m-5">
-        <div class="inner__container h-[550px] w-[350px]">
+<body class="bg-[#141d2f] min-h[100vh] flex justify-center items-center" id="root">
+    <div class="flex items-center justify-center m-5 main__container">
+        <div class="inner__container main">
             <nav class="nav flex justify-between my-8 text-white">
                 <h1 class="logo text-2xl">devfinder</h1>
                 <div class="toggle flex justify-between w-[25%] items-center">
@@ -22,8 +22,8 @@
                 </div>
             </nav>
             <form class="form__container">
-                <div class="wrapper bg-[#1E2A47]">
-                    <div class="inner__wrapper">
+                <div class="wrapper bg-[#1E2A47] shadow-xl">
+                    <div class="inner__wrapper flex justify-between items-center w-full">
                         <div class="img">
                             <span>
                                 <img src="./assets/icon-search.svg" alt="search icon">
@@ -34,8 +34,9 @@
                         </div>
                         <div class="len__mic">
                             <div class="break"></div>
+                            <span class="error__smg text-[#f74646] text-sm font-bold pr-4"></span>
                         </div>
-                        <div class="btn -ml-[200px] -mt-[0.3em]">
+                        <div class="btn">
                             <button id="btn" type="submit" data-mdb-ripple="true" data-mdb-ripple-color="light"
                             class="inline-block px-4 py-2.5 bg-[#0079ff] text-white font-medium text-xs leading-tight rounded-[10px] shadow-md hover:bg-[#0079ff] hover:shadow-lg focus:bg-[#0079ff] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#0079ff] active:shadow-lg transition duration-150 ease-in-out btn__search">Search</button>
                         </div>
@@ -43,7 +44,7 @@
                 </div>
                 
             </form>
-            <main class="content h-[450px] rounded-xl mt-5 bg-[#1E2A47]">
+            <main class="content rounded-xl mt-5 bg-[#1E2A47] shadow-xl">
                 <section class="profile flex justify-around py-8">
                     <div class="img__profile -ml-[5em]">
                         <img src="./assets/image-user-placeholder.png" alt="github user avarta" id="git__avatar">
@@ -51,7 +52,7 @@
                     <div class="profile__name">
                         <div class="user__name">
                             <p class="text-white git__name"></p>
-                            <p class="text-[#0079ff] text-xl login__name"></p>
+                            <a class="text-[#0079ff] text-xl login__name" target="_blank"></a>
                         </div>
                         <p class="text-white join__date"></p>
                     </div>
@@ -113,7 +114,7 @@
                 </section>
             </main>
         </div>
-</div>
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>
