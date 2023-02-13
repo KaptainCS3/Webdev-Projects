@@ -39,7 +39,7 @@ const monthArray = [
   "Dec",
 ];
 themeBtn.addEventListener("click", () => {
-  image.getAttribute("src") === "./assets/icon-sun.svg"
+  image.getAttribute("src") == "./assets/icon-sun.svg"
     ? image.setAttribute("src", "./assets/icon-moon.svg")
     : image.setAttribute("src", "./assets/icon-sun.svg");
   if (themeIndicator.innerText === "light".toLocaleUpperCase()) {
@@ -48,8 +48,6 @@ themeBtn.addEventListener("click", () => {
     formContainer.style.background = "#fefefe";
     mainContainer.style.background = "#fefefe";
     statsContainer.style.background = "#f6f8ff";
-    document.querySelector(".content").classList.add("shadow-xl");
-    document.querySelector(".form__container").classList.add("shadow-xl");
     formInput.style.color = "#4b6a9b";
     document.querySelector(".svg__location").setAttribute("fill", "#4b6a9b");
     document.querySelector(".svg__twitter").setAttribute("fill", "#4b6a9b");
@@ -59,8 +57,6 @@ themeBtn.addEventListener("click", () => {
     followersText.style.color = "#000";
     followingText.style.color = "#000";
   } else {
-    document.querySelector(".content").classList.remove("shadow-xl");
-    document.querySelector(".form__container").classList.remove("shadow-xl");
     repoText.style.color = "#f6f8ff";
     followersText.style.color = "#f6f8ff";
     followingText.style.color = "#f6f8ff";
@@ -96,6 +92,7 @@ const getResponse = async (gitUserName) => {
   } else {
     const data = await response.json();
     console.log(data);
+    formInput.value = "";
     //!get github avarta img
     data.avatar_url
       ? gitAvatar.setAttribute("src", data.avatar_url)
