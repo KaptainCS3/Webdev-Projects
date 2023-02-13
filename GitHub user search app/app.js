@@ -81,6 +81,9 @@ themeBtn.addEventListener("click", () => {
 
 formSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
+  formInput.value === ""
+    ? (document.querySelector(".error__smg").innerText = "No results")
+    : (document.querySelector(".error__smg").innerText = "");
 });
 const getResponse = async (gitUserName) => {
   const response = await fetch(`https://api.github.com/users/${gitUserName}`);
@@ -101,6 +104,7 @@ const getResponse = async (gitUserName) => {
 
     //!get github login name
     loginName.innerText = `@${data.login}`;
+    loginName.setAttribute("href", data.html_url);
 
     //!get github date join
     joinDate.innerText = `Joined on ${data.created_at.slice(8, 10)} ${
@@ -170,6 +174,10 @@ const getResponse = async (gitUserName) => {
       webSite.removeAttribute("href");
       webSite.style.cursor = "not-allowed";
     }
+    //! check for search result
+    // if (formInput.value !== data.login) {
+    //   document.querySelector(".error__smg").innerText = "user not found";
+    // }
   }
   //!fill svg path
   document.querySelector(".svg__location").setAttribute("fill", "#f6f8ff");
