@@ -82,11 +82,16 @@ themeBtn.addEventListener("click", () => {
 formSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
   formInput.value === ""
-    ? (document.querySelector(".error__smg").innerText = "No results")
+    ? alert("Input fill is blank")
     : (document.querySelector(".error__smg").innerText = "");
 });
 const getResponse = async (gitUserName) => {
   const response = await fetch(`https://api.github.com/users/${gitUserName}`);
+
+  //! check for search result
+  if (response.status === 404) {
+    return (document.querySelector(".error__smg").innerText = "User Not Found");
+  } else alert("Request sent successfully");
   if (!response.ok) {
     throw new Error(response.error);
   } else {
@@ -175,10 +180,6 @@ const getResponse = async (gitUserName) => {
       webSite.removeAttribute("href");
       webSite.style.cursor = "not-allowed";
     }
-    //! check for search result
-    // if (formInput.value !== data.login) {
-    //   document.querySelector(".error__smg").innerText = "user not found";
-    // }
   }
   //!fill svg path
   document.querySelector(".svg__location").setAttribute("fill", "#f6f8ff");
