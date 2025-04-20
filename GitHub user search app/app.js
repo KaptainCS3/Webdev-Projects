@@ -79,10 +79,19 @@ themeBtn.addEventListener("click", () => {
   // stats.classList.toggle("value");
 });
 
+function launchConfetti() {
+  confetti({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 },
+  });
+}
+
+
 formSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
   formInput.value === ""
-    ? alert("Input fill is blank")
+    ? document.querySelector(".error__smg").innerText = "Input fill is blank"
     : (document.querySelector(".error__smg").innerText = "");
 });
 const getResponse = async (gitUserName) => {
@@ -90,14 +99,19 @@ const getResponse = async (gitUserName) => {
 
   //! check for search result
   if (response.status === 404) {
-    return (document.querySelector(".error__smg").innerText = "User Not Found");
-  } else alert("Request sent successfully");
+    document.querySelector(".error__smg").innerText = "User Not Found";
+    document.querySelector(".form__container").classList.add("shake");
+    setTimeout(() => {
+      document.querySelector(".form__container").classList.remove("shake");
+    }, 500);
+    return;
+  } 
   if (!response.ok) {
     throw new Error(response.error);
   } else {
     const data = await response.json();
-    console.log(data);
     formInput.value = "";
+    launchConfetti();
     //!get github avarta img
     data.avatar_url
       ? gitAvatar.setAttribute("src", data.avatar_url)
@@ -149,7 +163,7 @@ const getResponse = async (gitUserName) => {
       twitter.innerText = `@${data.twitter_username}`;
       twitter.setAttribute(
         "href",
-        `https://twitter.com/${data.twitter_username}`
+        `https://x.com/${data.twitter_username}`
       );
       twitter.setAttribute("target", "_blank");
     } else {
@@ -174,6 +188,7 @@ const getResponse = async (gitUserName) => {
       webSite.innerText = link;
       webSite.setAttribute("href", data.blog);
       webSite.setAttribute("target", "_blank");
+      webSite.classList.add("truncate"); // add truncate class
     } else {
       webSite.innerText = "Not Available";
       document.querySelector(".blog").style.opacity = "0.5";
