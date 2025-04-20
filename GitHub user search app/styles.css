@@ -128,7 +128,9 @@
 }
 @media screen and (min-width: 769px) {
   body {
-    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .wrapper {
     padding: 0;
