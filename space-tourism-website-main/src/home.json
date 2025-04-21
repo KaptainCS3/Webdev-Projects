@@ -1,0 +1,15 @@
+{
+    "hero":{
+        "content": "So, you want to travel to"
+    },
+    "descriptions":{
+    "content": 
+        ""
+    },
+    "explore":{
+        "content": "Explore"
+    },
+    "space":{
+        "content": "Space"
+    }
+}

@@ -11,7 +11,7 @@ const Cards = () => {
             className="w-full h-full bg-cover"
           />
         </div>
-        <div className="px-8 col-span-1 py-12 row-span-full">
+        <div className="px-8 col-span-1 py-12 row-span-full dark:text-white text-[#999]">
           <h1 className="text-2xl font-bold capitalize">harvest Vase</h1>
           <h4 className="uppercase py-2">by studio and friends</h4>
           <p className="pb-4">

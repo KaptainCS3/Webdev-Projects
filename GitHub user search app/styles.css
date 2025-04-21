@@ -1,4 +1,66 @@
-@media screen and (min-width: 200px) and (max-width: 475px) {
+:root {
+  --bg-color: #f6f8ff;
+  --content-bg: #fefefe;
+  --text-color: #2b3442;
+  --secondary-text: #4b6a9b;
+  --stats-bg: #f6f8ff;
+}
+
+.dark {
+  --bg-color: #141d2f;
+  --content-bg: #1e2a47;
+  --text-color: #ffffff;
+  --secondary-text: #ffffff;
+  --stats-bg: #141d2f;
+  .wrapper,
+  .content {
+    background-color: var(--content-bg);
+  }
+
+  .git__stats {
+    background-color: var(--stats-bg);
+  }
+
+  .text-color {
+    color: var(--text-color);
+  }
+
+  .secondary-text {
+    color: var(--secondary-text);
+  }
+
+  .svg-icon {
+    fill: var(--secondary-text);
+  }
+}
+
+/* Apply the variables */
+#root {
+  background-color: var(--bg-color);
+}
+
+.wrapper,
+.content {
+  background-color: var(--content-bg);
+}
+
+.git__stats {
+  background-color: var(--stats-bg);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.secondary-text {
+  color: var(--secondary-text);
+}
+
+.svg-icon {
+  fill: var(--secondary-text);
+}
+
+@media screen and (min-width: 200px) and (max-width: 530px) {
   body {
     margin: 0 auto;
   }
@@ -41,11 +103,10 @@
     border-radius: 50%;
   }
   .input {
-    width: 20%;
     padding-right: 0.5em;
   }
   .input__form {
-    width: 100%;
+    max-width: calc(100% - 50px);
     background-color: transparent;
     border: none;
     margin: 0;
@@ -68,18 +129,50 @@
     max-width: 100%; /* adjust to your layout */
     vertical-align: bottom;
   }
+  .git__stats {
+    flex-direction: column;
+    gap: 1rem;
+    div {
+      gap: 1rem;
+      flex-direction: row;
+    }
+    div:nth-child(2){
+      padding-left: 1.2em;
+    }
+  }
+  .error__smg{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: inline-block;
+    padding-top: 1.8rem;
+    margin-left: 0.8rem;
+  }
+  .error_style{
+    margin-top: 2rem;
+  }
 }
-@media screen and (min-width: 475px) and (max-width: 768px) {
+
+
+
+@media screen and (min-width: 530px) and (max-width: 768px) {
   body {
     padding: 0 auto;
     min-height: 0;
   }
+
   .main__container {
     width: 95%;
   }
+
+  .input__form {
+    max-width: calc(100% - 100px);
+  }
+
   .btn__search {
-    padding: 1em 2em;
-    margin-top: -0.5em;
+    padding: 0.75em 1.5em;
+    margin-top: 0;
+    flex-shrink: 0;
   }
   .img__profile {
     margin-left: -12.5em;
@@ -110,7 +203,8 @@
     padding: 0;
   }
   .inner__wrapper {
-    padding: 0.7em;
+    gap: 0.5rem;
+    padding: 0.5em;
   }
   .truncate {
     overflow: hidden;
@@ -122,8 +216,12 @@
   }
   .inner__container {
     width: 100%;
-    max-width: 470px;
+    max-width: 570px;
     height: 350px;
+  }
+
+  .len__mic {
+    margin-left: -45px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -182,9 +280,6 @@
     width: 85%;
     margin-top: -15%;
     margin-left: 7em;
-  }
-  .stats {
-    padding: 0 3em;
   }
   .profile__detail {
     padding-left: 8em;
@@ -357,5 +452,80 @@ h1 {
   color: #f44336;
   font-size: 14px;
   margin-top: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+
+.input__form[type="text"]{
+ color: var(--secondary-text);
+}
+
+/* Add this to your styles.css */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.skeleton-loading {
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.skeleton-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 75%
+  );
+  animation: shimmer 2s infinite;
+  background-size: 1000px 100%;
+}
+
+/* Specific skeleton styles */
+.avatar-skeleton {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.text-skeleton {
+  height: 1rem;
+  width: 200px;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.small-text-skeleton {
+  height: 0.8rem;
+  width: 150px;
+  border-radius: 4px;
+}
+
+.stat-skeleton {
+  height: 2rem;
+  width: 80px;
+  border-radius: 4px;
+}
+
+.detail-skeleton {
+  height: 1rem;
+  width: 200px;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+}
+
+/* Add this to your CSS */
+.hidden {
+  display: none !important;
+}
+
+#git__avatar {
   transition: opacity 0.3s ease;
 }
