@@ -11,16 +11,6 @@ const Nav = ({ isDarkMode, toggleDarkMode, setFont }) => {
     document.documentElement.style.fontFamily = selectedFont;
   }, [selectedFont]);
 
-  // const handleDarkModeToggle = (e) => {
-  //   const { name, type, value, checked } = e.target;
-  //   setCheck((prev) => {
-  //     return {
-  //       ...prev,
-  //       [name]: type === "checkbox" ? checked : null,
-  //     };
-  //   });
-  //   toggleDarkMode();
-  // };
    const handleDarkModeToggle = () => {
      setCheck(!check);
      toggleDarkMode();
