@@ -189,6 +189,202 @@ app.post("/packet-loss-test", (req: Request, res: Response): void => {
 });
 
 // Advanced network diagnostics via WebSocket
+// io.on("connection", (socket: Socket) => {
+//   console.log("Socket.IO client connected:", socket.id);
+
+//   let pingTimes: PingResult[] = [];
+//   let packetSequences: number[] = [];
+//   let expectedSequences: number[] = [];
+//   let testStartTime: number;
+//   let uploadData = {
+//     startTime: 0,
+//     totalBytes: 0,
+//   };
+//   let downloadSpeed = 0;
+
+//   socket.on(
+//     "start_all_tests",
+//     (data: { duration?: number; interval?: number }) => {
+//       // This test orchestrates a full network analysis including latency, jitter,
+//       // packet loss, and download/upload speeds.
+
+//       // 1. Start latency/jitter/packet loss test
+//       console.log("Starting comprehensive network test...");
+//       pingTimes = [];
+//       packetSequences = [];
+//       expectedSequences = [];
+//       testStartTime = Date.now();
+//       const testDuration: number = data?.duration || 5000; // 5 seconds for latency
+//       const pingInterval: number = data?.interval || 100;
+//       let sequence: number = 0;
+//       const expectedPackets: number = Math.floor(testDuration / pingInterval);
+//       for (let i = 0; i < expectedPackets; i++) {
+//         expectedSequences.push(i);
+//       }
+//       const latencyInterval = setInterval(() => {
+//         if (Date.now() - testStartTime >= testDuration) {
+//           clearInterval(latencyInterval);
+
+//           // 2. Start Download Test after latency test is complete
+//           console.log("Latency test complete. Starting download test...");
+//           socket.emit("start_download_test");
+//           const downloadData = generateTestData(10 * 1024 * 1024); // 10MB
+//           const chunkSize = 1024 * 1024; // 1MB chunks
+//           let offset = 0;
+
+//           const sendChunk = () => {
+//             if (offset < downloadData.length) {
+//               const chunk = downloadData.slice(offset, offset + chunkSize);
+//               console.log(
+//                 `Sending chunk: offset=${offset}, size=${chunk.length}`
+//               );
+//               socket.emit("download_chunk", chunk, () => {
+//                 console.log(`Chunk acknowledged: offset=${offset}`);
+//                 offset += chunkSize;
+//                 sendChunk(); // Send next chunk after acknowledgment
+//               });
+//             } else {
+//               socket.emit("end_download_test");
+//               console.log("All download chunks sent.");
+//             }
+//           };
+//           console.log("Starting chunked download...");
+//           sendChunk();
+//           return;
+//         }
+//         socket.emit("diagnostic_ping", {
+//           type: "diagnostic_ping",
+//           timestamp: Date.now(),
+//           sequence: sequence++,
+//           test_start: testStartTime,
+//         });
+//       }, pingInterval);
+//     }
+//   );
+
+//   socket.on(
+//     "diagnostic_pong",
+//     (data: { original_timestamp: number; sequence: number }) => {
+//       const rtt: number = Date.now() - (data.original_timestamp || 0);
+//       pingTimes.push({
+//         sequence: data.sequence || 0,
+//         rtt: rtt,
+//         timestamp: Date.now(),
+//       });
+//       packetSequences.push(data.sequence || 0);
+//     }
+//   );
+
+//   socket.on("download_test_result", (data: { speed: number }) => {
+//     downloadSpeed = data.speed ?? 0;
+//     console.log(`Download speed recorded: ${downloadSpeed} Mbps`);
+
+//     // 3. Start Upload Test after receiving download speed from the client
+//     console.log("Starting upload test...");
+//     socket.emit("start_upload_test");
+//     uploadData = {
+//       startTime: Date.now(),
+//       totalBytes: 0,
+//     };
+//   });
+
+//   socket.on("upload_chunk", (chunk: Buffer) => {
+//     uploadData.totalBytes += chunk.length;
+//   });
+
+//   socket.on("end_upload_test", () => {
+//     const uploadDuration = (Date.now() - uploadData.startTime) / 1000; // in seconds
+//     const uploadSpeed =
+//       (uploadData.totalBytes * 8) / (uploadDuration * 1000 * 1000); // in Mbps
+//     console.log(`Upload test complete. Speed: ${uploadSpeed.toFixed(2)} Mbps`);
+
+//     const downloadSpeedMetrics = {
+//       speed: downloadSpeed,
+//       unit: "Mbps" as const,
+//     };
+//     const uploadSpeedMetrics = {
+//       speed: parseFloat(uploadSpeed.toFixed(2)),
+//       unit: "Mbps" as const,
+//     };
+
+//     // 4. Calculate and send final comprehensive results
+//     console.log("Calculating and sending final results...");
+//     calculateComprehensiveResults(downloadSpeedMetrics, uploadSpeedMetrics);
+//   });
+
+//   const calculateComprehensiveResults = (
+//     downloadSpeed?: SpeedMetrics,
+//     uploadSpeed?: SpeedMetrics
+//   ) => {
+//     // Calculate packet loss
+//     const expectedCount: number = expectedSequences.length;
+//     const receivedCount: number = packetSequences.length;
+//     const lostCount: number = expectedCount - receivedCount;
+//     const packetLoss: number =
+//       lostCount > 0 ? (lostCount / expectedCount) * 100 : 0;
+
+//     // Find missing sequences
+//     const receivedSet = new Set(packetSequences);
+//     const missingSequences: number[] = expectedSequences.filter(
+//       (seq) => !receivedSet.has(seq)
+//     );
+
+//     // Calculate latency statistics
+//     const rtts: number[] = pingTimes.map((p) => p.rtt);
+//     const avgLatency: number =
+//       rtts.length > 0 ? rtts.reduce((a, b) => a + b, 0) / rtts.length : 0;
+//     const minLatency: number = rtts.length > 0 ? Math.min(...rtts) : 0;
+//     const maxLatency: number = rtts.length > 0 ? Math.max(...rtts) : 0;
+
+//     // Calculate jitter
+//     const latencyVariations: number[] = rtts.map((rtt) =>
+//       Math.abs(rtt - avgLatency)
+//     );
+//     const jitter: number =
+//       latencyVariations.length > 0
+//         ? latencyVariations.reduce((a, b) => a + b, 0) /
+//           latencyVariations.length
+//         : 0;
+
+//     const result: ComprehensiveTestResult = {
+//       packetLoss: {
+//         percentage: packetLoss.toFixed(2),
+//         expected: expectedCount,
+//         received: receivedCount,
+//         lost: lostCount,
+//         missingSequences: missingSequences.slice(0, 10), // First 10 missing
+//       },
+//       latency: {
+//         avg: avgLatency.toFixed(2),
+//         min: minLatency,
+//         max: maxLatency,
+//         samples: rtts.length,
+//       },
+//       jitter: {
+//         value: jitter.toFixed(2),
+//         unit: "ms",
+//       },
+//       downloadSpeed,
+//       uploadSpeed,
+//       testDuration: Date.now() - testStartTime,
+//       rawData: {
+//         latencies: rtts,
+//         sequences: packetSequences,
+//       },
+//     };
+
+//     socket.emit("comprehensive_test_result", result);
+//   };
+
+//   socket.on("disconnect", (reason) => {
+//     console.log("Disconnected:", reason);
+//     //  if (reason === "io server disconnect") {
+//     //    socket.connect(); // Reconnect if server-initiated
+//     //  }
+//   });
+// });
+
+// Improved Socket.IO connection handler for your server
 io.on("connection", (socket: Socket) => {
   console.log("Socket.IO client connected:", socket.id);
 
@@ -201,70 +397,132 @@ io.on("connection", (socket: Socket) => {
     totalBytes: 0,
   };
   let downloadSpeed = 0;
+  let testInProgress = false;
+
+  // Add connection health monitoring
+  const healthCheck = setInterval(() => {
+    if (socket.connected) {
+      socket.emit("health_ping", { timestamp: Date.now() });
+    }
+  }, 30000); // Every 30 seconds
 
   socket.on(
     "start_all_tests",
     (data: { duration?: number; interval?: number }) => {
-      // This test orchestrates a full network analysis including latency, jitter,
-      // packet loss, and download/upload speeds.
+      if (testInProgress) {
+        console.log("Test already in progress for socket:", socket.id);
+        return;
+      }
 
-      // 1. Start latency/jitter/packet loss test
-      console.log("Starting comprehensive network test...");
+      testInProgress = true;
+      console.log("Starting comprehensive network test for socket:", socket.id);
+
+      // Reset all test data
       pingTimes = [];
       packetSequences = [];
       expectedSequences = [];
       testStartTime = Date.now();
+      uploadData = { startTime: 0, totalBytes: 0 };
+      downloadSpeed = 0;
+
       const testDuration: number = data?.duration || 5000; // 5 seconds for latency
       const pingInterval: number = data?.interval || 100;
       let sequence: number = 0;
       const expectedPackets: number = Math.floor(testDuration / pingInterval);
+
       for (let i = 0; i < expectedPackets; i++) {
         expectedSequences.push(i);
       }
+
       const latencyInterval = setInterval(() => {
+        if (!socket.connected || !testInProgress) {
+          clearInterval(latencyInterval);
+          return;
+        }
+
         if (Date.now() - testStartTime >= testDuration) {
           clearInterval(latencyInterval);
 
-          // 2. Start Download Test after latency test is complete
-          console.log("Latency test complete. Starting download test...");
+          // Start Download Test after latency test is complete
+          console.log(
+            "Latency test complete. Starting download test for socket:",
+            socket.id
+          );
           socket.emit("start_download_test");
+
           const downloadData = generateTestData(10 * 1024 * 1024); // 10MB
           const chunkSize = 1024 * 1024; // 1MB chunks
           let offset = 0;
+          let chunkCount = 0;
+          const maxChunks = Math.ceil(downloadData.length / chunkSize);
 
           const sendChunk = () => {
+            if (!socket.connected || !testInProgress) {
+              console.log("Download test aborted - socket disconnected");
+              return;
+            }
+
             if (offset < downloadData.length) {
-              const chunk = downloadData.slice(offset, offset + chunkSize);
-              console.log(
-                `Sending chunk: offset=${offset}, size=${chunk.length}`
+              const chunk = downloadData.slice(
+                offset,
+                Math.min(offset + chunkSize, downloadData.length)
               );
+              chunkCount++;
+
+              console.log(
+                `Sending chunk ${chunkCount}/${maxChunks}: offset=${offset}, size=${chunk.length}`
+              );
+
+              // Add timeout for chunk acknowledgment
+              const chunkTimeout = setTimeout(() => {
+                console.warn(`Chunk ${chunkCount} acknowledgment timeout`);
+                if (testInProgress) {
+                  sendChunk(); // Try to continue
+                }
+              }, 5000);
+
               socket.emit("download_chunk", chunk, () => {
-                console.log(`Chunk acknowledged: offset=${offset}`);
+                clearTimeout(chunkTimeout);
+                console.log(`Chunk ${chunkCount} acknowledged`);
                 offset += chunkSize;
-                sendChunk(); // Send next chunk after acknowledgment
+
+                // Add small delay between chunks to prevent overwhelming
+                setTimeout(sendChunk, 10);
               });
             } else {
               socket.emit("end_download_test");
-              console.log("All download chunks sent.");
+              console.log("All download chunks sent to socket:", socket.id);
             }
           };
+
           console.log("Starting chunked download...");
           sendChunk();
-          return;
+        } else {
+          socket.emit("diagnostic_ping", {
+            type: "diagnostic_ping",
+            timestamp: Date.now(),
+            sequence: sequence++,
+            test_start: testStartTime,
+          });
         }
-        socket.emit("diagnostic_ping", {
-          type: "diagnostic_ping",
-          timestamp: Date.now(),
-          sequence: sequence++,
-          test_start: testStartTime,
-        });
       }, pingInterval);
+
+      // Add timeout for the entire test
+      setTimeout(() => {
+        if (testInProgress) {
+          console.warn("Test timeout reached for socket:", socket.id);
+          testInProgress = false;
+          socket.emit("test_timeout");
+        }
+      }, 60000); // 60 second timeout
     }
   );
 
   socket.on(
     "diagnostic_pong",
     (data: { original_timestamp: number; sequence: number }) => {
+      if (!testInProgress) return;
+
       const rtt: number = Date.now() - (data.original_timestamp || 0);
       pingTimes.push({
         sequence: data.sequence || 0,
@@ -276,11 +534,16 @@ io.on("connection", (socket: Socket) => {
   );
 
   socket.on("download_test_result", (data: { speed: number }) => {
-    downloadSpeed = data.speed ?? 0;
-    console.log(`Download speed recorded: ${downloadSpeed} Mbps`);
+    if (!testInProgress) return;
 
-    // 3. Start Upload Test after receiving download speed from the client
-    console.log("Starting upload test...");
+    downloadSpeed = data.speed ?? 0;
+    console.log(
+      `Download speed recorded: ${downloadSpeed} Mbps for socket:`,
+      socket.id
+    );
+
+    // Start Upload Test after receiving download speed from the client
+    console.log("Starting upload test for socket:", socket.id);
     socket.emit("start_upload_test");
     uploadData = {
       startTime: Date.now(),
@@ -289,14 +552,37 @@ io.on("connection", (socket: Socket) => {
   });
 
   socket.on("upload_chunk", (chunk: Buffer) => {
-    uploadData.totalBytes += chunk.length;
+    if (!testInProgress) return;
+
+    if (Buffer.isBuffer(chunk)) {
+      uploadData.totalBytes += chunk.length;
+    } else if (
+      chunk &&
+      typeof ArrayBuffer !== "undefined" &&
+      Object.prototype.toString.call(chunk) === "[object ArrayBuffer]"
+    ) {
+      uploadData.totalBytes += (chunk as ArrayBuffer).byteLength;
+    } else {
+      console.warn(
+        "Received unknown chunk type:",
+        Object.prototype.toString.call(chunk)
+      );
+    }
   });
 
   socket.on("end_upload_test", () => {
-    const uploadDuration = (Date.now() - uploadData.startTime) / 1000; // in seconds
+    if (!testInProgress) return;
+
+    const uploadDuration = Math.max(
+      (Date.now() - uploadData.startTime) / 1000,
+      0.1
+    ); // Minimum 0.1s
     const uploadSpeed =
       (uploadData.totalBytes * 8) / (uploadDuration * 1000 * 1000); // in Mbps
-    console.log(`Upload test complete. Speed: ${uploadSpeed.toFixed(2)} Mbps`);
+    console.log(
+      `Upload test complete. Speed: ${uploadSpeed.toFixed(2)} Mbps for socket:`,
+      socket.id
+    );
 
     const downloadSpeedMetrics = {
       speed: downloadSpeed,
@@ -307,8 +593,8 @@ io.on("connection", (socket: Socket) => {
       unit: "Mbps" as const,
     };
 
-    // 4. Calculate and send final comprehensive results
-    console.log("Calculating and sending final results...");
+    // Calculate and send final comprehensive results
+    console.log("Calculating and sending final results for socket:", socket.id);
     calculateComprehensiveResults(downloadSpeedMetrics, uploadSpeedMetrics);
   });
 
@@ -316,12 +602,14 @@ io.on("connection", (socket: Socket) => {
     downloadSpeed?: SpeedMetrics,
     uploadSpeed?: SpeedMetrics
   ) => {
+    if (!testInProgress) return;
+
     // Calculate packet loss
     const expectedCount: number = expectedSequences.length;
     const receivedCount: number = packetSequences.length;
-    const lostCount: number = expectedCount - receivedCount;
+    const lostCount: number = Math.max(expectedCount - receivedCount, 0);
     const packetLoss: number =
-      lostCount > 0 ? (lostCount / expectedCount) * 100 : 0;
+      expectedCount > 0 ? (lostCount / expectedCount) * 100 : 0;
 
     // Find missing sequences
     const receivedSet = new Set(packetSequences);
@@ -336,7 +624,7 @@ io.on("connection", (socket: Socket) => {
     const minLatency: number = rtts.length > 0 ? Math.min(...rtts) : 0;
     const maxLatency: number = rtts.length > 0 ? Math.max(...rtts) : 0;
 
-    // Calculate jitter
+    // Calculate jitter (standard deviation of latencies)
     const latencyVariations: number[] = rtts.map((rtt) =>
       Math.abs(rtt - avgLatency)
     );
@@ -373,14 +661,23 @@ io.on("connection", (socket: Socket) => {
       },
     };
 
+    testInProgress = false;
     socket.emit("comprehensive_test_result", result);
+    console.log("Test completed for socket:", socket.id);
   };
 
+  socket.on("health_ping", () => {
+    socket.emit("health_pong", { timestamp: Date.now() });
+  });
+
   socket.on("disconnect", (reason) => {
-    console.log("Disconnected:", reason);
-    //  if (reason === "io server disconnect") {
-    //    socket.connect(); // Reconnect if server-initiated
-    //  }
+    console.log("Socket disconnected:", socket.id, "Reason:", reason);
+    clearInterval(healthCheck);
+    testInProgress = false;
+  });
+
+  socket.on("error", (error) => {
+    console.error("Socket error for", socket.id, ":", error);
   });
 });
 
