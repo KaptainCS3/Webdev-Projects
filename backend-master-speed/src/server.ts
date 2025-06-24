@@ -23,6 +23,8 @@ const io = new Server(server, {
     origin: "*",
   },
   maxHttpBufferSize: 1e7, // 10MB - Allow larger payloads
+  pingTimeout: 60000, // 60 seconds
+  pingInterval: 25000, // 25 seconds
 });
 
 app.use(express.json());
