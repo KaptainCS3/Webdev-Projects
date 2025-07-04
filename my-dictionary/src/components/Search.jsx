@@ -3,9 +3,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 import ErrorMSG from "./ErrorMSG";
 const Search = ({ url, setResult }) => {
   const [error, setError] = useState(null);
+  const [fireworks, setFireworks] = useState(false);
   const formik = useFormik({
     initialValues: {
       search: "",
@@ -21,11 +23,15 @@ const Search = ({ url, setResult }) => {
           setError(data.title);
         } else {
           setResult(data);
+          setFireworks(true);
         }
       } catch (error) {
         console.error(error);
       } finally {
         setSubmitting(false);
+        setTimeout(() => {
+          setFireworks(false);
+        }, 4000);
       }
     },
   });
@@ -50,6 +56,7 @@ const Search = ({ url, setResult }) => {
       ) : (
         <ErrorMSG error_value={error} />
       )}
+      {fireworks && <Fireworks autorun={{ speed: 3, duration: 4 }} />}
     </div>
   );
 };

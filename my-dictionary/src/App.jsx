@@ -6,9 +6,11 @@ import useDarkMode from "./hooks/useDarkMode";
 import Main from "./components/Main";
 import KeyWord from "./components/KeyWord";
 import Resource from "./components/Resource";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 const App = () => {
   const [result, setResult] = useState([]);
   const [font, setFont] = useState("");
+  const [fireworks, setFireworks] = useState(false);
   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
   useEffect(() => {
     getWork();
@@ -19,6 +21,10 @@ const App = () => {
       const response = await fetch(url + "endure");
       const data = await response.json();
       setResult(data);
+      setFireworks(true);
+      setTimeout(() => {
+        setFireworks(false);
+      }, 4000);
     } catch (error) {
       console.error(error);
     }
@@ -55,6 +61,7 @@ const App = () => {
                 <KeyWord result={result} />
                 <Main result={result} font={font} />
                 <Resource result={result} />
+                {fireworks && <Fireworks autorun={{ speed: 3, duration: 4 }} />}
               </div>
             </div>
         </div>
